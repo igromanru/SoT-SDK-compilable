@@ -1,1 +1,0 @@
-# SoT-SDK-compilable

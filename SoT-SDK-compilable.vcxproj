@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AthenaCommons.hpp" />
+    <ClInclude Include="include\SDK.hpp" />
+    <ClInclude Include="include\SoT_ActionStateMachine_classes.hpp" />
+    <ClInclude Include="include\SoT_ActionStateMachine_enums.hpp" />
+    <ClInclude Include="include\SoT_ActionStateMachine_structs.hpp" />
+    <ClInclude Include="include\SoT_AIModule_classes.hpp" />
+    <ClInclude Include="include\SoT_AIModule_enums.hpp" />
+    <ClInclude Include="include\SoT_AIModule_structs.hpp" />
+    <ClInclude Include="include\SoT_AIShips_classes.hpp" />
+    <ClInclude Include="include\SoT_AIShips_enums.hpp" />
+    <ClInclude Include="include\SoT_AIShips_structs.hpp" />
+    <ClInclude Include="include\SoT_Animation_classes.hpp" />
+    <ClInclude Include="include\SoT_Animation_enums.hpp" />
+    <ClInclude Include="include\SoT_Animation_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaAI_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaAI_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaAI_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaEngine_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaEngine_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaEngine_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaInput_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaInput_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaInput_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaRigging_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaRigging_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaRigging_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaSocketLookup_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaSocketLookup_structs.hpp" />
+    <ClInclude Include="include\SoT_Athena_classes.hpp" />
+    <ClInclude Include="include\SoT_Athena_enums.hpp" />
+    <ClInclude Include="include\SoT_Athena_structs.hpp" />
+    <ClInclude Include="include\SoT_Basic.hpp" />
+    <ClInclude Include="include\SoT_CoherentUIGTPlugin_classes.hpp" />
+    <ClInclude Include="include\SoT_CoherentUIGTPlugin_enums.hpp" />
+    <ClInclude Include="include\SoT_CoherentUIGTPlugin_structs.hpp" />
+    <ClInclude Include="include\SoT_CoreUObject_classes.hpp" />
+    <ClInclude Include="include\SoT_CoreUObject_enums.hpp" />
+    <ClInclude Include="include\SoT_CoreUObject_structs.hpp" />
+    <ClInclude Include="include\SoT_DebugMenu_classes.hpp" />
+    <ClInclude Include="include\SoT_DebugMenu_structs.hpp" />
+    <ClInclude Include="include\SoT_Engine_classes.hpp" />
+    <ClInclude Include="include\SoT_Engine_enums.hpp" />
+    <ClInclude Include="include\SoT_Engine_structs.hpp" />
+    <ClInclude Include="include\SoT_GameplayDebugger_classes.hpp" />
+    <ClInclude Include="include\SoT_GameplayDebugger_enums.hpp" />
+    <ClInclude Include="include\SoT_GameplayDebugger_structs.hpp" />
+    <ClInclude Include="include\SoT_GameplayTags_classes.hpp" />
+    <ClInclude Include="include\SoT_GameplayTags_enums.hpp" />
+    <ClInclude Include="include\SoT_GameplayTags_structs.hpp" />
+    <ClInclude Include="include\SoT_GameplayTasks_classes.hpp" />
+    <ClInclude Include="include\SoT_GameplayTasks_enums.hpp" />
+    <ClInclude Include="include\SoT_GameplayTasks_structs.hpp" />
+    <ClInclude Include="include\SoT_GameService_classes.hpp" />
+    <ClInclude Include="include\SoT_GameService_structs.hpp" />
+    <ClInclude Include="include\SoT_InputCore_classes.hpp" />
+    <ClInclude Include="include\SoT_InputCore_enums.hpp" />
+    <ClInclude Include="include\SoT_InputCore_structs.hpp" />
+    <ClInclude Include="include\SoT_Interaction_classes.hpp" />
+    <ClInclude Include="include\SoT_Interaction_enums.hpp" />
+    <ClInclude Include="include\SoT_Interaction_structs.hpp" />
+    <ClInclude Include="include\SoT_JsonUtilities_classes.hpp" />
+    <ClInclude Include="include\SoT_JsonUtilities_enums.hpp" />
+    <ClInclude Include="include\SoT_JsonUtilities_structs.hpp" />
+    <ClInclude Include="include\SoT_Kraken_classes.hpp" />
+    <ClInclude Include="include\SoT_Kraken_enums.hpp" />
+    <ClInclude Include="include\SoT_Kraken_structs.hpp" />
+    <ClInclude Include="include\SoT_Maths_classes.hpp" />
+    <ClInclude Include="include\SoT_Maths_enums.hpp" />
+    <ClInclude Include="include\SoT_Maths_structs.hpp" />
+    <ClInclude Include="include\SoT_MovieSceneTracks_classes.hpp" />
+    <ClInclude Include="include\SoT_MovieSceneTracks_enums.hpp" />
+    <ClInclude Include="include\SoT_MovieSceneTracks_structs.hpp" />
+    <ClInclude Include="include\SoT_MovieScene_classes.hpp" />
+    <ClInclude Include="include\SoT_MovieScene_enums.hpp" />
+    <ClInclude Include="include\SoT_MovieScene_structs.hpp" />
+    <ClInclude Include="include\SoT_NaturalDisasters_classes.hpp" />
+    <ClInclude Include="include\SoT_NaturalDisasters_enums.hpp" />
+    <ClInclude Include="include\SoT_NaturalDisasters_structs.hpp" />
+    <ClInclude Include="include\SoT_ObjectLifetime_classes.hpp" />
+    <ClInclude Include="include\SoT_ObjectLifetime_structs.hpp" />
+    <ClInclude Include="include\SoT_ObjectMessaging_classes.hpp" />
+    <ClInclude Include="include\SoT_ObjectMessaging_structs.hpp" />
+    <ClInclude Include="include\SoT_Pets_classes.hpp" />
+    <ClInclude Include="include\SoT_Pets_structs.hpp" />
+    <ClInclude Include="include\SoT_PirateGenerator_classes.hpp" />
+    <ClInclude Include="include\SoT_PirateGenerator_enums.hpp" />
+    <ClInclude Include="include\SoT_PirateGenerator_structs.hpp" />
+    <ClInclude Include="include\SoT_PositionalVoice_classes.hpp" />
+    <ClInclude Include="include\SoT_PositionalVoice_enums.hpp" />
+    <ClInclude Include="include\SoT_PositionalVoice_structs.hpp" />
+    <ClInclude Include="include\SoT_RareAudio_classes.hpp" />
+    <ClInclude Include="include\SoT_RareAudio_enums.hpp" />
+    <ClInclude Include="include\SoT_RareAudio_structs.hpp" />
+    <ClInclude Include="include\SoT_RareEngine_classes.hpp" />
+    <ClInclude Include="include\SoT_RareEngine_enums.hpp" />
+    <ClInclude Include="include\SoT_RareEngine_structs.hpp" />
+    <ClInclude Include="include\SoT_Repair_classes.hpp" />
+    <ClInclude Include="include\SoT_Repair_enums.hpp" />
+    <ClInclude Include="include\SoT_Repair_structs.hpp" />
+    <ClInclude Include="include\SoT_Sessions_classes.hpp" />
+    <ClInclude Include="include\SoT_Sessions_enums.hpp" />
+    <ClInclude Include="include\SoT_Sessions_structs.hpp" />
+    <ClInclude Include="include\SoT_ShipDamage_classes.hpp" />
+    <ClInclude Include="include\SoT_ShipDamage_structs.hpp" />
+    <ClInclude Include="include\SoT_SlateCore_classes.hpp" />
+    <ClInclude Include="include\SoT_SlateCore_enums.hpp" />
+    <ClInclude Include="include\SoT_SlateCore_structs.hpp" />
+    <ClInclude Include="include\SoT_Slate_classes.hpp" />
+    <ClInclude Include="include\SoT_Slate_enums.hpp" />
+    <ClInclude Include="include\SoT_Slate_structs.hpp" />
+    <ClInclude Include="include\SoT_StatusEffects_classes.hpp" />
+    <ClInclude Include="include\SoT_StatusEffects_structs.hpp" />
+    <ClInclude Include="include\SoT_StudiosAutomation_classes.hpp" />
+    <ClInclude Include="include\SoT_StudiosAutomation_enums.hpp" />
+    <ClInclude Include="include\SoT_StudiosAutomation_structs.hpp" />
+    <ClInclude Include="include\SoT_Tethering_classes.hpp" />
+    <ClInclude Include="include\SoT_Tethering_enums.hpp" />
+    <ClInclude Include="include\SoT_Tethering_structs.hpp" />
+    <ClInclude Include="include\SoT_Time_classes.hpp" />
+    <ClInclude Include="include\SoT_Time_enums.hpp" />
+    <ClInclude Include="include\SoT_Time_structs.hpp" />
+    <ClInclude Include="include\SoT_UMG_classes.hpp" />
+    <ClInclude Include="include\SoT_UMG_enums.hpp" />
+    <ClInclude Include="include\SoT_UMG_structs.hpp" />
+    <ClInclude Include="include\SoT_Watercrafts_classes.hpp" />
+    <ClInclude Include="include\SoT_Watercrafts_enums.hpp" />
+    <ClInclude Include="include\SoT_Watercrafts_structs.hpp" />
+    <ClInclude Include="include\SoT_Water_classes.hpp" />
+    <ClInclude Include="include\SoT_Water_enums.hpp" />
+    <ClInclude Include="include\SoT_Water_structs.hpp" />
+    <ClInclude Include="include\SoT_Wind_classes.hpp" />
+    <ClInclude Include="include\SoT_Wind_structs.hpp" />
+    <ClInclude Include="include\SoT_WwiseAudio_classes.hpp" />
+    <ClInclude Include="include\SoT_WwiseAudio_enums.hpp" />
+    <ClInclude Include="include\SoT_WwiseAudio_structs.hpp" />
+    <ClInclude Include="include\XorStr\xorstr.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\SoT_Athena_functions.cpp" />
+    <ClCompile Include="source\SoT_Basic.cpp" />
+    <ClCompile Include="source\SoT_CoreUObject_functions.cpp" />
+    <ClCompile Include="source\SoT_DebugMenu_functions.cpp" />
+    <ClCompile Include="source\SoT_Engine_functions.cpp" />
+    <ClCompile Include="source\SoT_Maths_functions.cpp" />
+    <ClCompile Include="source\SoT_UMG_functions.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AC5E8C18-D93C-4D65-983D-990947A089EF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SoTSDKminimalist</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
