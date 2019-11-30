@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -212,6 +212,26 @@ public:
 };
 
 
+// Class Maths.ProjectileMaths
+// 0x0000 (0x0028 - 0x0028)
+class UProjectileMaths : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.ProjectileMaths"));
+		return ptr;
+	}
+
+
+	static float PredictProjectileFlightTime(float Speed, float Gravity, float Pitch, float Height);
+	static float FindProjectileSpeedModifierToHitTarget(const struct FVector& From, const struct FVector& Target, float Pitch, float ProjectileSpeed, float Gravity);
+	static bool FindAimDirectionToHitTarget(const struct FVector& From, const struct FVector& Target, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FRotator* OutAimDirection);
+	static bool CalculateLaunchVelocity(const struct FVector& From, const struct FVector& Target, const struct FVector& TargetVelocity, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FVector* OutLaunchVelocty, float* OutFlightTime);
+};
+
+
 // Class Maths.RotationMaths
 // 0x0000 (0x0028 - 0x0028)
 class URotationMaths : public UBlueprintFunctionLibrary
@@ -227,6 +247,27 @@ public:
 
 	static struct FTransform TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation);
 	static struct FQuat RotatorToQuat(const struct FRotator& Rotation);
+};
+
+
+// Class Maths.ShapeMathsBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UShapeMathsBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.ShapeMathsBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static bool IsPointOnOrWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinASphere(class USphereComponent* SphereComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinACylinder(class UCapsuleComponent* CylinderComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinACapsule(class UCapsuleComponent* CapsuleComponent, const struct FVector& WorldSpaceReferencePoint);
+	static struct FVector FindClosestPointWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint);
 };
 
 
@@ -264,6 +305,21 @@ public:
 	static float Volume(float InRadius, float InHeight);
 	static float CalculateGeometricCentroidOffsetRelativeToBoundingSphereCentroid(float InRadius, float InHeight);
 	static float BaseRadius(float InRadius, float InHeight);
+};
+
+
+// Class Maths.StatisticsMaths
+// 0x0000 (0x0028 - 0x0028)
+class UStatisticsMaths : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.StatisticsMaths"));
+		return ptr;
+	}
+
 };
 
 

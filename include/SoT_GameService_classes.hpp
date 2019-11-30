@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
+
+// Class GameService.ServiceProviderGameState
+// 0x0120 (0x0628 - 0x0508)
+class AServiceProviderGameState : public AGameState
+{
+public:
+	unsigned char                                      UnknownData00[0x120];                                     // 0x0508(0x0120) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class GameService.ServiceProviderGameState"));
+		return ptr;
+	}
+
+};
+
 
 // Class GameService.GameServiceLifecycleInterface
 // 0x0000 (0x0028 - 0x0028)

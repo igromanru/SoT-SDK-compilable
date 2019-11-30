@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,8 @@ enum class EAIShipEncounterType : uint8_t
 	EAIShipEncounterType__Battle   = 0,
 	EAIShipEncounterType__Passive  = 1,
 	EAIShipEncounterType__Aggressive = 2,
-	EAIShipEncounterType__EAIShipEncounterType_MAX = 3
+	EAIShipEncounterType__MAX      = 3,
+	EAIShipEncounterType__EAIShipEncounterType_MAX = 4
 };
 
 

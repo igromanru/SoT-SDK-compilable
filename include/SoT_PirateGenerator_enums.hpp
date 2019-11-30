@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,6 +48,15 @@ enum class EIPGTestEnum : uint8_t
 	EIPGTestEnum__RANDOM           = 0,
 	EIPGTestEnum__RANDOM_OR_NONE   = 1,
 	EIPGTestEnum__EIPGTestEnum_MAX = 2
+};
+
+
+// Enum PirateGenerator.EIPGSlotType
+enum class EIPGSlotType : uint8_t
+{
+	EIPGSlotType__DEFAULT          = 0,
+	EIPGSlotType__DYNAMIC          = 1,
+	EIPGSlotType__EIPGSlotType_MAX = 2
 };
 
 

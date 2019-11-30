@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Enums
 //---------------------------------------------------------------------------
+
+// Enum WwiseAudio.EWwiseEventDurationType
+enum class EWwiseEventDurationType : uint8_t
+{
+	EWwiseEventDurationType__OneShot = 0,
+	EWwiseEventDurationType__Mixed = 1,
+	EWwiseEventDurationType__Infinite = 2,
+	EWwiseEventDurationType__Unknown = 3,
+	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 4
+};
+
 
 // Enum WwiseAudio.EWwiseAsyncIOPriorityDisplay
 enum class EWwiseAsyncIOPriorityDisplay : uint8_t
@@ -52,17 +63,6 @@ enum class EWwise7Point1Order : uint8_t
 	EWwise7Point1Order__LFE        = 7,
 	EWwise7Point1Order__Null_Channel = 8,
 	EWwise7Point1Order__EWwise7Point1Order_MAX = 9
-};
-
-
-// Enum WwiseAudio.EWwiseEventDurationType
-enum class EWwiseEventDurationType : uint8_t
-{
-	EWwiseEventDurationType__OneShot = 0,
-	EWwiseEventDurationType__Mixed = 1,
-	EWwiseEventDurationType__Infinite = 2,
-	EWwiseEventDurationType__Unknown = 3,
-	EWwiseEventDurationType__EWwiseEventDurationType_MAX = 4
 };
 
 

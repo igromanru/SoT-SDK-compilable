@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Water_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK
@@ -57,7 +57,7 @@ struct FBuoyancyVolumeSample
 };
 
 // ScriptStruct Water.BuoyancyDragSample
-// 0x0050
+// 0x0090
 struct FBuoyancyDragSample
 {
 	struct FVector                                     Offset;                                                   // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
@@ -66,11 +66,11 @@ struct FBuoyancyDragSample
 	float                                              Radius;                                                   // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DragCoefficient;                                          // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBuoyancyDragSampleType>               Type;                                                     // 0x002C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x23];                                      // 0x002D(0x0023) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x63];                                      // 0x002D(0x0063) MISSED OFFSET
 };
 
 // ScriptStruct Water.WaterBuoyancy
-// 0x00B8
+// 0x0130
 struct FWaterBuoyancy
 {
 	class UPrimitiveComponent*                         PrimitiveComponent;                                       // 0x0000(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
@@ -82,7 +82,7 @@ struct FWaterBuoyancy
 	TArray<struct FBuoyancyDragSample>                 DragSamples;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	class UCurveFloat*                                 BuyoancySampleZSpeedVSDampeningScalar;                    // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              QuadSubmersionTestSampleResolution;                       // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x74];                                      // 0x0044(0x0074) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xEC];                                      // 0x0044(0x00EC) MISSED OFFSET
 };
 
 // ScriptStruct Water.BuoyancySampleMovementConfigurationEntry
@@ -137,6 +137,16 @@ struct FWaterSplashProbe
 	unsigned char                                      UnknownData01[0x8F];                                      // 0x0049(0x008F) MISSED OFFSET
 };
 
+// ScriptStruct Water.WaterSpout
+// 0x0070
+struct FWaterSpout
+{
+	struct FTransform                                  SpoutLocatorTransform;                                    // 0x0000(0x0030) (Edit, IsPlainOldData)
+	class UParticleSystemComponent*                    SpoutParticleSystem;                                      // 0x0030(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    SplashParticleSystem;                                     // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0040(0x0030) MISSED OFFSET
+};
+
 // ScriptStruct Water.WaterSplashProbesContainer
 // 0x0018
 struct FWaterSplashProbesContainer
@@ -144,6 +154,14 @@ struct FWaterSplashProbesContainer
 	TArray<struct FWaterSplashProbe>                   Probes;                                                   // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              ProbeSamplingTime;                                        // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Water.EventCurrentWaterPlaneChange
+// 0x0010
+struct FEventCurrentWaterPlaneChange
+{
+	class UBaseWaterComponent*                         FormerWaterPlane;                                         // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         NewWaterPlane;                                            // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct Water.EventLeftWaterExclusionZone

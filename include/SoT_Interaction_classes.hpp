@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,12 +53,12 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x00A0 (0x0680 - 0x05E0)
+// 0x00C0 (0x0690 - 0x05D0)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x98];                                      // 0x05E8(0x0098) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x05D8(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -166,12 +166,13 @@ public:
 
 
 // Class Interaction.InteractableService
-// 0x0020 (0x0048 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UInteractableService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 	TArray<class UInteractableArea*>                   InteractableAreas;                                        // 0x0038(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -198,13 +199,13 @@ public:
 
 
 // Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B0 (0x0550 - 0x04A0)
+// 0x00B0 (0x0560 - 0x04B0)
 class AMockActorWithCharacterInteractionComponent : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x04A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x04B0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x04B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x04C0(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -232,15 +233,15 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x04C8 - 0x04A0)
+// 0x0028 (0x04D8 - 0x04B0)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
-	class UObject*                                     FocusedInteractable;                                      // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     InteractedObject;                                         // 0x04B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractNotificationType;                                 // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x04C0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
+	class UObject*                                     FocusedInteractable;                                      // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x04C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InteractNotificationType;                                 // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04D0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

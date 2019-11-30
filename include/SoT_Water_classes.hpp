@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Water.AthenaFFTWater
-// 0x0028 (0x0510 - 0x04E8)
+// 0x0028 (0x0520 - 0x04F8)
 class AAthenaFFTWater : public AFFTWater
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x04E8(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x04F8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -46,11 +46,11 @@ public:
 
 
 // Class Water.AthenaWaterEmissionVolume
-// 0x0008 (0x04B0 - 0x04A8)
+// 0x0008 (0x04C0 - 0x04B8)
 class AAthenaWaterEmissionVolume : public AWaterEmissionVolume
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -125,16 +125,16 @@ public:
 
 
 // Class Water.FFTWaterService
-// 0x0080 (0x0520 - 0x04A0)
+// 0x0080 (0x0530 - 0x04B0)
 class AFFTWaterService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04A0(0x0010) MISSED OFFSET
-	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04B0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04B8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                   // 0x04C0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x04C8(0x0050) MISSED OFFSET
-	double                                             ReplicatedServerCreationTime;                             // 0x0518(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x04B0(0x0010) MISSED OFFSET
+	TWeakObjectPtr<class AAthenaFFTWater>              FFTWaterActor;                                            // 0x04C0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterComponent>           FFTWaterComponent;                                        // 0x04C8(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UFFTWaterExtendedPlaneComponent> ExtendedPlaneComponent;                                   // 0x04D0(0x0008) (ExportObject, Net, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x04D8(0x0050) MISSED OFFSET
+	double                                             ReplicatedServerCreationTime;                             // 0x0528(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -165,11 +165,11 @@ public:
 
 
 // Class Water.WaterInteractionComponent
-// 0x0020 (0x0600 - 0x05E0)
+// 0x0020 (0x05F0 - 0x05D0)
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05E0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05D0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -205,11 +205,11 @@ public:
 
 
 // Class Water.FFTWaterQueryTestActor
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04B8 - 0x04B0)
 class AFFTWaterQueryTestActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x04A0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x04B0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -221,11 +221,11 @@ public:
 
 
 // Class Water.FFTWaterPerformanceCountService
-// 0x0008 (0x0528 - 0x0520)
+// 0x0008 (0x0538 - 0x0530)
 class AFFTWaterPerformanceCountService : public AFFTWaterService
 {
 public:
-	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0520(0x0008)
+	struct FFFTWaterPerformanceCountData               PerformanceCountData;                                     // 0x0530(0x0008)
 
 	static UClass* StaticClass()
 	{
@@ -240,12 +240,12 @@ public:
 
 
 // Class Water.FFTWaterServiceFixedWaterHeight
-// 0x0008 (0x0528 - 0x0520)
+// 0x0008 (0x0538 - 0x0530)
 class AFFTWaterServiceFixedWaterHeight : public AFFTWaterService
 {
 public:
-	float                                              RequiredWaterHeight;                                      // 0x0520(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0524(0x0004) MISSED OFFSET
+	float                                              RequiredWaterHeight;                                      // 0x0530(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0534(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -257,11 +257,11 @@ public:
 
 
 // Class Water.FlatWaterPlaneComponent
-// 0x0010 (0x05D0 - 0x05C0)
+// 0x0010 (0x05C0 - 0x05B0)
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05B0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -323,6 +323,22 @@ public:
 };
 
 
+// Class Water.MockWaterServiceWithValidWaterPlane
+// 0x0008 (0x0040 - 0x0038)
+class UMockWaterServiceWithValidWaterPlane : public UMockWaterInterface
+{
+public:
+	class UFFTWaterComponent*                          DefaultWaterComponent;                                    // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterServiceWithValidWaterPlane"));
+		return ptr;
+	}
+
+};
+
+
 // Class Water.WaterSubmersionTests
 // 0x0000 (0x0038 - 0x0038)
 class UWaterSubmersionTests : public UMockWaterInterface
@@ -351,6 +367,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterPlaneComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class Water.MockWaterPlaneRetrievalProviderComponent
+// 0x0018 (0x00E8 - 0x00D0)
+class UMockWaterPlaneRetrievalProviderComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00D0(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.MockWaterPlaneRetrievalProviderComponent"));
 		return ptr;
 	}
 
@@ -434,12 +466,12 @@ public:
 
 
 // Class Water.TestBaseWaterActor
-// 0x0010 (0x04B0 - 0x04A0)
+// 0x0010 (0x04C0 - 0x04B0)
 class ATestBaseWaterActor : public AActor
 {
 public:
-	class USceneComponent*                             SceneRootComponent;                                       // 0x04A0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x04A8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             SceneRootComponent;                                       // 0x04B0(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBaseWaterComponent*                         BaseWaterComponent;                                       // 0x04B8(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -556,6 +588,35 @@ public:
 	static void TickProbe(class AActor* InOwner, float InDeltaTime, struct FWaterSplashProbe* InSplashProbe);
 	static void SetSamplingTime(float SamplingTime, TArray<struct FWaterSplashProbe>* InSplashProbes);
 	static struct FVector GetRelativeWaterHeightChangeSpd(int ProbeIndex, TArray<struct FWaterSplashProbe>* InSplashProbes);
+};
+
+
+// Class Water.WaterSpoutVFXComponent
+// 0x0068 (0x0138 - 0x00D0)
+class UWaterSpoutVFXComponent : public UActorComponent
+{
+public:
+	TArray<struct FWaterSpout>                         WaterSpouts;                                              // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FVector                                     SplashEffectPointBottomZ;                                 // 0x00E0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
+	class UObject*                                     SpoutParticleSystem;                                      // 0x00F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     SplashParticleSystem;                                     // 0x00F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WaterSplashDelayMin;                                      // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WaterSplashDelayMax;                                      // 0x0104(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SplashEffectVFXOffset;                                    // 0x0108(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
+	TArray<struct FWaterSpout>                         ActiveWaterSpouts;                                        // 0x0110(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x18];                                      // 0x0120(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Water.WaterSpoutVFXComponent"));
+		return ptr;
+	}
+
+
+	void AddSplashVFXSpawnerWithLocation(struct FWaterSpout* WaterSplashLocator);
+	void ActivateSplashVFXWithDelay();
 };
 
 

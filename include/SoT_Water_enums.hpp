@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,8 @@ enum class EWaterQueryResult : uint8_t
 	EWaterQueryResult__Success     = 0,
 	EWaterQueryResult__Failed      = 1,
 	EWaterQueryResult__NoWater     = 2,
-	EWaterQueryResult__EWaterQueryResult_MAX = 3
+	EWaterQueryResult__Count       = 3,
+	EWaterQueryResult__EWaterQueryResult_MAX = 4
 };
 
 

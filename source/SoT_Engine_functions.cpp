@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3165,6 +3165,2475 @@ bool AActor::ActorHasTag(const struct FName& Tag)
 }
 
 
+// Function Engine.Pawn.SpawnDefaultController
+// (Native, Public, BlueprintCallable)
+
+void APawn::SpawnDefaultController()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.SpawnDefaultController"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.SetCanAffectNavigationGeneration
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::SetCanAffectNavigationGeneration(bool bNewValue)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.SetCanAffectNavigationGeneration"));
+
+	struct
+	{
+		bool                           bNewValue;
+	} params;
+
+	params.bNewValue = bNewValue;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.ReceiveUnpossessed
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AController*             OldController                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::ReceiveUnpossessed(class AController* OldController)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ReceiveUnpossessed"));
+
+	struct
+	{
+		class AController*             OldController;
+	} params;
+
+	params.OldController = OldController;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.ReceivePossessed
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AController*             NewController                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::ReceivePossessed(class AController* NewController)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ReceivePossessed"));
+
+	struct
+	{
+		class AController*             NewController;
+	} params;
+
+	params.NewController = NewController;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.PawnMakeNoise
+// (Final, BlueprintAuthorityOnly, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NoiseLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUseNoiseMakerLocation         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  NoiseMaker                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::PawnMakeNoise(float Loudness, const struct FVector& NoiseLocation, bool bUseNoiseMakerLocation, class AActor* NoiseMaker)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.PawnMakeNoise"));
+
+	struct
+	{
+		float                          Loudness;
+		struct FVector                 NoiseLocation;
+		bool                           bUseNoiseMakerLocation;
+		class AActor*                  NoiseMaker;
+	} params;
+
+	params.Loudness = Loudness;
+	params.NoiseLocation = NoiseLocation;
+	params.bUseNoiseMakerLocation = bUseNoiseMakerLocation;
+	params.NoiseMaker = NoiseMaker;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.OnRep_PlayerState
+// (Native, Public)
+
+void APawn::OnRep_PlayerState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.OnRep_PlayerState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.OnRep_Controller
+// (Native, Public)
+
+void APawn::OnRep_Controller()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.OnRep_Controller"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.LaunchPawn
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::LaunchPawn(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.LaunchPawn"));
+
+	struct
+	{
+		struct FVector                 LaunchVelocity;
+		bool                           bXYOverride;
+		bool                           bZOverride;
+	} params;
+
+	params.LaunchVelocity = LaunchVelocity;
+	params.bXYOverride = bXYOverride;
+	params.bZOverride = bZOverride;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.K2_GetMovementInputVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APawn::K2_GetMovementInputVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.K2_GetMovementInputVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.IsMoveInputIgnored
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APawn::IsMoveInputIgnored()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsMoveInputIgnored"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.IsLocallyControlled
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APawn::IsLocallyControlled()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsLocallyControlled"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.IsControlled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APawn::IsControlled()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsControlled"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetPendingMovementInputVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APawn::GetPendingMovementInputVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetPendingMovementInputVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetNavAgentLocation
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APawn::GetNavAgentLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetNavAgentLocation"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetMovementComponent
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPawnMovementComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UPawnMovementComponent* APawn::GetMovementComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetMovementComponent"));
+
+	struct
+	{
+		class UPawnMovementComponent*  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetMovementBaseActor
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class APawn*                   Pawn                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* APawn::GetMovementBaseActor(class APawn* Pawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetMovementBaseActor"));
+
+	struct
+	{
+		class APawn*                   Pawn;
+		class AActor*                  ReturnValue;
+	} params;
+
+	params.Pawn = Pawn;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetLastMovementInputVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APawn::GetLastMovementInputVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetLastMovementInputVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetControlRotation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FRotator APawn::GetControlRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetControlRotation"));
+
+	struct
+	{
+		struct FRotator                ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetController
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AController*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AController* APawn::GetController()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetController"));
+
+	struct
+	{
+		class AController*             ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.GetBaseAimRotation
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FRotator APawn::GetBaseAimRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetBaseAimRotation"));
+
+	struct
+	{
+		struct FRotator                ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.DetachFromControllerPendingDestroy
+// (Native, Public, BlueprintCallable)
+
+void APawn::DetachFromControllerPendingDestroy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.DetachFromControllerPendingDestroy"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.ConsumeMovementInputVector
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APawn::ConsumeMovementInputVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ConsumeMovementInputVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Pawn.AddMovementInput
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 WorldDirection                 (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ScaleValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::AddMovementInput(const struct FVector& WorldDirection, float ScaleValue, bool bForce)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddMovementInput"));
+
+	struct
+	{
+		struct FVector                 WorldDirection;
+		float                          ScaleValue;
+		bool                           bForce;
+	} params;
+
+	params.WorldDirection = WorldDirection;
+	params.ScaleValue = ScaleValue;
+	params.bForce = bForce;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.AddControllerYawInput
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::AddControllerYawInput(float Val)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerYawInput"));
+
+	struct
+	{
+		float                          Val;
+	} params;
+
+	params.Val = Val;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.AddControllerRollInput
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::AddControllerRollInput(float Val)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerRollInput"));
+
+	struct
+	{
+		float                          Val;
+	} params;
+
+	params.Val = Val;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Pawn.AddControllerPitchInput
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+
+void APawn::AddControllerPitchInput(float Val)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerPitchInput"));
+
+	struct
+	{
+		float                          Val;
+	} params;
+
+	params.Val = Val;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.UnCrouch
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bClientSimulation              (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::UnCrouch(bool bClientSimulation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.UnCrouch"));
+
+	struct
+	{
+		bool                           bClientSimulation;
+	} params;
+
+	params.bClientSimulation = bClientSimulation;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.StopJumping
+// (Native, Public, BlueprintCallable)
+
+void ACharacter::StopJumping()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.StopJumping"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.StopAnimMontage
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::StopAnimMontage(class UAnimMontage* AnimMontage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.StopAnimMontage"));
+
+	struct
+	{
+		class UAnimMontage*            AnimMontage;
+	} params;
+
+	params.AnimMontage = AnimMontage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.SetReplicateMovement
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bInReplicateMovement           (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::SetReplicateMovement(bool bInReplicateMovement)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.SetReplicateMovement"));
+
+	struct
+	{
+		bool                           bInReplicateMovement;
+	} params;
+
+	params.bInReplicateMovement = bInReplicateMovement;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.PlayAnimMontage
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   StartSectionName               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ACharacter::PlayAnimMontage(class UAnimMontage* AnimMontage, float InPlayRate, const struct FName& StartSectionName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.PlayAnimMontage"));
+
+	struct
+	{
+		class UAnimMontage*            AnimMontage;
+		float                          InPlayRate;
+		struct FName                   StartSectionName;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimMontage = AnimMontage;
+	params.InPlayRate = InPlayRate;
+	params.StartSectionName = StartSectionName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.OnWalkingOffLedge
+// (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 PreviousFloorImpactNormal      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 PreviousFloorContactNormal     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 PreviousLocation               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          TimeDelta                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::OnWalkingOffLedge(const struct FVector& PreviousFloorImpactNormal, const struct FVector& PreviousFloorContactNormal, const struct FVector& PreviousLocation, float TimeDelta)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnWalkingOffLedge"));
+
+	struct
+	{
+		struct FVector                 PreviousFloorImpactNormal;
+		struct FVector                 PreviousFloorContactNormal;
+		struct FVector                 PreviousLocation;
+		float                          TimeDelta;
+	} params;
+
+	params.PreviousFloorImpactNormal = PreviousFloorImpactNormal;
+	params.PreviousFloorContactNormal = PreviousFloorContactNormal;
+	params.PreviousLocation = PreviousLocation;
+	params.TimeDelta = TimeDelta;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnRep_RootMotion
+// (Final, Native, Public)
+
+void ACharacter::OnRep_RootMotion()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_RootMotion"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnRep_ReplicatedBasedMovement
+// (Native, Public)
+
+void ACharacter::OnRep_ReplicatedBasedMovement()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_ReplicatedBasedMovement"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnRep_IsCrouched
+// (Native, Public)
+
+void ACharacter::OnRep_IsCrouched()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_IsCrouched"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnLaunched
+// (Event, Public, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnLaunched"));
+
+	struct
+	{
+		struct FVector                 LaunchVelocity;
+		bool                           bXYOverride;
+		bool                           bZOverride;
+	} params;
+
+	params.LaunchVelocity = LaunchVelocity;
+	params.bXYOverride = bXYOverride;
+	params.bZOverride = bZOverride;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnLanded
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm)
+
+void ACharacter::OnLanded(const struct FHitResult& Hit)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnLanded"));
+
+	struct
+	{
+		struct FHitResult              Hit;
+	} params;
+
+	params.Hit = Hit;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.OnJumped
+// (Native, Event, Public, BlueprintEvent)
+
+void ACharacter::OnJumped()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnJumped"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.LaunchCharacter
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::LaunchCharacter(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.LaunchCharacter"));
+
+	struct
+	{
+		struct FVector                 LaunchVelocity;
+		bool                           bXYOverride;
+		bool                           bZOverride;
+	} params;
+
+	params.LaunchVelocity = LaunchVelocity;
+	params.bXYOverride = bXYOverride;
+	params.bZOverride = bZOverride;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.K2_UpdateCustomMovement
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::K2_UpdateCustomMovement(float DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_UpdateCustomMovement"));
+
+	struct
+	{
+		float                          DeltaTime;
+	} params;
+
+	params.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.K2_OnStartCrouch
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          HalfHeightAdjust               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ScaledHalfHeightAdjust         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnStartCrouch"));
+
+	struct
+	{
+		float                          HalfHeightAdjust;
+		float                          ScaledHalfHeightAdjust;
+	} params;
+
+	params.HalfHeightAdjust = HalfHeightAdjust;
+	params.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.K2_OnMovementModeChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EMovementMode>     PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>     NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode> PrevMovementMode, TEnumAsByte<EMovementMode> NewMovementMode, unsigned char PrevCustomMode, unsigned char NewCustomMode)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnMovementModeChanged"));
+
+	struct
+	{
+		TEnumAsByte<EMovementMode>     PrevMovementMode;
+		TEnumAsByte<EMovementMode>     NewMovementMode;
+		unsigned char                  PrevCustomMode;
+		unsigned char                  NewCustomMode;
+	} params;
+
+	params.PrevMovementMode = PrevMovementMode;
+	params.NewMovementMode = NewMovementMode;
+	params.PrevCustomMode = PrevCustomMode;
+	params.NewCustomMode = NewCustomMode;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.K2_OnEndCrouch
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          HalfHeightAdjust               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ScaledHalfHeightAdjust         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnEndCrouch"));
+
+	struct
+	{
+		float                          HalfHeightAdjust;
+		float                          ScaledHalfHeightAdjust;
+	} params;
+
+	params.HalfHeightAdjust = HalfHeightAdjust;
+	params.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.Jump
+// (Native, Public, BlueprintCallable)
+
+void ACharacter::Jump()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.Jump"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.IsPlayingRootMotion
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACharacter::IsPlayingRootMotion()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsPlayingRootMotion"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.IsPlayingNetworkedRootMotionMontage
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACharacter::IsPlayingNetworkedRootMotionMontage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsPlayingNetworkedRootMotionMontage"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.IsJumpProvidingForce
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACharacter::IsJumpProvidingForce()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsJumpProvidingForce"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.GetCurrentMontage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimMontage* ACharacter::GetCurrentMontage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.GetCurrentMontage"));
+
+	struct
+	{
+		class UAnimMontage*            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.Crouch
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bClientSimulation              (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACharacter::Crouch(bool bClientSimulation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.Crouch"));
+
+	struct
+	{
+		bool                           bClientSimulation;
+	} params;
+
+	params.bClientSimulation = bClientSimulation;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.ClientCheatWalk
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void ACharacter::ClientCheatWalk()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatWalk"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.ClientCheatGhost
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void ACharacter::ClientCheatGhost()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatGhost"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.ClientCheatFly
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void ACharacter::ClientCheatFly()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatFly"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Character.CanJumpInternal
+// (Native, Event, Protected, BlueprintEvent, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACharacter::CanJumpInternal()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.CanJumpInternal"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Character.CanJump
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACharacter::CanJump()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.CanJump"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.UnlockAIResources
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bUnlockMovement                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UnlockAILogic                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.UnlockAIResources"));
+
+	struct
+	{
+		bool                           bUnlockMovement;
+		bool                           UnlockAILogic;
+	} params;
+
+	params.bUnlockMovement = bUnlockMovement;
+	params.UnlockAILogic = UnlockAILogic;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.TryGetPawnOwner
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class APawn* UAnimInstance::TryGetPawnOwner()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.TryGetPawnOwner"));
+
+	struct
+	{
+		class APawn*                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.StopSlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.StopSlotAnimation"));
+
+	struct
+	{
+		float                          InBlendOutTime;
+		struct FName                   SlotNodeName;
+	} params;
+
+	params.InBlendOutTime = InBlendOutTime;
+	params.SlotNodeName = SlotNodeName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.SetMorphTarget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   MorphTargetName                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::SetMorphTarget(const struct FName& MorphTargetName, float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.SetMorphTarget"));
+
+	struct
+	{
+		struct FName                   MorphTargetName;
+		float                          Value;
+	} params;
+
+	params.MorphTargetName = MorphTargetName;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTriggerTime            (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimMontage* UAnimInstance::PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		float                          BlendInTime;
+		float                          BlendOutTime;
+		float                          InPlayRate;
+		int                            LoopCount;
+		float                          BlendOutTriggerTime;
+		class UAnimMontage*            ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+	params.BlendInTime = BlendInTime;
+	params.BlendOutTime = BlendOutTime;
+	params.InPlayRate = InPlayRate;
+	params.LoopCount = LoopCount;
+	params.BlendOutTriggerTime = BlendOutTriggerTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.PlaySlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimation"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		float                          BlendInTime;
+		float                          BlendOutTime;
+		float                          InPlayRate;
+		int                            LoopCount;
+		float                          ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+	params.BlendInTime = BlendInTime;
+	params.BlendOutTime = BlendOutTime;
+	params.InPlayRate = InPlayRate;
+	params.LoopCount = LoopCount;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_Stop
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Stop"));
+
+	struct
+	{
+		float                          InBlendOutTime;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.InBlendOutTime = InBlendOutTime;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_SetPlayRate
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewPlayRate                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetPlayRate"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		float                          NewPlayRate;
+	} params;
+
+	params.Montage = Montage;
+	params.NewPlayRate = NewPlayRate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_SetNextSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionNameToChange            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   NextSection                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetNextSection"));
+
+	struct
+	{
+		struct FName                   SectionNameToChange;
+		struct FName                   NextSection;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionNameToChange = SectionNameToChange;
+	params.NextSection = NextSection;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_Play
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Play"));
+
+	struct
+	{
+		class UAnimMontage*            MontageToPlay;
+		float                          InPlayRate;
+		float                          ReturnValue;
+	} params;
+
+	params.MontageToPlay = MontageToPlay;
+	params.InPlayRate = InPlayRate;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_Pause
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_Pause(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Pause"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_JumpToSectionsEnd
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSectionsEnd"));
+
+	struct
+	{
+		struct FName                   SectionName;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionName = SectionName;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_JumpToSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSection"));
+
+	struct
+	{
+		struct FName                   SectionName;
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.SectionName = SectionName;
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.Montage_IsPlaying
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::Montage_IsPlaying(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsPlaying"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		bool                           ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_IsActive
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::Montage_IsActive(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsActive"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		bool                           ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.Montage_GetCurrentSection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UAnimInstance::Montage_GetCurrentSection(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_GetCurrentSection"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+		struct FName                   ReturnValue;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.LockAIResources
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bLockMovement                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           LockAILogic                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::LockAIResources(bool bLockMovement, bool LockAILogic)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.LockAIResources"));
+
+	struct
+	{
+		bool                           bLockMovement;
+		bool                           LockAILogic;
+	} params;
+
+	params.bLockMovement = bLockMovement;
+	params.LockAILogic = LockAILogic;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.IsPlayingSlotAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimInstance::IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.IsPlayingSlotAnimation"));
+
+	struct
+	{
+		class UAnimSequenceBase*       Asset;
+		struct FName                   SlotNodeName;
+		bool                           ReturnValue;
+	} params;
+
+	params.Asset = Asset;
+	params.SlotNodeName = SlotNodeName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetSyncGroupPosition
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetSyncGroupPosition(const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetSyncGroupPosition"));
+
+	struct
+	{
+		struct FName                   Name;
+		float                          ReturnValue;
+	} params;
+
+	params.Name = Name;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetStateWeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetStateWeight(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetStateWeight"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTimeFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimTime(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetRelevantAnimLength
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetRelevantAnimLength(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimLength"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetOwningComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USkeletalMeshComponent* UAnimInstance::GetOwningComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningComponent"));
+
+	struct
+	{
+		class USkeletalMeshComponent*  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetOwningActor
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UAnimInstance::GetOwningActor()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningActor"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetMaxPlayingAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetMaxAnimTimeRemaining
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetMaxAnimTimeRemaining(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxAnimTimeRemaining"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            TransitionIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.TransitionIndex = TransitionIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceStateWeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceStateWeight(int MachineIndex, int StateIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceStateWeight"));
+
+	struct
+	{
+		int                            MachineIndex;
+		int                            StateIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+	params.StateIndex = StateIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceCurrentStateElapsedTime(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerTime(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTime"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetInstanceAssetPlayerLength
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetInstanceAssetPlayerLength(int AssetPlayerIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerLength"));
+
+	struct
+	{
+		int                            AssetPlayerIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.AssetPlayerIndex = AssetPlayerIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurveValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FName                   CurveName                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetCurveValue(const struct FName& CurveName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurveValue"));
+
+	struct
+	{
+		struct FName                   CurveName;
+		float                          ReturnValue;
+	} params;
+
+	params.CurveName = CurveName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurrentStateName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UAnimInstance::GetCurrentStateName(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateName"));
+
+	struct
+	{
+		int                            MachineIndex;
+		struct FName                   ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetCurrentStateElapsedTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetCurrentStateElapsedTime(int MachineIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateElapsedTime"));
+
+	struct
+	{
+		int                            MachineIndex;
+		float                          ReturnValue;
+	} params;
+
+	params.MachineIndex = MachineIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          CurrentTime;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+	params.CurrentTime = CurrentTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.GetAnimAssetPlayerLength
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerLength"));
+
+	struct
+	{
+		class UAnimationAsset*         AnimAsset;
+		float                          ReturnValue;
+	} params;
+
+	params.AnimAsset = AnimAsset;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.ClearMorphTargets
+// (Final, Native, Public, BlueprintCallable)
+
+void UAnimInstance::ClearMorphTargets()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.ClearMorphTargets"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.CalculateDirection
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 Velocity                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                BaseRotation                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimInstance::CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.CalculateDirection"));
+
+	struct
+	{
+		struct FVector                 Velocity;
+		struct FRotator                BaseRotation;
+		float                          ReturnValue;
+	} params;
+
+	params.Velocity = Velocity;
+	params.BaseRotation = BaseRotation;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimInstance.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUpdateAnimation"));
+
+	struct
+	{
+		float                          DeltaTimeX;
+	} params;
+
+	params.DeltaTimeX = DeltaTimeX;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintUninitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintUninitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUninitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintPostEvaluateAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintPostEvaluateAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintPostEvaluateAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UAnimInstance::BlueprintInitializeAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintInitializeAnimation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimInstance.AnimNotify_Sound
+// (Final, Native, Public)
+// Parameters:
+// class UAnimNotify*             Notify                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.AnimNotify_Sound"));
+
+	struct
+	{
+		class UAnimNotify*             Notify;
+	} params;
+
+	params.Notify = Notify;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.AnimNotify.Received_Notify
+// (Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.Received_Notify"));
+
+	struct
+	{
+		class USkeletalMeshComponent*  MeshComp;
+		class UAnimSequenceBase*       Animation;
+		bool                           ReturnValue;
+	} params;
+
+	params.MeshComp = MeshComp;
+	params.Animation = Animation;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimNotify.GetNotifyName
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString UAnimNotify::GetNotifyName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.GetNotifyName"));
+
+	struct
+	{
+		class FString                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.SceneComponent.ToggleVisibility
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -4533,359 +7002,29 @@ void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallMo
 }
 
 
-// Function Engine.AnimInstance.UnlockAIResources
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Function Engine.AnimNotifyState.Received_NotifyTick
+// (Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           bUnlockMovement                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           UnlockAILogic                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.UnlockAIResources"));
-
-	struct
-	{
-		bool                           bUnlockMovement;
-		bool                           UnlockAILogic;
-	} params;
-
-	params.bUnlockMovement = bUnlockMovement;
-	params.UnlockAILogic = UnlockAILogic;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.TryGetPawnOwner
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class APawn* UAnimInstance::TryGetPawnOwner()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.TryGetPawnOwner"));
-
-	struct
-	{
-		class APawn*                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.StopSlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.StopSlotAnimation"));
-
-	struct
-	{
-		float                          InBlendOutTime;
-		struct FName                   SlotNodeName;
-	} params;
-
-	params.InBlendOutTime = InBlendOutTime;
-	params.SlotNodeName = SlotNodeName;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.SetMorphTarget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   MorphTargetName                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::SetMorphTarget(const struct FName& MorphTargetName, float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.SetMorphTarget"));
-
-	struct
-	{
-		struct FName                   MorphTargetName;
-		float                          Value;
-	} params;
-
-	params.MorphTargetName = MorphTargetName;
-	params.Value = Value;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTriggerTime            (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimMontage* UAnimInstance::PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimationAsDynamicMontage"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		float                          BlendInTime;
-		float                          BlendOutTime;
-		float                          InPlayRate;
-		int                            LoopCount;
-		float                          BlendOutTriggerTime;
-		class UAnimMontage*            ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-	params.BlendInTime = BlendInTime;
-	params.BlendOutTime = BlendOutTime;
-	params.InPlayRate = InPlayRate;
-	params.LoopCount = LoopCount;
-	params.BlendOutTriggerTime = BlendOutTriggerTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.PlaySlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.PlaySlotAnimation"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		float                          BlendInTime;
-		float                          BlendOutTime;
-		float                          InPlayRate;
-		int                            LoopCount;
-		float                          ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-	params.BlendInTime = BlendInTime;
-	params.BlendOutTime = BlendOutTime;
-	params.InPlayRate = InPlayRate;
-	params.LoopCount = LoopCount;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_Stop
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InBlendOutTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Stop"));
-
-	struct
-	{
-		float                          InBlendOutTime;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.InBlendOutTime = InBlendOutTime;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_SetPlayRate
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewPlayRate                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetPlayRate"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		float                          NewPlayRate;
-	} params;
-
-	params.Montage = Montage;
-	params.NewPlayRate = NewPlayRate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_SetNextSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionNameToChange            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   NextSection                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_SetNextSection"));
-
-	struct
-	{
-		struct FName                   SectionNameToChange;
-		struct FName                   NextSection;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionNameToChange = SectionNameToChange;
-	params.NextSection = NextSection;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_Play
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Play"));
-
-	struct
-	{
-		class UAnimMontage*            MontageToPlay;
-		float                          InPlayRate;
-		float                          ReturnValue;
-	} params;
-
-	params.MontageToPlay = MontageToPlay;
-	params.InPlayRate = InPlayRate;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_Pause
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_Pause(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Pause"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_JumpToSectionsEnd
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSectionsEnd"));
-
-	struct
-	{
-		struct FName                   SectionName;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionName = SectionName;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_JumpToSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SectionName                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_JumpToSection"));
-
-	struct
-	{
-		struct FName                   SectionName;
-		class UAnimMontage*            Montage;
-	} params;
-
-	params.SectionName = SectionName;
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.Montage_IsPlaying
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          FrameDeltaTime                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimInstance::Montage_IsPlaying(class UAnimMontage* Montage)
+bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsPlaying"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyTick"));
 
 	struct
 	{
-		class UAnimMontage*            Montage;
+		class USkeletalMeshComponent*  MeshComp;
+		class UAnimSequenceBase*       Animation;
+		float                          FrameDeltaTime;
 		bool                           ReturnValue;
 	} params;
 
-	params.Montage = Montage;
+	params.MeshComp = MeshComp;
+	params.Animation = Animation;
+	params.FrameDeltaTime = FrameDeltaTime;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4893,2109 +7032,16 @@ bool UAnimInstance::Montage_IsPlaying(class UAnimMontage* Montage)
 }
 
 
-// Function Engine.AnimInstance.Montage_IsActive
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimInstance::Montage_IsActive(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_IsActive"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		bool                           ReturnValue;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.Montage_GetCurrentSection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UAnimInstance::Montage_GetCurrentSection(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_GetCurrentSection"));
-
-	struct
-	{
-		class UAnimMontage*            Montage;
-		struct FName                   ReturnValue;
-	} params;
-
-	params.Montage = Montage;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.LockAIResources
-// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bLockMovement                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           LockAILogic                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::LockAIResources(bool bLockMovement, bool LockAILogic)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.LockAIResources"));
-
-	struct
-	{
-		bool                           bLockMovement;
-		bool                           LockAILogic;
-	} params;
-
-	params.bLockMovement = bLockMovement;
-	params.LockAILogic = LockAILogic;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.IsPlayingSlotAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimInstance::IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.IsPlayingSlotAnimation"));
-
-	struct
-	{
-		class UAnimSequenceBase*       Asset;
-		struct FName                   SlotNodeName;
-		bool                           ReturnValue;
-	} params;
-
-	params.Asset = Asset;
-	params.SlotNodeName = SlotNodeName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetSyncGroupPosition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetSyncGroupPosition(const struct FName& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetSyncGroupPosition"));
-
-	struct
-	{
-		struct FName                   Name;
-		float                          ReturnValue;
-	} params;
-
-	params.Name = Name;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetStateWeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetStateWeight(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetStateWeight"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemainingFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTimeFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTimeFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimTime(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetRelevantAnimLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetRelevantAnimLength(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetRelevantAnimLength"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetOwningComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class USkeletalMeshComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class USkeletalMeshComponent* UAnimInstance::GetOwningComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningComponent"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetOwningActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* UAnimInstance::GetOwningActor()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetOwningActor"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetMaxPlayingAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxPlayingAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetMaxAnimTimeRemaining
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetMaxAnimTimeRemaining(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetMaxAnimTimeRemaining"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsedFraction"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionTimeElapsed"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TransitionIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceTransitionCrossfadeDuration"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            TransitionIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.TransitionIndex = TransitionIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceStateWeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceStateWeight(int MachineIndex, int StateIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceStateWeight"));
-
-	struct
-	{
-		int                            MachineIndex;
-		int                            StateIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-	params.StateIndex = StateIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceCurrentStateElapsedTime(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceCurrentStateElapsedTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEndFraction"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFromEnd"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTimeFraction"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerTime(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerTime"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetInstanceAssetPlayerLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            AssetPlayerIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetInstanceAssetPlayerLength(int AssetPlayerIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetInstanceAssetPlayerLength"));
-
-	struct
-	{
-		int                            AssetPlayerIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.AssetPlayerIndex = AssetPlayerIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurveValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FName                   CurveName                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetCurveValue(const struct FName& CurveName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurveValue"));
-
-	struct
-	{
-		struct FName                   CurveName;
-		float                          ReturnValue;
-	} params;
-
-	params.CurveName = CurveName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurrentStateName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UAnimInstance::GetCurrentStateName(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateName"));
-
-	struct
-	{
-		int                            MachineIndex;
-		struct FName                   ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetCurrentStateElapsedTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            MachineIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetCurrentStateElapsedTime(int MachineIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetCurrentStateElapsedTime"));
-
-	struct
-	{
-		int                            MachineIndex;
-		float                          ReturnValue;
-	} params;
-
-	params.MachineIndex = MachineIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEndFraction"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFromEnd"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurrentTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerTimeFraction"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          CurrentTime;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-	params.CurrentTime = CurrentTime;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.GetAnimAssetPlayerLength
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAnimationAsset*         AnimAsset                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.GetAnimAssetPlayerLength"));
-
-	struct
-	{
-		class UAnimationAsset*         AnimAsset;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimAsset = AnimAsset;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.ClearMorphTargets
-// (Final, Native, Public, BlueprintCallable)
-
-void UAnimInstance::ClearMorphTargets()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.ClearMorphTargets"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.CalculateDirection
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 Velocity                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                BaseRotation                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimInstance::CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.CalculateDirection"));
-
-	struct
-	{
-		struct FVector                 Velocity;
-		struct FRotator                BaseRotation;
-		float                          ReturnValue;
-	} params;
-
-	params.Velocity = Velocity;
-	params.BaseRotation = BaseRotation;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimInstance.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::BlueprintUpdateAnimation(float DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUpdateAnimation"));
-
-	struct
-	{
-		float                          DeltaTimeX;
-	} params;
-
-	params.DeltaTimeX = DeltaTimeX;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintUninitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintUninitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintUninitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintPostEvaluateAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintPostEvaluateAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintPostEvaluateAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UAnimInstance::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.BlueprintInitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimInstance.AnimNotify_Sound
-// (Final, Native, Public)
-// Parameters:
-// class UAnimNotify*             Notify                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.AnimNotify_Sound"));
-
-	struct
-	{
-		class UAnimNotify*             Notify;
-	} params;
-
-	params.Notify = Notify;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.SpawnDefaultController
-// (Native, Public, BlueprintCallable)
-
-void APawn::SpawnDefaultController()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.SpawnDefaultController"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.SetCanAffectNavigationGeneration
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewValue                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::SetCanAffectNavigationGeneration(bool bNewValue)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.SetCanAffectNavigationGeneration"));
-
-	struct
-	{
-		bool                           bNewValue;
-	} params;
-
-	params.bNewValue = bNewValue;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.ReceiveUnpossessed
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AController*             OldController                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::ReceiveUnpossessed(class AController* OldController)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ReceiveUnpossessed"));
-
-	struct
-	{
-		class AController*             OldController;
-	} params;
-
-	params.OldController = OldController;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.ReceivePossessed
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AController*             NewController                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::ReceivePossessed(class AController* NewController)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ReceivePossessed"));
-
-	struct
-	{
-		class AController*             NewController;
-	} params;
-
-	params.NewController = NewController;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.PawnMakeNoise
-// (Final, BlueprintAuthorityOnly, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NoiseLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseNoiseMakerLocation         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  NoiseMaker                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::PawnMakeNoise(float Loudness, const struct FVector& NoiseLocation, bool bUseNoiseMakerLocation, class AActor* NoiseMaker)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.PawnMakeNoise"));
-
-	struct
-	{
-		float                          Loudness;
-		struct FVector                 NoiseLocation;
-		bool                           bUseNoiseMakerLocation;
-		class AActor*                  NoiseMaker;
-	} params;
-
-	params.Loudness = Loudness;
-	params.NoiseLocation = NoiseLocation;
-	params.bUseNoiseMakerLocation = bUseNoiseMakerLocation;
-	params.NoiseMaker = NoiseMaker;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.OnRep_PlayerState
-// (Native, Public)
-
-void APawn::OnRep_PlayerState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.OnRep_PlayerState"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.OnRep_Controller
-// (Native, Public)
-
-void APawn::OnRep_Controller()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.OnRep_Controller"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.LaunchPawn
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::LaunchPawn(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.LaunchPawn"));
-
-	struct
-	{
-		struct FVector                 LaunchVelocity;
-		bool                           bXYOverride;
-		bool                           bZOverride;
-	} params;
-
-	params.LaunchVelocity = LaunchVelocity;
-	params.bXYOverride = bXYOverride;
-	params.bZOverride = bZOverride;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.K2_GetMovementInputVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector APawn::K2_GetMovementInputVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.K2_GetMovementInputVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.IsMoveInputIgnored
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool APawn::IsMoveInputIgnored()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsMoveInputIgnored"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.IsLocallyControlled
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool APawn::IsLocallyControlled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsLocallyControlled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.IsControlled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool APawn::IsControlled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.IsControlled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetPendingMovementInputVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector APawn::GetPendingMovementInputVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetPendingMovementInputVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetNavAgentLocation
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector APawn::GetNavAgentLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetNavAgentLocation"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetMovementComponent
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UPawnMovementComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UPawnMovementComponent* APawn::GetMovementComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetMovementComponent"));
-
-	struct
-	{
-		class UPawnMovementComponent*  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetMovementBaseActor
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class APawn*                   Pawn                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* APawn::GetMovementBaseActor(class APawn* Pawn)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetMovementBaseActor"));
-
-	struct
-	{
-		class APawn*                   Pawn;
-		class AActor*                  ReturnValue;
-	} params;
-
-	params.Pawn = Pawn;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetLastMovementInputVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector APawn::GetLastMovementInputVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetLastMovementInputVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetControlRotation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FRotator APawn::GetControlRotation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetControlRotation"));
-
-	struct
-	{
-		struct FRotator                ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetController
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AController*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AController* APawn::GetController()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetController"));
-
-	struct
-	{
-		class AController*             ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.GetBaseAimRotation
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FRotator APawn::GetBaseAimRotation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.GetBaseAimRotation"));
-
-	struct
-	{
-		struct FRotator                ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.DetachFromControllerPendingDestroy
-// (Native, Public, BlueprintCallable)
-
-void APawn::DetachFromControllerPendingDestroy()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.DetachFromControllerPendingDestroy"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.ConsumeMovementInputVector
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector APawn::ConsumeMovementInputVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.ConsumeMovementInputVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Pawn.AddMovementInput
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 WorldDirection                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ScaleValue                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::AddMovementInput(const struct FVector& WorldDirection, float ScaleValue, bool bForce)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddMovementInput"));
-
-	struct
-	{
-		struct FVector                 WorldDirection;
-		float                          ScaleValue;
-		bool                           bForce;
-	} params;
-
-	params.WorldDirection = WorldDirection;
-	params.ScaleValue = ScaleValue;
-	params.bForce = bForce;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.AddControllerYawInput
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::AddControllerYawInput(float Val)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerYawInput"));
-
-	struct
-	{
-		float                          Val;
-	} params;
-
-	params.Val = Val;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.AddControllerRollInput
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::AddControllerRollInput(float Val)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerRollInput"));
-
-	struct
-	{
-		float                          Val;
-	} params;
-
-	params.Val = Val;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Pawn.AddControllerPitchInput
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
-
-void APawn::AddControllerPitchInput(float Val)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Pawn.AddControllerPitchInput"));
-
-	struct
-	{
-		float                          Val;
-	} params;
-
-	params.Val = Val;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.UnCrouch
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bClientSimulation              (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::UnCrouch(bool bClientSimulation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.UnCrouch"));
-
-	struct
-	{
-		bool                           bClientSimulation;
-	} params;
-
-	params.bClientSimulation = bClientSimulation;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.StopJumping
-// (Native, Public, BlueprintCallable)
-
-void ACharacter::StopJumping()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.StopJumping"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.StopAnimMontage
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::StopAnimMontage(class UAnimMontage* AnimMontage)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.StopAnimMontage"));
-
-	struct
-	{
-		class UAnimMontage*            AnimMontage;
-	} params;
-
-	params.AnimMontage = AnimMontage;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.SetReplicateMovement
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bInReplicateMovement           (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::SetReplicateMovement(bool bInReplicateMovement)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.SetReplicateMovement"));
-
-	struct
-	{
-		bool                           bInReplicateMovement;
-	} params;
-
-	params.bInReplicateMovement = bInReplicateMovement;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.PlayAnimMontage
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StartSectionName               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float ACharacter::PlayAnimMontage(class UAnimMontage* AnimMontage, float InPlayRate, const struct FName& StartSectionName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.PlayAnimMontage"));
-
-	struct
-	{
-		class UAnimMontage*            AnimMontage;
-		float                          InPlayRate;
-		struct FName                   StartSectionName;
-		float                          ReturnValue;
-	} params;
-
-	params.AnimMontage = AnimMontage;
-	params.InPlayRate = InPlayRate;
-	params.StartSectionName = StartSectionName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.OnWalkingOffLedge
-// (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
-// Parameters:
-// struct FVector                 PreviousFloorImpactNormal      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 PreviousFloorContactNormal     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 PreviousLocation               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          TimeDelta                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::OnWalkingOffLedge(const struct FVector& PreviousFloorImpactNormal, const struct FVector& PreviousFloorContactNormal, const struct FVector& PreviousLocation, float TimeDelta)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnWalkingOffLedge"));
-
-	struct
-	{
-		struct FVector                 PreviousFloorImpactNormal;
-		struct FVector                 PreviousFloorContactNormal;
-		struct FVector                 PreviousLocation;
-		float                          TimeDelta;
-	} params;
-
-	params.PreviousFloorImpactNormal = PreviousFloorImpactNormal;
-	params.PreviousFloorContactNormal = PreviousFloorContactNormal;
-	params.PreviousLocation = PreviousLocation;
-	params.TimeDelta = TimeDelta;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnRep_RootMotion
-// (Final, Native, Public)
-
-void ACharacter::OnRep_RootMotion()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_RootMotion"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnRep_ReplicatedBasedMovement
-// (Native, Public)
-
-void ACharacter::OnRep_ReplicatedBasedMovement()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_ReplicatedBasedMovement"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnRep_IsCrouched
-// (Native, Public)
-
-void ACharacter::OnRep_IsCrouched()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnRep_IsCrouched"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnLaunched
-// (Event, Public, HasDefaults, BlueprintEvent)
-// Parameters:
-// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnLaunched"));
-
-	struct
-	{
-		struct FVector                 LaunchVelocity;
-		bool                           bXYOverride;
-		bool                           bZOverride;
-	} params;
-
-	params.LaunchVelocity = LaunchVelocity;
-	params.bXYOverride = bXYOverride;
-	params.bZOverride = bZOverride;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnLanded
-// (Event, Public, HasOutParms, BlueprintEvent)
-// Parameters:
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm)
-
-void ACharacter::OnLanded(const struct FHitResult& Hit)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnLanded"));
-
-	struct
-	{
-		struct FHitResult              Hit;
-	} params;
-
-	params.Hit = Hit;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.OnJumped
-// (Native, Event, Public, BlueprintEvent)
-
-void ACharacter::OnJumped()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.OnJumped"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.LaunchCharacter
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::LaunchCharacter(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.LaunchCharacter"));
-
-	struct
-	{
-		struct FVector                 LaunchVelocity;
-		bool                           bXYOverride;
-		bool                           bZOverride;
-	} params;
-
-	params.LaunchVelocity = LaunchVelocity;
-	params.bXYOverride = bXYOverride;
-	params.bZOverride = bZOverride;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.K2_UpdateCustomMovement
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::K2_UpdateCustomMovement(float DeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_UpdateCustomMovement"));
-
-	struct
-	{
-		float                          DeltaTime;
-	} params;
-
-	params.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.K2_OnStartCrouch
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          HalfHeightAdjust               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ScaledHalfHeightAdjust         (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnStartCrouch"));
-
-	struct
-	{
-		float                          HalfHeightAdjust;
-		float                          ScaledHalfHeightAdjust;
-	} params;
-
-	params.HalfHeightAdjust = HalfHeightAdjust;
-	params.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.K2_OnMovementModeChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EMovementMode>     PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>     NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode> PrevMovementMode, TEnumAsByte<EMovementMode> NewMovementMode, unsigned char PrevCustomMode, unsigned char NewCustomMode)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnMovementModeChanged"));
-
-	struct
-	{
-		TEnumAsByte<EMovementMode>     PrevMovementMode;
-		TEnumAsByte<EMovementMode>     NewMovementMode;
-		unsigned char                  PrevCustomMode;
-		unsigned char                  NewCustomMode;
-	} params;
-
-	params.PrevMovementMode = PrevMovementMode;
-	params.NewMovementMode = NewMovementMode;
-	params.PrevCustomMode = PrevCustomMode;
-	params.NewCustomMode = NewCustomMode;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.K2_OnEndCrouch
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                          HalfHeightAdjust               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ScaledHalfHeightAdjust         (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.K2_OnEndCrouch"));
-
-	struct
-	{
-		float                          HalfHeightAdjust;
-		float                          ScaledHalfHeightAdjust;
-	} params;
-
-	params.HalfHeightAdjust = HalfHeightAdjust;
-	params.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.Jump
-// (Native, Public, BlueprintCallable)
-
-void ACharacter::Jump()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.Jump"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.IsPlayingRootMotion
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ACharacter::IsPlayingRootMotion()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsPlayingRootMotion"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.IsPlayingNetworkedRootMotionMontage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ACharacter::IsPlayingNetworkedRootMotionMontage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsPlayingNetworkedRootMotionMontage"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.IsJumpProvidingForce
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ACharacter::IsJumpProvidingForce()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.IsJumpProvidingForce"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.GetCurrentMontage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimMontage* ACharacter::GetCurrentMontage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.GetCurrentMontage"));
-
-	struct
-	{
-		class UAnimMontage*            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.Crouch
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bClientSimulation              (Parm, ZeroConstructor, IsPlainOldData)
-
-void ACharacter::Crouch(bool bClientSimulation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.Crouch"));
-
-	struct
-	{
-		bool                           bClientSimulation;
-	} params;
-
-	params.bClientSimulation = bClientSimulation;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.ClientCheatWalk
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void ACharacter::ClientCheatWalk()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatWalk"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.ClientCheatGhost
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void ACharacter::ClientCheatGhost()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatGhost"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.ClientCheatFly
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void ACharacter::ClientCheatFly()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.ClientCheatFly"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Character.CanJumpInternal
-// (Native, Event, Protected, BlueprintEvent, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ACharacter::CanJumpInternal()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.CanJumpInternal"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Character.CanJump
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool ACharacter::CanJump()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Character.CanJump"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.PlayerState.OnRep_UniqueId
-// (Native, Public)
-
-void APlayerState::OnRep_UniqueId()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_UniqueId"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.PlayerState.OnRep_PlayerName
-// (Native, Public)
-
-void APlayerState::OnRep_PlayerName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_PlayerName"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AnimNotify.Received_Notify
+// Function Engine.AnimNotifyState.Received_NotifyEnd
 // (Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.Received_Notify"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyEnd"));
 
 	struct
 	{
@@ -7013,14 +7059,44 @@ bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class 
 }
 
 
-// Function Engine.AnimNotify.GetNotifyName
+// Function Engine.AnimNotifyState.Received_NotifyBegin
+// (Event, Public, BlueprintEvent, Const)
+// Parameters:
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyBegin"));
+
+	struct
+	{
+		class USkeletalMeshComponent*  MeshComp;
+		class UAnimSequenceBase*       Animation;
+		float                          TotalDuration;
+		bool                           ReturnValue;
+	} params;
+
+	params.MeshComp = MeshComp;
+	params.Animation = Animation;
+	params.TotalDuration = TotalDuration;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimNotifyState.GetNotifyName
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UAnimNotify::GetNotifyName()
+class FString UAnimNotifyState::GetNotifyName()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotify.GetNotifyName"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.GetNotifyName"));
 
 	struct
 	{
@@ -8843,22 +8919,6 @@ void UCharacterMovementComponent::AddForce(const struct FVector& Force)
 	} params;
 
 	params.Force = Force;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.WorldSettings.OnRep_WorldGravityZ
-// (Native, Public)
-
-void AWorldSettings::OnRep_WorldGravityZ()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.WorldSettings.OnRep_WorldGravityZ"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -11319,6 +11379,107 @@ void UPrimitiveComponent::AddAngularImpulse(const struct FVector& Impulse, const
 }
 
 
+// Function Engine.GameState.OnRep_SpectatorClass
+// (Native, Public)
+
+void AGameState::OnRep_SpectatorClass()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_SpectatorClass"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds
+// (Native, Protected)
+
+void AGameState::OnRep_ReplicatedWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_MatchState
+// (Native, Public)
+
+void AGameState::OnRep_MatchState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_MatchState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_GameModeClass
+// (Native, Public)
+
+void AGameState::OnRep_GameModeClass()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_GameModeClass"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.OnRep_ElapsedTime
+// (Native, Public)
+
+void AGameState::OnRep_ElapsedTime()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ElapsedTime"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GameState.GetServerWorldTimeSeconds
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AGameState::GetServerWorldTimeSeconds()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.GetServerWorldTimeSeconds"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.GameViewportClient.SSSwapControllers
 // (Exec, Native, Public)
 
@@ -11946,6 +12107,38 @@ class AEmitterCameraLensEffectBase* APlayerCameraManager::AddCameraLensEffect(cl
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.PlayerState.OnRep_UniqueId
+// (Native, Public)
+
+void APlayerState::OnRep_UniqueId()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_UniqueId"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerState.OnRep_PlayerName
+// (Native, Public)
+
+void APlayerState::OnRep_PlayerName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerState.OnRep_PlayerName"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -15202,6 +15395,22 @@ void APlayerController::ActivateTouchInterface(class UTouchInterface* NewTouchIn
 }
 
 
+// Function Engine.WorldSettings.OnRep_WorldGravityZ
+// (Native, Public)
+
+void AWorldSettings::OnRep_WorldGravityZ()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.WorldSettings.OnRep_WorldGravityZ"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PostProcessComponent.AddOrUpdateBlendable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -15225,12 +15434,12 @@ void UPostProcessComponent::AddOrUpdateBlendable(const TScriptInterface<class UB
 }
 
 
-// Function Engine.MeshComponent.ResetDefaultMaterials
+// Function Engine.DebugCameraController.ToggleDisplay
 // (Final, Native, Public, BlueprintCallable)
 
-void UMeshComponent::ResetDefaultMaterials()
+void ADebugCameraController::ToggleDisplay()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MeshComponent.ResetDefaultMaterials"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.DebugCameraController.ToggleDisplay"));
 
 	struct
 	{
@@ -15238,282 +15447,6 @@ void UMeshComponent::ResetDefaultMaterials()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.MeshComponent.GetMaterials
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMaterialInterface*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class UMaterialInterface*> UMeshComponent::GetMaterials()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MeshComponent.GetMaterials"));
-
-	struct
-	{
-		TArray<class UMaterialInterface*> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMeshComponent.SetStaticMesh
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UStaticMeshComponent::SetStaticMesh(class UStaticMesh* NewMesh)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.SetStaticMesh"));
-
-	struct
-	{
-		class UStaticMesh*             NewMesh;
-		bool                           ReturnValue;
-	} params;
-
-	params.NewMesh = NewMesh;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMeshComponent.SetForcedLodModel
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            NewForcedLodModel              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::SetForcedLodModel(int NewForcedLodModel)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.SetForcedLodModel"));
-
-	struct
-	{
-		int                            NewForcedLodModel;
-	} params;
-
-	params.NewForcedLodModel = NewForcedLodModel;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.StaticMeshComponent.OnRep_StaticMesh
-// (Final, Native, Public)
-// Parameters:
-// class UStaticMesh*             OldStaticMesh                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::OnRep_StaticMesh(class UStaticMesh* OldStaticMesh)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.OnRep_StaticMesh"));
-
-	struct
-	{
-		class UStaticMesh*             OldStaticMesh;
-	} params;
-
-	params.OldStaticMesh = OldStaticMesh;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.StaticMeshComponent.GetLocalBounds
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* Max)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.GetLocalBounds"));
-
-	struct
-	{
-		struct FVector                 Min;
-		struct FVector                 Max;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Min != nullptr)
-		*Min = params.Min;
-	if (Max != nullptr)
-		*Max = params.Max;
-}
-
-
-// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
-// (Final, Native, Public, BlueprintCallable)
-
-void UStaticMeshComponent::EnableAutomaticInstancing()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.EnableAutomaticInstancing"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CameraModifier.IsDisabled
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UCameraModifier::IsDisabled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.IsDisabled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CameraModifier.GetViewTarget
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* UCameraModifier::GetViewTarget()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.GetViewTarget"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CameraModifier.EnableModifier
-// (Native, Public, BlueprintCallable)
-
-void UCameraModifier::EnableModifier()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.EnableModifier"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CameraModifier.DisableModifier
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCameraModifier::DisableModifier(bool bImmediate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.DisableModifier"));
-
-	struct
-	{
-		bool                           bImmediate;
-	} params;
-
-	params.bImmediate = bImmediate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CameraModifier.BlueprintModifyPostProcess
-// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PostProcessBlendWeight         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FPostProcessSettings    PostProcessSettings            (Parm, OutParm)
-
-void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyPostProcess"));
-
-	struct
-	{
-		float                          DeltaTime;
-		float                          PostProcessBlendWeight;
-		struct FPostProcessSettings    PostProcessSettings;
-	} params;
-
-	params.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (PostProcessBlendWeight != nullptr)
-		*PostProcessBlendWeight = params.PostProcessBlendWeight;
-	if (PostProcessSettings != nullptr)
-		*PostProcessSettings = params.PostProcessSettings;
-}
-
-
-// Function Engine.CameraModifier.BlueprintModifyCamera
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
-// Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ViewLocation                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                ViewRotation                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NewViewLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                NewViewRotation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          NewFOV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyCamera"));
-
-	struct
-	{
-		float                          DeltaTime;
-		struct FVector                 ViewLocation;
-		struct FRotator                ViewRotation;
-		float                          FOV;
-		struct FVector                 NewViewLocation;
-		struct FRotator                NewViewRotation;
-		float                          NewFOV;
-	} params;
-
-	params.DeltaTime = DeltaTime;
-	params.ViewLocation = ViewLocation;
-	params.ViewRotation = ViewRotation;
-	params.FOV = FOV;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (NewViewLocation != nullptr)
-		*NewViewLocation = params.NewViewLocation;
-	if (NewViewRotation != nullptr)
-		*NewViewRotation = params.NewViewRotation;
-	if (NewFOV != nullptr)
-		*NewFOV = params.NewFOV;
 }
 
 
@@ -16534,12 +16467,12 @@ void ALevelScriptActor::InitialNetRelevantActorsCreated()
 }
 
 
-// Function Engine.GameState.OnRep_SpectatorClass
-// (Native, Public)
+// Function Engine.MeshComponent.ResetDefaultMaterials
+// (Final, Native, Public, BlueprintCallable)
 
-void AGameState::OnRep_SpectatorClass()
+void UMeshComponent::ResetDefaultMaterials()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_SpectatorClass"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MeshComponent.ResetDefaultMaterials"));
 
 	struct
 	{
@@ -16550,82 +16483,18 @@ void AGameState::OnRep_SpectatorClass()
 }
 
 
-// Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds
-// (Native, Protected)
-
-void AGameState::OnRep_ReplicatedWorldTimeSeconds()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ReplicatedWorldTimeSeconds"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_MatchState
-// (Native, Public)
-
-void AGameState::OnRep_MatchState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_MatchState"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_GameModeClass
-// (Native, Public)
-
-void AGameState::OnRep_GameModeClass()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_GameModeClass"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.OnRep_ElapsedTime
-// (Native, Public)
-
-void AGameState::OnRep_ElapsedTime()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.OnRep_ElapsedTime"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.GameState.GetServerWorldTimeSeconds
+// Function Engine.MeshComponent.GetMaterials
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<class UMaterialInterface*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-float AGameState::GetServerWorldTimeSeconds()
+TArray<class UMaterialInterface*> UMeshComponent::GetMaterials()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GameState.GetServerWorldTimeSeconds"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MeshComponent.GetMaterials"));
 
 	struct
 	{
-		float                          ReturnValue;
+		TArray<class UMaterialInterface*> ReturnValue;
 	} params;
 
 
@@ -16635,318 +16504,109 @@ float AGameState::GetServerWorldTimeSeconds()
 }
 
 
-// Function Engine.SphereComponent.SetSphereRadius
+// Function Engine.StaticMeshComponent.SetStaticMesh
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UStaticMeshComponent::SetStaticMesh(class UStaticMesh* NewMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.SetStaticMesh"));
+
+	struct
+	{
+		class UStaticMesh*             NewMesh;
+		bool                           ReturnValue;
+	} params;
+
+	params.NewMesh = NewMesh;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMeshComponent.SetForcedLodModel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+// int                            NewForcedLodModel              (Parm, ZeroConstructor, IsPlainOldData)
 
-void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
+void UStaticMeshComponent::SetForcedLodModel(int NewForcedLodModel)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.SetSphereRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.SetForcedLodModel"));
 
 	struct
 	{
-		float                          InSphereRadius;
-		bool                           bUpdateOverlaps;
+		int                            NewForcedLodModel;
 	} params;
 
-	params.InSphereRadius = InSphereRadius;
-	params.bUpdateOverlaps = bUpdateOverlaps;
+	params.NewForcedLodModel = NewForcedLodModel;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function Engine.SphereComponent.GetUnscaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Engine.StaticMeshComponent.OnRep_StaticMesh
+// (Final, Native, Public)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStaticMesh*             OldStaticMesh                  (Parm, ZeroConstructor, IsPlainOldData)
 
-float USphereComponent::GetUnscaledSphereRadius()
+void UStaticMeshComponent::OnRep_StaticMesh(class UStaticMesh* OldStaticMesh)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetUnscaledSphereRadius"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.OnRep_StaticMesh"));
 
 	struct
 	{
-		float                          ReturnValue;
+		class UStaticMesh*             OldStaticMesh;
 	} params;
 
+	params.OldStaticMesh = OldStaticMesh;
 
 	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
-// Function Engine.SphereComponent.GetShapeScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Engine.StaticMeshComponent.GetLocalBounds
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector                 Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-float USphereComponent::GetShapeScale()
+void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* Max)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetShapeScale"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.GetLocalBounds"));
 
 	struct
 	{
-		float                          ReturnValue;
+		struct FVector                 Min;
+		struct FVector                 Max;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	return params.ReturnValue;
+	if (Min != nullptr)
+		*Min = params.Min;
+	if (Max != nullptr)
+		*Max = params.Max;
 }
 
 
-// Function Engine.SphereComponent.GetScaledSphereRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float USphereComponent::GetScaledSphereRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetScaledSphereRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleSize
+// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
 // (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          InRadius                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InHalfHeight                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCapsuleComponent::SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps)
+void UStaticMeshComponent::EnableAutomaticInstancing()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleSize"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.EnableAutomaticInstancing"));
 
 	struct
 	{
-		float                          InRadius;
-		float                          InHalfHeight;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InRadius = InRadius;
-	params.InHalfHeight = InHalfHeight;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleRadius
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::SetCapsuleRadius(float Radius, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleRadius"));
-
-	struct
-	{
-		float                          Radius;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.Radius = Radius;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.SetCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          HalfHeight                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleHalfHeight"));
-
-	struct
-	{
-		float                          HalfHeight;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.HalfHeight = HalfHeight;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleSize"));
-
-	struct
-	{
-		float                          OutRadius;
-		float                          OutHalfHeight;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
-
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
-	if (OutHalfHeight != nullptr)
-		*OutHalfHeight = params.OutHalfHeight;
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetUnscaledCapsuleRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetUnscaledCapsuleHalfHeight()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetShapeScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetShapeScale()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetShapeScale"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleSize
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleSize"));
-
-	struct
-	{
-		float                          OutRadius;
-		float                          OutHalfHeight;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
-	if (OutHalfHeight != nullptr)
-		*OutHalfHeight = params.OutHalfHeight;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetScaledCapsuleRadius()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleRadius"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UCapsuleComponent::GetScaledCapsuleHalfHeight()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -16992,41 +16652,18 @@ class UMaterial* UMaterialInterface::GetBaseMaterial()
 }
 
 
-// Function Engine.BoxComponent.SetBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Function Engine.CameraModifier.IsDisabled
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
+bool UCameraModifier::IsDisabled()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.IsDisabled"));
 
 	struct
 	{
-		struct FVector                 InBoxExtent;
-		bool                           bUpdateOverlaps;
-	} params;
-
-	params.InBoxExtent = InBoxExtent;
-	params.bUpdateOverlaps = bUpdateOverlaps;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.BoxComponent.GetUnscaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UBoxComponent::GetUnscaledBoxExtent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
+		bool                           ReturnValue;
 	} params;
 
 
@@ -17036,24 +16673,131 @@ struct FVector UBoxComponent::GetUnscaledBoxExtent()
 }
 
 
-// Function Engine.BoxComponent.GetScaledBoxExtent
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Function Engine.CameraModifier.GetViewTarget
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UBoxComponent::GetScaledBoxExtent()
+class AActor* UCameraModifier::GetViewTarget()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.GetViewTarget"));
 
 	struct
 	{
-		struct FVector                 ReturnValue;
+		class AActor*                  ReturnValue;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.CameraModifier.EnableModifier
+// (Native, Public, BlueprintCallable)
+
+void UCameraModifier::EnableModifier()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.EnableModifier"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CameraModifier.DisableModifier
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCameraModifier::DisableModifier(bool bImmediate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.DisableModifier"));
+
+	struct
+	{
+		bool                           bImmediate;
+	} params;
+
+	params.bImmediate = bImmediate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CameraModifier.BlueprintModifyPostProcess
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          PostProcessBlendWeight         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FPostProcessSettings    PostProcessSettings            (Parm, OutParm)
+
+void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyPostProcess"));
+
+	struct
+	{
+		float                          DeltaTime;
+		float                          PostProcessBlendWeight;
+		struct FPostProcessSettings    PostProcessSettings;
+	} params;
+
+	params.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (PostProcessBlendWeight != nullptr)
+		*PostProcessBlendWeight = params.PostProcessBlendWeight;
+	if (PostProcessSettings != nullptr)
+		*PostProcessSettings = params.PostProcessSettings;
+}
+
+
+// Function Engine.CameraModifier.BlueprintModifyCamera
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ViewLocation                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ViewRotation                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewViewLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                NewViewRotation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          NewFOV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CameraModifier.BlueprintModifyCamera"));
+
+	struct
+	{
+		float                          DeltaTime;
+		struct FVector                 ViewLocation;
+		struct FRotator                ViewRotation;
+		float                          FOV;
+		struct FVector                 NewViewLocation;
+		struct FRotator                NewViewRotation;
+		float                          NewFOV;
+	} params;
+
+	params.DeltaTime = DeltaTime;
+	params.ViewLocation = ViewLocation;
+	params.ViewRotation = ViewRotation;
+	params.FOV = FOV;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (NewViewLocation != nullptr)
+		*NewViewLocation = params.NewViewLocation;
+	if (NewViewRotation != nullptr)
+		*NewViewRotation = params.NewViewRotation;
+	if (NewFOV != nullptr)
+		*NewFOV = params.NewFOV;
 }
 
 
@@ -17170,6 +16914,26 @@ void UParticleSystemComponent::SetFloatParameter(const struct FName& ParameterNa
 
 	params.ParameterName = ParameterName;
 	params.Param = Param;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.ParticleSystemComponent.SetEnableDistanceFading
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UParticleSystemComponent::SetEnableDistanceFading(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.SetEnableDistanceFading"));
+
+	struct
+	{
+		bool                           bEnable;
+	} params;
+
+	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -17608,14 +17372,35 @@ void UParticleSystemComponent::BeginTrails(const struct FName& InFirstSocketName
 }
 
 
+// Function Engine.ParticleSystemComponent.AddKillSphere
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector4                KillSphere                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UParticleSystemComponent::AddKillSphere(const struct FVector4& KillSphere)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.AddKillSphere"));
+
+	struct
+	{
+		struct FVector4                KillSphere;
+	} params;
+
+	params.KillSphere = KillSphere;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.ParticleSystemComponent.AddEmitterPoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector4                Position                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector4                InheritedVelocity              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector4                Orientation                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Scale                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, const struct FVector4& InheritedVelocity, const struct FVector4& Orientation)
+void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, const struct FVector4& InheritedVelocity, const struct FVector4& Orientation, const struct FVector& Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystemComponent.AddEmitterPoint"));
 
@@ -17624,11 +17409,13 @@ void UParticleSystemComponent::AddEmitterPoint(const struct FVector4& Position, 
 		struct FVector4                Position;
 		struct FVector4                InheritedVelocity;
 		struct FVector4                Orientation;
+		struct FVector                 Scale;
 	} params;
 
 	params.Position = Position;
 	params.InheritedVelocity = InheritedVelocity;
 	params.Orientation = Orientation;
+	params.Scale = Scale;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -19215,6 +19002,235 @@ void USplineComponent::AddSplineLocalPoint(const struct FVector& Position)
 	params.Position = Position;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleSize
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InRadius                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InHalfHeight                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleSize(float InRadius, float InHalfHeight, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleSize"));
+
+	struct
+	{
+		float                          InRadius;
+		float                          InHalfHeight;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InRadius = InRadius;
+	params.InHalfHeight = InHalfHeight;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleRadius
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleRadius(float Radius, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleRadius"));
+
+	struct
+	{
+		float                          Radius;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.Radius = Radius;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.SetCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          HalfHeight                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.SetCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          HalfHeight;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.HalfHeight = HalfHeight;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleSize"));
+
+	struct
+	{
+		float                          OutRadius;
+		float                          OutHalfHeight;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutRadius != nullptr)
+		*OutRadius = params.OutRadius;
+	if (OutHalfHeight != nullptr)
+		*OutHalfHeight = params.OutHalfHeight;
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetUnscaledCapsuleRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetUnscaledCapsuleHalfHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetUnscaledCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetShapeScale
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetShapeScale()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetShapeScale"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleSize"));
+
+	struct
+	{
+		float                          OutRadius;
+		float                          OutHalfHeight;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutRadius != nullptr)
+		*OutRadius = params.OutRadius;
+	if (OutHalfHeight != nullptr)
+		*OutHalfHeight = params.OutHalfHeight;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetScaledCapsuleRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCapsuleComponent::GetScaledCapsuleHalfHeight()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CapsuleComponent.GetScaledCapsuleHalfHeight"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -21627,17 +21643,40 @@ void AMatineeActor::Reverse()
 }
 
 
-// Function Engine.MatineeActor.Play
-// (Native, Public, BlueprintCallable)
+// Function Engine.MatineeActor.PlayInstantly
+// (Final, Native, Public, BlueprintCallable)
 
-void AMatineeActor::Play()
+void AMatineeActor::PlayInstantly()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.Play"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.PlayInstantly"));
 
 	struct
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.MatineeActor.Play
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLatentActionInfo       LatentInfo                     (Parm)
+
+void AMatineeActor::Play(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MatineeActor.Play"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		struct FLatentActionInfo       LatentInfo;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.LatentInfo = LatentInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -21773,6 +21812,51 @@ bool ANavLinkProxy::HasMovingAgents()
 		bool                           ReturnValue;
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ParticleSystem.GetNumLODs
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UParticleSystem::GetNumLODs()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ParticleSystem.ContainsEmitterType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
+
+	struct
+	{
+		class UClass*                  TypeData;
+		bool                           ReturnValue;
+	} params;
+
+	params.TypeData = TypeData;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -22093,27 +22177,6 @@ void ASceneCaptureCube::OnInterpToggle(bool bEnable)
 	params.bEnable = bEnable;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.Interface_Animatable.GetAnimInstance
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAnimInstance* UInterface_Animatable::GetAnimInstance()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
-
-	struct
-	{
-		class UAnimInstance*           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -23051,6 +23114,27 @@ void UPhysicsConstraintComponent::BreakConstraint()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Interface_Animatable.GetAnimInstance
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimInstance* UInterface_Animatable::GetAnimInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Interface_Animatable.GetAnimInstance"));
+
+	struct
+	{
+		class UAnimInstance*           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -24697,6 +24781,27 @@ bool UNavigationSystem::DoesMainNavDataHaveValidNavMesh()
 	struct
 	{
 		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.AnimSequenceBase.GetPlayLength
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAnimSequenceBase::GetPlayLength()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
+
+	struct
+	{
+		float                          ReturnValue;
 	} params;
 
 
@@ -26581,7 +26686,7 @@ void UDirectionalLightComponent::SetCascadeTransitionFraction(float NewValue)
 
 
 // Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -27405,6 +27510,72 @@ void UMaterialBillboardComponent::AddElement(class UMaterialInterface* Material,
 	params.DistanceToSizeCurve = DistanceToSizeCurve;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.StaticMesh.GetNumUVChannels
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumUVChannels(int LodLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
+
+	struct
+	{
+		int                            LodLevel;
+		int                            ReturnValue;
+	} params;
+
+	params.LodLevel = LodLevel;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetNumLODsBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UStaticMesh::GetNumLODsBP()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.StaticMesh.GetBoundingBox
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FBox UStaticMesh::GetBoundingBox()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
+
+	struct
+	{
+		struct FBox                    ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -28754,18 +28925,41 @@ float USplineMeshComponent::GetBoundaryMax()
 }
 
 
-// Function Engine.ParticleSystem.GetNumLODs
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function Engine.BoxComponent.SetBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector                 InBoxExtent                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
 
-int UParticleSystem::GetNumLODs()
+void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.GetNumLODs"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.SetBoxExtent"));
 
 	struct
 	{
-		int                            ReturnValue;
+		struct FVector                 InBoxExtent;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InBoxExtent = InBoxExtent;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.BoxComponent.GetUnscaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UBoxComponent::GetUnscaledBoxExtent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetUnscaledBoxExtent"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
 	} params;
 
 
@@ -28775,23 +28969,106 @@ int UParticleSystem::GetNumLODs()
 }
 
 
-// Function Engine.ParticleSystem.ContainsEmitterType
-// (Final, Native, Public, BlueprintCallable)
+// Function Engine.BoxComponent.GetScaledBoxExtent
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  TypeData                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
+struct FVector UBoxComponent::GetScaledBoxExtent()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ParticleSystem.ContainsEmitterType"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.BoxComponent.GetScaledBoxExtent"));
 
 	struct
 	{
-		class UClass*                  TypeData;
-		bool                           ReturnValue;
+		struct FVector                 ReturnValue;
 	} params;
 
-	params.TypeData = TypeData;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.SetSphereRadius
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          InSphereRadius                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bUpdateOverlaps                (Parm, ZeroConstructor, IsPlainOldData)
+
+void USphereComponent::SetSphereRadius(float InSphereRadius, bool bUpdateOverlaps)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.SetSphereRadius"));
+
+	struct
+	{
+		float                          InSphereRadius;
+		bool                           bUpdateOverlaps;
+	} params;
+
+	params.InSphereRadius = InSphereRadius;
+	params.bUpdateOverlaps = bUpdateOverlaps;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SphereComponent.GetUnscaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetUnscaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetUnscaledSphereRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetShapeScale
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetShapeScale()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetShapeScale"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SphereComponent.GetScaledSphereRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float USphereComponent::GetScaledSphereRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SphereComponent.GetScaledSphereRadius"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -29672,27 +29949,6 @@ float UTimelineComponent::GetPlaybackPosition()
 }
 
 
-// Function Engine.AnimSequenceBase.GetPlayLength
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAnimSequenceBase::GetPlayLength()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimSequenceBase.GetPlayLength"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.AnimSingleNodeInstance.StopAnim
 // (Final, Native, Public, BlueprintCallable)
 
@@ -29922,114 +30178,6 @@ float UAnimSingleNodeInstance::GetLength()
 	struct
 	{
 		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotifyState.Received_NotifyTick
-// (Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FrameDeltaTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyTick"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  MeshComp;
-		class UAnimSequenceBase*       Animation;
-		float                          FrameDeltaTime;
-		bool                           ReturnValue;
-	} params;
-
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
-	params.FrameDeltaTime = FrameDeltaTime;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotifyState.Received_NotifyEnd
-// (Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyEnd"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  MeshComp;
-		class UAnimSequenceBase*       Animation;
-		bool                           ReturnValue;
-	} params;
-
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotifyState.Received_NotifyBegin
-// (Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.Received_NotifyBegin"));
-
-	struct
-	{
-		class USkeletalMeshComponent*  MeshComp;
-		class UAnimSequenceBase*       Animation;
-		float                          TotalDuration;
-		bool                           ReturnValue;
-	} params;
-
-	params.MeshComp = MeshComp;
-	params.Animation = Animation;
-	params.TotalDuration = TotalDuration;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.AnimNotifyState.GetNotifyName
-// (Native, Event, Public, BlueprintEvent, Const)
-// Parameters:
-// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-class FString UAnimNotifyState::GetNotifyName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimNotifyState.GetNotifyName"));
-
-	struct
-	{
-		class FString                  ReturnValue;
 	} params;
 
 
@@ -32925,6 +33073,118 @@ void UGameplayStatics::ActivateReverbEffect(class UObject* WorldContextObject, c
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.GPUSortTestLibrary.ValidateGPUTransposeForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        TestData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGPUSortTestLibrary::ValidateGPUTransposeForSize(class UObject* WorldContext, class UGPUSortDestData* TestData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.ValidateGPUTransposeForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UGPUSortDestData*        TestData;
+		bool                           ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.TestData = TestData;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.ValidateGPUSortForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        TestData                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UGPUSortTestLibrary::ValidateGPUSortForSize(class UObject* WorldContext, class UGPUSortDestData* TestData)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.ValidateGPUSortForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UGPUSortDestData*        TestData;
+		bool                           ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.TestData = TestData;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.TestGPUTransposeForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGPUSortDestData* UGPUSortTestLibrary::TestGPUTransposeForSize(class UObject* WorldContext, int Size)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.TestGPUTransposeForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		int                            Size;
+		class UGPUSortDestData*        ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.Size = Size;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.GPUSortTestLibrary.TestGPUSortForSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UGPUSortDestData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGPUSortDestData* UGPUSortTestLibrary::TestGPUSortForSize(class UObject* WorldContext, int Size)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.GPUSortTestLibrary.TestGPUSortForSize"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		int                            Size;
+		class UGPUSortDestData*        ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.Size = Size;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -39932,6 +40192,34 @@ float UKismetMathLibrary::Lerp(float A, float B, float Alpha)
 	params.A = A;
 	params.B = B;
 	params.Alpha = Alpha;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.IsPointInBox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FBox                    Box                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsPointInBox(const struct FVector& Point, const struct FBox& Box)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.KismetMathLibrary.IsPointInBox"));
+
+	struct
+	{
+		struct FVector                 Point;
+		struct FBox                    Box;
+		bool                           ReturnValue;
+	} params;
+
+	params.Point = Point;
+	params.Box = Box;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -55267,6 +55555,52 @@ void UPlayerInput::SetCombinedAxisScale(const struct FName& CombinedAxisName, fl
 }
 
 
+// Function Engine.PlayerInput.SetCombinedAxisNonLinearity
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          NonLinearity                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisNonLinearity(const struct FName& CombinedAxisName, float NonLinearity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisNonLinearity"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          NonLinearity;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.NonLinearity = NonLinearity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone
+// (Final, Exec, Native, Public)
+// Parameters:
+// struct FName                   CombinedAxisName               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LowerDeadzone                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayerInput::SetCombinedAxisLowerDeadzone(const struct FName& CombinedAxisName, float LowerDeadzone)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerInput.SetCombinedAxisLowerDeadzone"));
+
+	struct
+	{
+		struct FName                   CombinedAxisName;
+		float                          LowerDeadzone;
+	} params;
+
+	params.CombinedAxisName = CombinedAxisName;
+	params.LowerDeadzone = LowerDeadzone;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PlayerInput.SetBind
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -55583,6 +55917,26 @@ void UMaterialInstanceDynamic::SetScalarParameterValue(const struct FName& Param
 }
 
 
+// Function Engine.MaterialInstanceDynamic.MergeParameters
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInstance*       MaterialInstance               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMaterialInstanceDynamic::MergeParameters(class UMaterialInstance* MaterialInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaterialInstanceDynamic.MergeParameters"));
+
+	struct
+	{
+		class UMaterialInstance*       MaterialInstance;
+	} params;
+
+	params.MaterialInstance = MaterialInstance;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.MaterialInstanceDynamic.K2_InterpolateMaterialInstanceParams
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -55685,17 +56039,20 @@ float UMaterialInstanceDynamic::K2_GetScalarParameterValue(const struct FName& P
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*      SourceMaterialToCopyFrom       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOverride                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMaterialInstanceDynamic::K2_CopyMaterialInstanceParameters(class UMaterialInterface* SourceMaterialToCopyFrom)
+void UMaterialInstanceDynamic::K2_CopyMaterialInstanceParameters(class UMaterialInterface* SourceMaterialToCopyFrom, bool bOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaterialInstanceDynamic.K2_CopyMaterialInstanceParameters"));
 
 	struct
 	{
 		class UMaterialInterface*      SourceMaterialToCopyFrom;
+		bool                           bOverride;
 	} params;
 
 	params.SourceMaterialToCopyFrom = SourceMaterialToCopyFrom;
+	params.bOverride = bOverride;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55718,6 +56075,268 @@ void UMaterialInstanceDynamic::CopyParameterOverrides(class UMaterialInstance* M
 	params.MaterialInstance = MaterialInstance;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.Texture2D.Blueprint_GetSizeY
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeY()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Texture2D.Blueprint_GetSizeX
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTexture2D::Blueprint_GetSizeX()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CanvasRenderTarget2D.UpdateResource
+// (Native, Public, BlueprintCallable)
+
+void UCanvasRenderTarget2D::UpdateResource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.UpdateResource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CanvasRenderTarget2D.Render
+// (Final, Native, Public, BlueprintCallable)
+
+void UCanvasRenderTarget2D::Render()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.Render"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CanvasRenderTarget2D.ReceiveUpdate
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UCanvas*                 Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCanvasRenderTarget2D::ReceiveUpdate(class UCanvas* Canvas, int Width, int Height)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.ReceiveUpdate"));
+
+	struct
+	{
+		class UCanvas*                 Canvas;
+		int                            Width;
+		int                            Height;
+	} params;
+
+	params.Canvas = Canvas;
+	params.Width = Width;
+	params.Height = Height;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.CanvasRenderTarget2D.GetSize
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            Width                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCanvasRenderTarget2D::GetSize(int* Width, int* Height)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.GetSize"));
+
+	struct
+	{
+		int                            Width;
+		int                            Height;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Width != nullptr)
+		*Width = params.Width;
+	if (Height != nullptr)
+		*Height = params.Height;
+}
+
+
+// Function Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  CanvasRenderTarget2DClass      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECanvasRenderTargetMips> Mips                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           HDR                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CreateTextureResource          (Parm, ZeroConstructor, IsPlainOldData)
+// class UCanvasRenderTarget2D*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCanvasRenderTarget2D* UCanvasRenderTarget2D::CreateCanvasRenderTarget2D(class UObject* WorldContextObject, class UClass* CanvasRenderTarget2DClass, int Width, int Height, TEnumAsByte<ECanvasRenderTargetMips> Mips, bool HDR, bool CreateTextureResource)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		class UClass*                  CanvasRenderTarget2DClass;
+		int                            Width;
+		int                            Height;
+		TEnumAsByte<ECanvasRenderTargetMips> Mips;
+		bool                           HDR;
+		bool                           CreateTextureResource;
+		class UCanvasRenderTarget2D*   ReturnValue;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.CanvasRenderTarget2DClass = CanvasRenderTarget2DClass;
+	params.Width = Width;
+	params.Height = Height;
+	params.Mips = Mips;
+	params.HDR = HDR;
+	params.CreateTextureResource = CreateTextureResource;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.CompressedCanvasRenderTarget2D.UpdateResource
+// (Native, Public, BlueprintCallable)
+
+void UCompressedCanvasRenderTarget2D::UpdateResource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CompressedCanvasRenderTarget2D.UpdateResource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.MaybeCompressedCanvasRenderTarget2D.UpdateResource
+// (Final, Native, Public, BlueprintCallable)
+
+void UMaybeCompressedCanvasRenderTarget2D::UpdateResource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaybeCompressedCanvasRenderTarget2D.UpdateResource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.MaybeCompressedCanvasRenderTarget2D.GetTexture
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture* UMaybeCompressedCanvasRenderTarget2D::GetTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaybeCompressedCanvasRenderTarget2D.GetTexture"));
+
+	struct
+	{
+		class UTexture*                ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.MaybeCompressedCanvasRenderTarget2D.CreateMaybeCompressedCanvasRenderTarget2D
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECanvasRenderTargetMips> Mips                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           HDR                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CreateTextureResource          (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaybeCompressedCanvasRenderTarget2D* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaybeCompressedCanvasRenderTarget2D* UMaybeCompressedCanvasRenderTarget2D::CreateMaybeCompressedCanvasRenderTarget2D(class UObject* WorldContextObject, int Width, int Height, TEnumAsByte<ECanvasRenderTargetMips> Mips, bool HDR, bool CreateTextureResource)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.MaybeCompressedCanvasRenderTarget2D.CreateMaybeCompressedCanvasRenderTarget2D"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		int                            Width;
+		int                            Height;
+		TEnumAsByte<ECanvasRenderTargetMips> Mips;
+		bool                           HDR;
+		bool                           CreateTextureResource;
+		class UMaybeCompressedCanvasRenderTarget2D* ReturnValue;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.Width = Width;
+	params.Height = Height;
+	params.Mips = Mips;
+	params.HDR = HDR;
+	params.CreateTextureResource = CreateTextureResource;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -56175,241 +56794,6 @@ struct FVector USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshCompone
 	params.SkelComp = SkelComp;
 
 	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumUVChannels
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            LodLevel                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumUVChannels(int LodLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumUVChannels"));
-
-	struct
-	{
-		int                            LodLevel;
-		int                            ReturnValue;
-	} params;
-
-	params.LodLevel = LodLevel;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetNumLODsBP
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UStaticMesh::GetNumLODsBP()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetNumLODsBP"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.StaticMesh.GetBoundingBox
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FBox UStaticMesh::GetBoundingBox()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMesh.GetBoundingBox"));
-
-	struct
-	{
-		struct FBox                    ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeY
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeY()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeY"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.Texture2D.Blueprint_GetSizeX
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UTexture2D::Blueprint_GetSizeX()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Texture2D.Blueprint_GetSizeX"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.CanvasRenderTarget2D.UpdateResource
-// (Native, Public, BlueprintCallable)
-
-void UCanvasRenderTarget2D::UpdateResource()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.UpdateResource"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CanvasRenderTarget2D.Render
-// (Final, Native, Public, BlueprintCallable)
-
-void UCanvasRenderTarget2D::Render()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.Render"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CanvasRenderTarget2D.ReceiveUpdate
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UCanvas*                 Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UCanvasRenderTarget2D::ReceiveUpdate(class UCanvas* Canvas, int Width, int Height)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.ReceiveUpdate"));
-
-	struct
-	{
-		class UCanvas*                 Canvas;
-		int                            Width;
-		int                            Height;
-	} params;
-
-	params.Canvas = Canvas;
-	params.Width = Width;
-	params.Height = Height;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.CanvasRenderTarget2D.GetSize
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            Width                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UCanvasRenderTarget2D::GetSize(int* Width, int* Height)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.GetSize"));
-
-	struct
-	{
-		int                            Width;
-		int                            Height;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Width != nullptr)
-		*Width = params.Width;
-	if (Height != nullptr)
-		*Height = params.Height;
-}
-
-
-// Function Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  CanvasRenderTarget2DClass      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ECanvasRenderTargetMips> Mips                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           HDR                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CreateTextureResource          (Parm, ZeroConstructor, IsPlainOldData)
-// class UCanvasRenderTarget2D*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UCanvasRenderTarget2D* UCanvasRenderTarget2D::CreateCanvasRenderTarget2D(class UObject* WorldContextObject, class UClass* CanvasRenderTarget2DClass, int Width, int Height, TEnumAsByte<ECanvasRenderTargetMips> Mips, bool HDR, bool CreateTextureResource)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D"));
-
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UClass*                  CanvasRenderTarget2DClass;
-		int                            Width;
-		int                            Height;
-		TEnumAsByte<ECanvasRenderTargetMips> Mips;
-		bool                           HDR;
-		bool                           CreateTextureResource;
-		class UCanvasRenderTarget2D*   ReturnValue;
-	} params;
-
-	params.WorldContextObject = WorldContextObject;
-	params.CanvasRenderTarget2DClass = CanvasRenderTarget2DClass;
-	params.Width = Width;
-	params.Height = Height;
-	params.Mips = Mips;
-	params.HDR = HDR;
-	params.CreateTextureResource = CreateTextureResource;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

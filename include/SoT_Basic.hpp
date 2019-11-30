@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,13 +21,13 @@ inline Fn GetVFunction(const void *instance, std::size_t index)
 
 class UObject;
 
-class FUObjectItem //it's UObjectBase from UE4 v4.10
+class FUObjectItem
 {
 public:
 	UObject* Object;
 	int32_t Flags;
 	int32_t ClusterIndex; 
-	//__int32 SerialNumber;
+	int32_t SerialNumber;
 
 	enum class EInternalObjectFlags : int32_t
 	{

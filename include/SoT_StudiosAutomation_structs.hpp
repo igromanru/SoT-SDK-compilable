@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_StudiosAutomation_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -32,6 +32,33 @@ struct FClientPawnDetails
 	TArray<class APawn*>                               Pawns;                                                    // 0x0000(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct StudiosAutomation.SubstringAuditQueryData
+// 0x0018
+struct FSubstringAuditQueryData
+{
+	TArray<class FString>                              QueryStringArray;                                         // 0x0000(0x0010) (ZeroConstructor)
+	int                                                SearchSetSize;                                            // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MemoryLimitForSet;                                        // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.FolderTotals
+// 0x0028
+struct FFolderTotals
+{
+	bool                                               EnforceCollectionMembership;                              // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	TArray<struct FName>                               CollectionsAllowedForFolder;                              // 0x0008(0x0010) (ZeroConstructor)
+	TArray<struct FName>                               AssetTypesToTest;                                         // 0x0018(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct StudiosAutomation.MeshAuditLimits
+// 0x0038
+struct FMeshAuditLimits
+{
+	TArray<struct FSubstringAuditQueryData>            SubstringQueries;                                         // 0x0000(0x0010) (ZeroConstructor)
+	struct FFolderTotals                               FolderMeshLimits;                                         // 0x0010(0x0028)
+};
+
 // ScriptStruct StudiosAutomation.AssetAuditConstantEntry
 // 0x0018
 struct FAssetAuditConstantEntry
@@ -52,18 +79,52 @@ struct FAssetAuditConstants
 // 0x0010
 struct FCollectionTotalsLimits
 {
-	int                                                MaxTotalVerts;                                            // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxTotalMemory;                                           // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MostExpensiveAssetsSetSize;                               // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ExpensiveAssetSetMaxTotalMemory;                          // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxTotalVerts;                                            // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTotalMemory;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MostExpensiveAssetsSetSize;                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                ExpensiveAssetSetMaxTotalMemory;                          // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.CollectionMeshLimitsBase
+// 0x0008
+struct FCollectionMeshLimitsBase
+{
+	int                                                MaxVerts;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MaxMemory;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.CollectionStaticMeshLimits
+// 0x0000 (0x0008 - 0x0008)
+struct FCollectionStaticMeshLimits : public FCollectionMeshLimitsBase
+{
+
+};
+
+// ScriptStruct StudiosAutomation.CollectionSkeleMeshLimits
+// 0x0000 (0x0008 - 0x0008)
+struct FCollectionSkeleMeshLimits : public FCollectionMeshLimitsBase
+{
+
+};
+
+// ScriptStruct StudiosAutomation.CollectionAnimSequenceLimits
+// 0x0004
+struct FCollectionAnimSequenceLimits
+{
+	int                                                MaxMemory;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimits
-// 0x0018
+// 0x0030
 struct FCollectionLimits
 {
-	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               IsOnlyParentCollection;                                   // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x000C(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x001C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0024(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimitsArray

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -145,6 +145,39 @@ enum class EPathFollowingStatus : uint8_t
 };
 
 
+// Enum AIModule.ETextKeyOperation
+enum class ETextKeyOperation : uint8_t
+{
+	ETextKeyOperation__Equal       = 0,
+	ETextKeyOperation__NotEqual    = 1,
+	ETextKeyOperation__Contain     = 2,
+	ETextKeyOperation__NotContain  = 3,
+	ETextKeyOperation__ETextKeyOperation_MAX = 4
+};
+
+
+// Enum AIModule.EArithmeticKeyOperation
+enum class EArithmeticKeyOperation : uint8_t
+{
+	EArithmeticKeyOperation__Equal = 0,
+	EArithmeticKeyOperation__NotEqual = 1,
+	EArithmeticKeyOperation__Less  = 2,
+	EArithmeticKeyOperation__LessOrEqual = 3,
+	EArithmeticKeyOperation__Greater = 4,
+	EArithmeticKeyOperation__GreaterOrEqual = 5,
+	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
+};
+
+
+// Enum AIModule.EBasicKeyOperation
+enum class EBasicKeyOperation : uint8_t
+{
+	EBasicKeyOperation__Set        = 0,
+	EBasicKeyOperation__NotSet     = 1,
+	EBasicKeyOperation__EBasicKeyOperation_MAX = 2
+};
+
+
 // Enum AIModule.EBTFlowAbortMode
 enum class EBTFlowAbortMode : uint8_t
 {
@@ -216,39 +249,6 @@ enum class EBTChildIndex : uint8_t
 	EBTChildIndex__FirstNode       = 0,
 	EBTChildIndex__TaskNode        = 1,
 	EBTChildIndex__EBTChildIndex_MAX = 2
-};
-
-
-// Enum AIModule.ETextKeyOperation
-enum class ETextKeyOperation : uint8_t
-{
-	ETextKeyOperation__Equal       = 0,
-	ETextKeyOperation__NotEqual    = 1,
-	ETextKeyOperation__Contain     = 2,
-	ETextKeyOperation__NotContain  = 3,
-	ETextKeyOperation__ETextKeyOperation_MAX = 4
-};
-
-
-// Enum AIModule.EArithmeticKeyOperation
-enum class EArithmeticKeyOperation : uint8_t
-{
-	EArithmeticKeyOperation__Equal = 0,
-	EArithmeticKeyOperation__NotEqual = 1,
-	EArithmeticKeyOperation__Less  = 2,
-	EArithmeticKeyOperation__LessOrEqual = 3,
-	EArithmeticKeyOperation__Greater = 4,
-	EArithmeticKeyOperation__GreaterOrEqual = 5,
-	EArithmeticKeyOperation__EArithmeticKeyOperation_MAX = 6
-};
-
-
-// Enum AIModule.EBasicKeyOperation
-enum class EBasicKeyOperation : uint8_t
-{
-	EBasicKeyOperation__Set        = 0,
-	EBasicKeyOperation__NotSet     = 1,
-	EBasicKeyOperation__EBasicKeyOperation_MAX = 2
 };
 
 
@@ -347,7 +347,8 @@ enum class EEnvQueryRunMode : uint8_t
 	EEnvQueryRunMode__RandomBest5Pct = 1,
 	EEnvQueryRunMode__RandomBest25Pct = 2,
 	EEnvQueryRunMode__AllMatching  = 3,
-	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 4
+	EEnvQueryRunMode__RandomFromAllMatching = 4,
+	EEnvQueryRunMode__EEnvQueryRunMode_MAX = 5
 };
 
 

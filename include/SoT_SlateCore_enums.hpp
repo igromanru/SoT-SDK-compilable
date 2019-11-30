@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,17 @@ enum class EFontHinting : uint8_t
 	EFontHinting__Monochrome       = 3,
 	EFontHinting__None             = 4,
 	EFontHinting__EFontHinting_MAX = 5
+};
+
+
+// Enum SlateCore.ESlateColorStylingMode
+enum class ESlateColorStylingMode : uint8_t
+{
+	ESlateColorStylingMode__UseColor_Specified = 0,
+	ESlateColorStylingMode__UseColor_Specified_Link = 1,
+	ESlateColorStylingMode__UseColor_Foreground = 2,
+	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
+	ESlateColorStylingMode__UseColor_MAX = 4
 };
 
 
@@ -143,17 +154,6 @@ enum class EButtonClickMethod : uint8_t
 	EButtonClickMethod__MouseUp    = 2,
 	EButtonClickMethod__PreciseClick = 3,
 	EButtonClickMethod__EButtonClickMethod_MAX = 4
-};
-
-
-// Enum SlateCore.ESlateColorStylingMode
-enum class ESlateColorStylingMode : uint8_t
-{
-	ESlateColorStylingMode__UseColor_Specified = 0,
-	ESlateColorStylingMode__UseColor_Specified_Link = 1,
-	ESlateColorStylingMode__UseColor_Foreground = 2,
-	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
-	ESlateColorStylingMode__UseColor_MAX = 4
 };
 
 

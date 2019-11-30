@@ -1,4 +1,4 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1066,6 +1066,168 @@ TArray<struct FVector> UPoissonDiscSampling::GeneratePoissonDiscDistributionAcro
 }
 
 
+// Function Maths.ProjectileMaths.PredictProjectileFlightTime
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          Speed                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Gravity                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Pitch                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UProjectileMaths::PredictProjectileFlightTime(float Speed, float Gravity, float Pitch, float Height)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ProjectileMaths.PredictProjectileFlightTime"));
+
+	struct
+	{
+		float                          Speed;
+		float                          Gravity;
+		float                          Pitch;
+		float                          Height;
+		float                          ReturnValue;
+	} params;
+
+	params.Speed = Speed;
+	params.Gravity = Gravity;
+	params.Pitch = Pitch;
+	params.Height = Height;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ProjectileMaths.FindProjectileSpeedModifierToHitTarget
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 From                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Target                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          Pitch                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ProjectileSpeed                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Gravity                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UProjectileMaths::FindProjectileSpeedModifierToHitTarget(const struct FVector& From, const struct FVector& Target, float Pitch, float ProjectileSpeed, float Gravity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ProjectileMaths.FindProjectileSpeedModifierToHitTarget"));
+
+	struct
+	{
+		struct FVector                 From;
+		struct FVector                 Target;
+		float                          Pitch;
+		float                          ProjectileSpeed;
+		float                          Gravity;
+		float                          ReturnValue;
+	} params;
+
+	params.From = From;
+	params.Target = Target;
+	params.Pitch = Pitch;
+	params.ProjectileSpeed = ProjectileSpeed;
+	params.Gravity = Gravity;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ProjectileMaths.FindAimDirectionToHitTarget
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                OutAimDirection                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 From                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Target                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ProjectileSpeed                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Gravity                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           PreferHigherAngles             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UProjectileMaths::FindAimDirectionToHitTarget(const struct FVector& From, const struct FVector& Target, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FRotator* OutAimDirection)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ProjectileMaths.FindAimDirectionToHitTarget"));
+
+	struct
+	{
+		struct FRotator                OutAimDirection;
+		struct FVector                 From;
+		struct FVector                 Target;
+		float                          ProjectileSpeed;
+		float                          Gravity;
+		bool                           PreferHigherAngles;
+		bool                           ReturnValue;
+	} params;
+
+	params.From = From;
+	params.Target = Target;
+	params.ProjectileSpeed = ProjectileSpeed;
+	params.Gravity = Gravity;
+	params.PreferHigherAngles = PreferHigherAngles;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (OutAimDirection != nullptr)
+		*OutAimDirection = params.OutAimDirection;
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ProjectileMaths.CalculateLaunchVelocity
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 OutLaunchVelocty               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          OutFlightTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 From                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Target                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 TargetVelocity                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ProjectileSpeed                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Gravity                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           PreferHigherAngles             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UProjectileMaths::CalculateLaunchVelocity(const struct FVector& From, const struct FVector& Target, const struct FVector& TargetVelocity, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FVector* OutLaunchVelocty, float* OutFlightTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ProjectileMaths.CalculateLaunchVelocity"));
+
+	struct
+	{
+		struct FVector                 OutLaunchVelocty;
+		float                          OutFlightTime;
+		struct FVector                 From;
+		struct FVector                 Target;
+		struct FVector                 TargetVelocity;
+		float                          ProjectileSpeed;
+		float                          Gravity;
+		bool                           PreferHigherAngles;
+		bool                           ReturnValue;
+	} params;
+
+	params.From = From;
+	params.Target = Target;
+	params.TargetVelocity = TargetVelocity;
+	params.ProjectileSpeed = ProjectileSpeed;
+	params.Gravity = Gravity;
+	params.PreferHigherAngles = PreferHigherAngles;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (OutLaunchVelocty != nullptr)
+		*OutLaunchVelocty = params.OutLaunchVelocty;
+	if (OutFlightTime != nullptr)
+		*OutFlightTime = params.OutFlightTime;
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.RotationMaths.TransformAroundArbitraryPivot
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -1117,6 +1279,146 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 	} params;
 
 	params.Rotation = Rotation;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.IsPointOnOrWithinABox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UBoxComponent*           BoxComponent                   (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UShapeMathsBlueprintLibrary::IsPointOnOrWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.IsPointOnOrWithinABox"));
+
+	struct
+	{
+		class UBoxComponent*           BoxComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		bool                           ReturnValue;
+	} params;
+
+	params.BoxComponent = BoxComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinASphere
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USphereComponent*        SphereComponent                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinASphere(class USphereComponent* SphereComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinASphere"));
+
+	struct
+	{
+		class USphereComponent*        SphereComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.SphereComponent = SphereComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACylinder
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCapsuleComponent*       CylinderComponent              (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinACylinder(class UCapsuleComponent* CylinderComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACylinder"));
+
+	struct
+	{
+		class UCapsuleComponent*       CylinderComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.CylinderComponent = CylinderComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACapsule
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCapsuleComponent*       CapsuleComponent               (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinACapsule(class UCapsuleComponent* CapsuleComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinACapsule"));
+
+	struct
+	{
+		class UCapsuleComponent*       CapsuleComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.CapsuleComponent = CapsuleComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinABox
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UBoxComponent*           BoxComponent                   (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector                 WorldSpaceReferencePoint       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UShapeMathsBlueprintLibrary::FindClosestPointWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.ShapeMathsBlueprintLibrary.FindClosestPointWithinABox"));
+
+	struct
+	{
+		class UBoxComponent*           BoxComponent;
+		struct FVector                 WorldSpaceReferencePoint;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.BoxComponent = BoxComponent;
+	params.WorldSpaceReferencePoint = WorldSpaceReferencePoint;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,32 +12,13 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
-// Enum NaturalDisasters.EEarthquakeState
-enum class EEarthquakeState : uint8_t
+// Enum NaturalDisasters.EAshCloudState
+enum class EAshCloudState : uint8_t
 {
-	EEarthquakeState__Dormant      = 0,
-	EEarthquakeState__WarmingUp    = 1,
-	EEarthquakeState__Active       = 2,
-	EEarthquakeState__CoolingDown  = 3,
-	EEarthquakeState__EEarthquakeState_MAX = 4
-};
-
-
-// Enum NaturalDisasters.EGeyserState
-enum class EGeyserState : uint8_t
-{
-	EGeyserState__Dormant          = 0,
-	EGeyserState__Active           = 1,
-	EGeyserState__EGeyserState_MAX = 2
-};
-
-
-// Enum NaturalDisasters.EGeyserManagerState
-enum class EGeyserManagerState : uint8_t
-{
-	EGeyserManagerState__Dormant   = 0,
-	EGeyserManagerState__Active    = 1,
-	EGeyserManagerState__EGeyserManagerState_MAX = 2
+	EAshCloudState__Spawning       = 0,
+	EAshCloudState__Active         = 1,
+	EAshCloudState__Dissipating    = 2,
+	EAshCloudState__EAshCloudState_MAX = 3
 };
 
 
@@ -68,6 +49,35 @@ enum class EVolcanoState : uint8_t
 	EVolcanoState__WarmingUp       = 1,
 	EVolcanoState__Erupting        = 2,
 	EVolcanoState__EVolcanoState_MAX = 3
+};
+
+
+// Enum NaturalDisasters.EEarthquakeState
+enum class EEarthquakeState : uint8_t
+{
+	EEarthquakeState__Dormant      = 0,
+	EEarthquakeState__WarmingUp    = 1,
+	EEarthquakeState__Active       = 2,
+	EEarthquakeState__CoolingDown  = 3,
+	EEarthquakeState__EEarthquakeState_MAX = 4
+};
+
+
+// Enum NaturalDisasters.EGeyserState
+enum class EGeyserState : uint8_t
+{
+	EGeyserState__Dormant          = 0,
+	EGeyserState__Active           = 1,
+	EGeyserState__EGeyserState_MAX = 2
+};
+
+
+// Enum NaturalDisasters.EGeyserManagerState
+enum class EGeyserManagerState : uint8_t
+{
+	EGeyserManagerState__Dormant   = 0,
+	EGeyserManagerState__Active    = 1,
+	EGeyserManagerState__EGeyserManagerState_MAX = 2
 };
 
 
