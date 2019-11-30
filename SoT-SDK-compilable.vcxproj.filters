@@ -15,6 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\XorStr\xorstr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AthenaCommons.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SDK.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -75,6 +81,9 @@
     <ClInclude Include="include\SoT_AthenaEngine_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_AthenaEngine_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_AthenaEngine_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -105,6 +114,24 @@
     <ClInclude Include="include\SoT_Basic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_BP_LargeShipTemplate_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_BP_LargeShipTemplate_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_BP_MediumShipTemplate_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_BP_MediumShipTemplate_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_BP_SmallShipTemplate_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_BP_SmallShipTemplate_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -112,6 +139,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Cooking_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Cooking_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Cooking_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_CoreUObject_classes.hpp">
@@ -129,6 +165,18 @@
     <ClInclude Include="include\SoT_DebugMenu_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_DeliverableFramework_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_DeliverableFramework_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_EmotingFramework_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_EmotingFramework_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_Engine_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -136,6 +184,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_Engine_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Fire_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Fire_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Fire_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_GameplayDebugger_classes.hpp">
@@ -216,6 +273,12 @@
     <ClInclude Include="include\SoT_Maths_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_MerchantContracts_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_MerchantContracts_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_MovieScene_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -255,6 +318,15 @@
     <ClInclude Include="include\SoT_ObjectMessaging_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_Pets_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Pets_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Pets_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_PirateGenerator_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -271,6 +343,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_PositionalVoice_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_PrioritisedPrompts_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_PrioritisedPrompts_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_PrioritisedPrompts_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_RareAudio_classes.hpp">
@@ -291,6 +372,21 @@
     <ClInclude Include="include\SoT_RareEngine_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SoT_Repair_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Repair_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Repair_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Retraction_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Retraction_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\SoT_Sessions_classes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -298,6 +394,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_Sessions_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_ShipDamage_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_ShipDamage_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_ShipDamage_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_Slate_classes.hpp">
@@ -331,6 +436,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_StudiosAutomation_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tales_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tales_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tales_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tethering_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tethering_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SoT_Tethering_structs.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_Time_classes.hpp">
@@ -382,45 +505,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\SoT_WwiseAudio_structs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\XorStr\xorstr.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AthenaCommons.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_AthenaEngine_enums.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Pets_classes.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Pets_structs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_ShipDamage_classes.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_ShipDamage_structs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Tethering_structs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Tethering_enums.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Tethering_classes.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Repair_structs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Repair_classes.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SoT_Repair_enums.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
