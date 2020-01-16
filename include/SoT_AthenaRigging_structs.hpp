@@ -170,21 +170,6 @@ struct FRiggingSystemLineGroup
 	TArray<struct FRiggingSystemLineParams>            Lines;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
-// ScriptStruct AthenaRigging.RopeAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FRopeAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
-};
-
-// ScriptStruct AthenaRigging.RiggingSystemAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FRiggingSystemAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-	TArray<class ARiggingSystem*>                      RiggingSystems;                                           // 0x0050(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct AthenaRigging.RopeCatenaryLengthPair
 // 0x0008
 struct FRopeCatenaryLengthPair

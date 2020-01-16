@@ -177,7 +177,7 @@ enum class EPixelFormat : uint8_t
 	PF_R32G32_SINT                 = 60,
 	PF_Stencil                     = 61,
 	PF_Depth                       = 62,
-	PF_MAX1                        = 63
+	PF_MAX                         = 63
 };
 
 
