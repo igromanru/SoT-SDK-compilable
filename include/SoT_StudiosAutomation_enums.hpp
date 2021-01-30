@@ -25,6 +25,17 @@ enum class EComparisonMethod : uint8_t
 };
 
 
+// Enum StudiosAutomation.ETestAutomationPlayModeOverride
+enum class ETestAutomationPlayModeOverride : uint8_t
+{
+	ETestAutomationPlayModeOverride__Adventure = 0,
+	ETestAutomationPlayModeOverride__Contest = 1,
+	ETestAutomationPlayModeOverride__Tutorial = 2,
+	ETestAutomationPlayModeOverride__NotSelectedYet = 3,
+	ETestAutomationPlayModeOverride__ETestAutomationPlayModeOverride_MAX = 4
+};
+
+
 // Enum StudiosAutomation.EPerformanceCaptureType
 enum class EPerformanceCaptureType : uint8_t
 {
@@ -44,7 +55,8 @@ enum class ETestArea : uint8_t
 	ETestArea__UserInterface       = 2,
 	ETestArea__UserInterfaceInitialization = 3,
 	ETestArea__Art                 = 4,
-	ETestArea__ETestArea_MAX       = 5
+	ETestArea__Audio               = 5,
+	ETestArea__ETestArea_MAX       = 6
 };
 
 
@@ -58,6 +70,21 @@ enum class ETestCategory : uint8_t
 	ETestCategory__Soak            = 4,
 	ETestCategory__Performance     = 5,
 	ETestCategory__ETestCategory_MAX = 6
+};
+
+
+// Enum StudiosAutomation.ECollectionAuditType
+enum class ECollectionAuditType : uint8_t
+{
+	ECollectionAuditType__NoneSet  = 0,
+	ECollectionAuditType__UseParentType = 1,
+	ECollectionAuditType__Totals   = 2,
+	ECollectionAuditType__MeshLimits = 3,
+	ECollectionAuditType__AnimSequenceLimits = 4,
+	ECollectionAuditType__PhysicsAudits = 5,
+	ECollectionAuditType__ExceptionList = 6,
+	ECollectionAuditType__WIP      = 7,
+	ECollectionAuditType__ECollectionAuditType_MAX = 8
 };
 
 

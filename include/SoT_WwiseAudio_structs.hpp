@@ -10,6 +10,7 @@
 #include "SoT_WwiseAudio_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
 
 namespace SDK
 {
@@ -114,12 +115,12 @@ struct FWwiseAudioGameStateSettings
 	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingEnd;                       // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
 };
 
-// ScriptStruct WwiseAudio.WwiseEmitterParams
-// 0x0002
-struct FWwiseEmitterParams
+// ScriptStruct WwiseAudio.AnimNotify_SoundSwitch
+// 0x0018
+struct FAnimNotify_SoundSwitch
 {
-	bool                                               bEnableObstructionAndOcclusion;                           // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableAccoustics;                                        // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FStringAssetReference                       SkeletalMeshReference;                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       SkeletalMeshCategoryName;                                 // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseEventParam
@@ -129,6 +130,14 @@ struct FWwiseEventParam
 	TWeakObjectPtr<class UWwiseEvent>                  WwiseEvent;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       SourcePath;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FName                                       SourceObj;                                                // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct WwiseAudio.WwiseEmitterParams
+// 0x0002
+struct FWwiseEmitterParams
+{
+	bool                                               bEnableObstructionAndOcclusion;                           // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bEnableAccoustics;                                        // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseListenerInfo
@@ -175,6 +184,28 @@ struct FWwiseExternalSource
 struct FWwiseSubtitle
 {
 	class FString                                      Subtitle;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct WwiseAudio.MovieSceneAkAudioEventTemplate
+// 0x0008 (0x0020 - 0x0018)
+struct FMovieSceneAkAudioEventTemplate : public FMovieSceneEvalTemplate
+{
+	class UMovieSceneAkAudioEventSection*              Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct WwiseAudio.MovieSceneAkAudioRTPCTemplate
+// 0x0008 (0x0020 - 0x0018)
+struct FMovieSceneAkAudioRTPCTemplate : public FMovieSceneEvalTemplate
+{
+	class UMovieSceneAkAudioRTPCSection*               Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct WwiseAudio.MovieSceneAkAudioRTPCSectionData
+// 0x0088
+struct FMovieSceneAkAudioRTPCSectionData
+{
+	class FString                                      RTPCName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	struct FRichCurve                                  RTPCCurve;                                                // 0x0010(0x0078)
 };
 
 }

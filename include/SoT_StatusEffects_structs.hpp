@@ -20,15 +20,15 @@ namespace SDK
 // 0x0004
 struct FStatusDescriptor
 {
-	float                                              Intensity;                                                // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Intensity;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.Status
 // 0x0018
 struct FStatus
 {
-	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004) (Edit)
+	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
@@ -38,6 +38,15 @@ struct FDebugMenuStatusDefinition
 {
 	struct FName                                       Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FStatus                                     Status;                                                   // 0x0008(0x0018) (Edit)
+};
+
+// ScriptStruct StatusEffects.DelayedStatusEffect
+// 0x0020
+struct FDelayedStatusEffect
+{
+	struct FStatus                                     StatusEffect;                                             // 0x0000(0x0018) (Edit)
+	float                                              InEffectTime;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct StatusEffects.FeatureToggledStatusResponseList
@@ -61,11 +70,12 @@ struct FActiveStatusEffect
 	unsigned char                                      UnknownData01[0x17];                                      // 0x0039(0x0017) MISSED OFFSET
 };
 
-// ScriptStruct StatusEffects.StatusEffectManagerComponentAggregateTickFunction
-// 0x0010 (0x0058 - 0x0048)
-struct FStatusEffectManagerComponentAggregateTickFunction : public FTickFunction
+// ScriptStruct StatusEffects.EventAppliedStatusToTargets
+// 0x0020
+struct FEventAppliedStatusToTargets
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
+	TArray<class UClass*>                              StatusApplied;                                            // 0x0000(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              Targets;                                                  // 0x0010(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct StatusEffects.StatusEffectPersistenceKey

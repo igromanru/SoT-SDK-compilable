@@ -132,6 +132,18 @@ enum class ENavPathEvent : uint8_t
 };
 
 
+// Enum Engine.EComponentNetDormancy
+enum class EComponentNetDormancy : uint8_t
+{
+	EComponentNetDormancy__NotSupported = 0,
+	EComponentNetDormancy__Awake   = 1,
+	EComponentNetDormancy__FollowOwner = 2,
+	EComponentNetDormancy__Dormant = 3,
+	EComponentNetDormancy__Count   = 4,
+	EComponentNetDormancy__EComponentNetDormancy_MAX = 5
+};
+
+
 // Enum Engine.EComponentCreationMethod
 enum class EComponentCreationMethod : uint8_t
 {
@@ -353,6 +365,152 @@ enum class EQuitPreference : uint8_t
 };
 
 
+// Enum Engine.ENodeAdvancedPins
+enum class ENodeAdvancedPins : uint8_t
+{
+	ENodeAdvancedPins__NoPins      = 0,
+	ENodeAdvancedPins__Shown       = 1,
+	ENodeAdvancedPins__Hidden      = 2,
+	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
+};
+
+
+// Enum Engine.ENodeTitleType
+enum class ENodeTitleType : uint8_t
+{
+	ENodeTitleType__FullTitle      = 0,
+	ENodeTitleType__ListView       = 1,
+	ENodeTitleType__EditableTitle  = 2,
+	ENodeTitleType__MenuTitle      = 3,
+	ENodeTitleType__MAX_TitleTypes = 4,
+	ENodeTitleType__ENodeTitleType_MAX = 5
+};
+
+
+// Enum Engine.EEdGraphPinDirection
+enum class EEdGraphPinDirection : uint8_t
+{
+	EGPD_Input                     = 0,
+	EGPD_Output                    = 1,
+	EGPD_MAX                       = 2
+};
+
+
+// Enum Engine.EBlueprintPinStyleType
+enum class EBlueprintPinStyleType : uint8_t
+{
+	BPST_Original                  = 0,
+	BPST_VariantA                  = 1,
+	BPST_MAX                       = 2
+};
+
+
+// Enum Engine.EViewModeIndex
+enum class EViewModeIndex : uint8_t
+{
+	VMI_BrushWireframe             = 0,
+	VMI_Wireframe                  = 1,
+	VMI_Unlit                      = 2,
+	VMI_Lit                        = 3,
+	VMI_Lit_DetailLighting         = 4,
+	VMI_LightingOnly               = 5,
+	VMI_LightComplexity            = 6,
+	VMI_ShaderComplexity           = 7,
+	VMI_LightmapDensity            = 8,
+	VMI_LitLightmapDensity         = 9,
+	VMI_ReflectionOverride         = 10,
+	VMI_VisualizeBuffer            = 11,
+	VMI_StationaryLightOverlap     = 12,
+	VMI_CollisionPawn              = 13,
+	VMI_CollisionVisibility        = 14,
+	VMI_CollisionWireframe         = 15,
+	VMI_LODColoration              = 16,
+	VMI_TriangleDensityScreenSpace = 17,
+	VMI_TriangleDensityWorldSpace  = 18,
+	VMI_Max                        = 19,
+	VMI_Unknown                    = 20
+};
+
+
+// Enum Engine.EDemoPlayFailure
+enum class EDemoPlayFailure : uint8_t
+{
+	EDemoPlayFailure__Generic      = 0,
+	EDemoPlayFailure__DemoNotFound = 1,
+	EDemoPlayFailure__Corrupt      = 2,
+	EDemoPlayFailure__InvalidVersion = 3,
+	EDemoPlayFailure__EDemoPlayFailure_MAX = 4
+};
+
+
+// Enum Engine.ETravelType
+enum class ETravelType : uint8_t
+{
+	TRAVEL_Absolute                = 0,
+	TRAVEL_Partial                 = 1,
+	TRAVEL_Relative                = 2,
+	TRAVEL_MAX                     = 3
+};
+
+
+// Enum Engine.ETravelFailure
+enum class ETravelFailure : uint8_t
+{
+	ETravelFailure__NoLevel        = 0,
+	ETravelFailure__LoadMapFailure = 1,
+	ETravelFailure__InvalidURL     = 2,
+	ETravelFailure__PackageMissing = 3,
+	ETravelFailure__PackageVersion = 4,
+	ETravelFailure__NoDownload     = 5,
+	ETravelFailure__TravelFailure  = 6,
+	ETravelFailure__CheatCommands  = 7,
+	ETravelFailure__PendingNetGameCreateFailure = 8,
+	ETravelFailure__CloudSaveFailure = 9,
+	ETravelFailure__ServerTravelFailure = 10,
+	ETravelFailure__ClientTravelFailure = 11,
+	ETravelFailure__ETravelFailure_MAX = 12
+};
+
+
+// Enum Engine.ENetworkFailure
+enum class ENetworkFailure : uint8_t
+{
+	ENetworkFailure__NetDriverAlreadyExists = 0,
+	ENetworkFailure__NetDriverCreateFailure = 1,
+	ENetworkFailure__NetDriverListenFailure = 2,
+	ENetworkFailure__ConnectionLost = 3,
+	ENetworkFailure__ConnectionTimeout = 4,
+	ENetworkFailure__FailureReceived = 5,
+	ENetworkFailure__OutdatedClient = 6,
+	ENetworkFailure__OutdatedServer = 7,
+	ENetworkFailure__PendingConnectionFailure = 8,
+	ENetworkFailure__InvalidFeatureConfig = 9,
+	ENetworkFailure__RPCSpamDetected = 10,
+	ENetworkFailure__FailedPreLogin = 11,
+	ENetworkFailure__InitialConnectionTimeout = 12,
+	ENetworkFailure__PendingConnectionTimeout = 13,
+	ENetworkFailure__PlayerDeemedInactive = 14,
+	ENetworkFailure__CrewMigrationRequested = 15,
+	ENetworkFailure__ServerAtMatchmakingCapacity = 16,
+	ENetworkFailure__ServerShuttingDownWhilstMigrationOngoing = 17,
+	ENetworkFailure__ServerShuttingDown = 18,
+	ENetworkFailure__CrewSessionLost = 19,
+	ENetworkFailure__ENetworkFailure_MAX = 20
+};
+
+
+// Enum Engine.EInputEvent
+enum class EInputEvent : uint8_t
+{
+	IE_Pressed                     = 0,
+	IE_Released                    = 1,
+	IE_Repeat                      = 2,
+	IE_DoubleClick                 = 3,
+	IE_Axis                        = 4,
+	IE_MAX                         = 5
+};
+
+
 // Enum Engine.EAngularConstraintMotion
 enum class EAngularConstraintMotion : uint8_t
 {
@@ -484,8 +642,7 @@ enum class ENetDormancy : uint8_t
 	DORM_DormantAll                = 2,
 	DORM_DormantPartial            = 3,
 	DORM_Initial                   = 4,
-	DORN_MAX                       = 5,
-	ENetDormancy_MAX               = 6
+	DORM_MAX                       = 5
 };
 
 
@@ -943,6 +1100,25 @@ enum class ESceneDepthPriorityGroup : uint8_t
 };
 
 
+// Enum Engine.EDetachmentRule
+enum class EDetachmentRule : uint8_t
+{
+	EDetachmentRule__KeepRelative  = 0,
+	EDetachmentRule__KeepWorld     = 1,
+	EDetachmentRule__EDetachmentRule_MAX = 2
+};
+
+
+// Enum Engine.EAttachmentRule
+enum class EAttachmentRule : uint8_t
+{
+	EAttachmentRule__KeepRelative  = 0,
+	EAttachmentRule__KeepWorld     = 1,
+	EAttachmentRule__SnapToTarget  = 2,
+	EAttachmentRule__EAttachmentRule_MAX = 3
+};
+
+
 // Enum Engine.EActorMetricsType
 enum class EActorMetricsType : uint8_t
 {
@@ -961,151 +1137,6 @@ enum class EAspectRatioAxisConstraint : uint8_t
 	AspectRatio_MajorAxisFOV       = 2,
 	AspectRatio_MaintainYFOV_UnitIsXFovIn16By9 = 3,
 	AspectRatio_MAX                = 4
-};
-
-
-// Enum Engine.EViewModeIndex
-enum class EViewModeIndex : uint8_t
-{
-	VMI_BrushWireframe             = 0,
-	VMI_Wireframe                  = 1,
-	VMI_Unlit                      = 2,
-	VMI_Lit                        = 3,
-	VMI_Lit_DetailLighting         = 4,
-	VMI_LightingOnly               = 5,
-	VMI_LightComplexity            = 6,
-	VMI_ShaderComplexity           = 7,
-	VMI_LightmapDensity            = 8,
-	VMI_LitLightmapDensity         = 9,
-	VMI_ReflectionOverride         = 10,
-	VMI_VisualizeBuffer            = 11,
-	VMI_StationaryLightOverlap     = 12,
-	VMI_CollisionPawn              = 13,
-	VMI_CollisionVisibility        = 14,
-	VMI_CollisionWireframe         = 15,
-	VMI_LODColoration              = 16,
-	VMI_TriangleDensityScreenSpace = 17,
-	VMI_TriangleDensityWorldSpace  = 18,
-	VMI_Max                        = 19,
-	VMI_Unknown                    = 20
-};
-
-
-// Enum Engine.EDemoPlayFailure
-enum class EDemoPlayFailure : uint8_t
-{
-	EDemoPlayFailure__Generic      = 0,
-	EDemoPlayFailure__DemoNotFound = 1,
-	EDemoPlayFailure__Corrupt      = 2,
-	EDemoPlayFailure__InvalidVersion = 3,
-	EDemoPlayFailure__EDemoPlayFailure_MAX = 4
-};
-
-
-// Enum Engine.ETravelType
-enum class ETravelType : uint8_t
-{
-	TRAVEL_Absolute                = 0,
-	TRAVEL_Partial                 = 1,
-	TRAVEL_Relative                = 2,
-	TRAVEL_MAX                     = 3
-};
-
-
-// Enum Engine.ETravelFailure
-enum class ETravelFailure : uint8_t
-{
-	ETravelFailure__NoLevel        = 0,
-	ETravelFailure__LoadMapFailure = 1,
-	ETravelFailure__InvalidURL     = 2,
-	ETravelFailure__PackageMissing = 3,
-	ETravelFailure__PackageVersion = 4,
-	ETravelFailure__NoDownload     = 5,
-	ETravelFailure__TravelFailure  = 6,
-	ETravelFailure__CheatCommands  = 7,
-	ETravelFailure__PendingNetGameCreateFailure = 8,
-	ETravelFailure__CloudSaveFailure = 9,
-	ETravelFailure__ServerTravelFailure = 10,
-	ETravelFailure__ClientTravelFailure = 11,
-	ETravelFailure__ETravelFailure_MAX = 12
-};
-
-
-// Enum Engine.ENetworkFailure
-enum class ENetworkFailure : uint8_t
-{
-	ENetworkFailure__NetDriverAlreadyExists = 0,
-	ENetworkFailure__NetDriverCreateFailure = 1,
-	ENetworkFailure__NetDriverListenFailure = 2,
-	ENetworkFailure__ConnectionLost = 3,
-	ENetworkFailure__ConnectionTimeout = 4,
-	ENetworkFailure__FailureReceived = 5,
-	ENetworkFailure__OutdatedClient = 6,
-	ENetworkFailure__OutdatedServer = 7,
-	ENetworkFailure__PendingConnectionFailure = 8,
-	ENetworkFailure__InvalidFeatureConfig = 9,
-	ENetworkFailure__RPCSpamDetected = 10,
-	ENetworkFailure__FailedPreLogin = 11,
-	ENetworkFailure__InitialConnectionTimeout = 12,
-	ENetworkFailure__PendingConnectionTimeout = 13,
-	ENetworkFailure__PlayerDeemedInactive = 14,
-	ENetworkFailure__CrewMigrationRequested = 15,
-	ENetworkFailure__ServerAtMatchmakingCapacity = 16,
-	ENetworkFailure__ServerShuttingDown = 17,
-	ENetworkFailure__CrewSessionLost = 18,
-	ENetworkFailure__ENetworkFailure_MAX = 19
-};
-
-
-// Enum Engine.EInputEvent
-enum class EInputEvent : uint8_t
-{
-	IE_Pressed                     = 0,
-	IE_Released                    = 1,
-	IE_Repeat                      = 2,
-	IE_DoubleClick                 = 3,
-	IE_Axis                        = 4,
-	IE_MAX                         = 5
-};
-
-
-// Enum Engine.ENodeAdvancedPins
-enum class ENodeAdvancedPins : uint8_t
-{
-	ENodeAdvancedPins__NoPins      = 0,
-	ENodeAdvancedPins__Shown       = 1,
-	ENodeAdvancedPins__Hidden      = 2,
-	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
-};
-
-
-// Enum Engine.ENodeTitleType
-enum class ENodeTitleType : uint8_t
-{
-	ENodeTitleType__FullTitle      = 0,
-	ENodeTitleType__ListView       = 1,
-	ENodeTitleType__EditableTitle  = 2,
-	ENodeTitleType__MenuTitle      = 3,
-	ENodeTitleType__MAX_TitleTypes = 4,
-	ENodeTitleType__ENodeTitleType_MAX = 5
-};
-
-
-// Enum Engine.EEdGraphPinDirection
-enum class EEdGraphPinDirection : uint8_t
-{
-	EGPD_Input                     = 0,
-	EGPD_Output                    = 1,
-	EGPD_MAX                       = 2
-};
-
-
-// Enum Engine.EBlueprintPinStyleType
-enum class EBlueprintPinStyleType : uint8_t
-{
-	BPST_Original                  = 0,
-	BPST_VariantA                  = 1,
-	BPST_MAX                       = 2
 };
 
 
@@ -1810,7 +1841,8 @@ enum class EAnimationMode : uint8_t
 {
 	EAnimationMode__AnimationBlueprint = 0,
 	EAnimationMode__AnimationSingleNode = 1,
-	EAnimationMode__EAnimationMode_MAX = 2
+	EAnimationMode__AnimationCustomMode = 2,
+	EAnimationMode__EAnimationMode_MAX = 3
 };
 
 
@@ -2402,16 +2434,6 @@ enum class ESuggestProjVelocityTraceOption : uint8_t
 };
 
 
-// Enum Engine.EOrientPositionSelector
-enum class EOrientPositionSelector : uint8_t
-{
-	EOrientPositionSelector__Orientation = 0,
-	EOrientPositionSelector__Position = 1,
-	EOrientPositionSelector__OrientationAndPosition = 2,
-	EOrientPositionSelector__EOrientPositionSelector_MAX = 3
-};
-
-
 // Enum Engine.EEasingFunc
 enum class EEasingFunc : uint8_t
 {
@@ -2473,6 +2495,16 @@ enum class ECollisionTraceFlag : uint8_t
 	CTF_UseSimpleAsComplex         = 1,
 	CTF_UseComplexAsSimple         = 2,
 	CTF_MAX                        = 3
+};
+
+
+// Enum Engine.ReliabilityType
+enum class EReliabilityType : uint8_t
+{
+	ReliabilityType__Reliable      = 0,
+	ReliabilityType__Unreliable    = 1,
+	ReliabilityType__Count         = 2,
+	ReliabilityType__ReliabilityType_MAX = 3
 };
 
 
@@ -3186,7 +3218,9 @@ enum class ESceneTextureId : uint8_t
 	PPI_AmbientOcclusion           = 23,
 	PPI_CustomStencil              = 24,
 	PPI_PlanarReflections          = 25,
-	PPI_MAX                        = 26
+	PPI_Mask                       = 26,
+	PPI_PreviousMask               = 27,
+	PPI_MAX                        = 28
 };
 
 
@@ -3356,16 +3390,6 @@ enum class ECanvasRenderTargetMips : uint8_t
 	ECanvasRenderTargetMips__Disabled = 0,
 	ECanvasRenderTargetMips__Enabled = 1,
 	ECanvasRenderTargetMips__ECanvasRenderTargetMips_MAX = 2
-};
-
-
-// Enum Engine.ReliabilityType
-enum class EReliabilityType : uint8_t
-{
-	ReliabilityType__Reliable      = 0,
-	ReliabilityType__Unreliable    = 1,
-	ReliabilityType__Count         = 2,
-	ReliabilityType__ReliabilityType_MAX = 3
 };
 
 

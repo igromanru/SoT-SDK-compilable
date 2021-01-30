@@ -25,6 +25,8 @@
     <ClInclude Include="include\SoT_Animation_classes.hpp" />
     <ClInclude Include="include\SoT_Animation_enums.hpp" />
     <ClInclude Include="include\SoT_Animation_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaAIAbilities_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaAIAbilities_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_classes.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_structs.hpp" />
@@ -43,10 +45,14 @@
     <ClInclude Include="include\SoT_Athena_enums.hpp" />
     <ClInclude Include="include\SoT_Athena_structs.hpp" />
     <ClInclude Include="include\SoT_Basic.hpp" />
+    <ClInclude Include="include\SoT_BP_CollectorsChest_Proxy_classes.hpp" />
+    <ClInclude Include="include\SoT_BP_CollectorsChest_Proxy_structs.hpp" />
     <ClInclude Include="include\SoT_BP_LargeShipTemplate_classes.hpp" />
     <ClInclude Include="include\SoT_BP_LargeShipTemplate_structs.hpp" />
     <ClInclude Include="include\SoT_BP_MediumShipTemplate_classes.hpp" />
     <ClInclude Include="include\SoT_BP_MediumShipTemplate_structs.hpp" />
+    <ClInclude Include="include\SoT_BP_SkeletonPawnBase_classes.hpp" />
+    <ClInclude Include="include\SoT_BP_SkeletonPawnBase_structs.hpp" />
     <ClInclude Include="include\SoT_BP_SmallShipTemplate_classes.hpp" />
     <ClInclude Include="include\SoT_BP_SmallShipTemplate_structs.hpp" />
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_classes.hpp" />
@@ -63,7 +69,11 @@
     <ClInclude Include="include\SoT_DeliverableFramework_classes.hpp" />
     <ClInclude Include="include\SoT_DeliverableFramework_structs.hpp" />
     <ClInclude Include="include\SoT_EmotingFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_EmotingFramework_enums.hpp" />
     <ClInclude Include="include\SoT_EmotingFramework_structs.hpp" />
+    <ClInclude Include="include\SoT_EnchantedCompass_classes.hpp" />
+    <ClInclude Include="include\SoT_EnchantedCompass_enums.hpp" />
+    <ClInclude Include="include\SoT_EnchantedCompass_structs.hpp" />
     <ClInclude Include="include\SoT_Engine_classes.hpp" />
     <ClInclude Include="include\SoT_Engine_enums.hpp" />
     <ClInclude Include="include\SoT_Engine_structs.hpp" />
@@ -87,12 +97,17 @@
     <ClInclude Include="include\SoT_Interaction_classes.hpp" />
     <ClInclude Include="include\SoT_Interaction_enums.hpp" />
     <ClInclude Include="include\SoT_Interaction_structs.hpp" />
+    <ClInclude Include="include\SoT_ItemQuality_classes.hpp" />
+    <ClInclude Include="include\SoT_ItemQuality_enums.hpp" />
+    <ClInclude Include="include\SoT_ItemQuality_structs.hpp" />
     <ClInclude Include="include\SoT_JsonUtilities_classes.hpp" />
     <ClInclude Include="include\SoT_JsonUtilities_enums.hpp" />
     <ClInclude Include="include\SoT_JsonUtilities_structs.hpp" />
     <ClInclude Include="include\SoT_Kraken_classes.hpp" />
     <ClInclude Include="include\SoT_Kraken_enums.hpp" />
     <ClInclude Include="include\SoT_Kraken_structs.hpp" />
+    <ClInclude Include="include\SoT_LevelSequence_classes.hpp" />
+    <ClInclude Include="include\SoT_LevelSequence_structs.hpp" />
     <ClInclude Include="include\SoT_Maths_classes.hpp" />
     <ClInclude Include="include\SoT_Maths_enums.hpp" />
     <ClInclude Include="include\SoT_Maths_structs.hpp" />
@@ -111,6 +126,9 @@
     <ClInclude Include="include\SoT_ObjectLifetime_structs.hpp" />
     <ClInclude Include="include\SoT_ObjectMessaging_classes.hpp" />
     <ClInclude Include="include\SoT_ObjectMessaging_structs.hpp" />
+    <ClInclude Include="include\SoT_OnlineSubsystem_classes.hpp" />
+    <ClInclude Include="include\SoT_OnlineSubsystem_enums.hpp" />
+    <ClInclude Include="include\SoT_OnlineSubsystem_structs.hpp" />
     <ClInclude Include="include\SoT_Pets_classes.hpp" />
     <ClInclude Include="include\SoT_Pets_enums.hpp" />
     <ClInclude Include="include\SoT_Pets_structs.hpp" />
@@ -132,8 +150,16 @@
     <ClInclude Include="include\SoT_Repair_classes.hpp" />
     <ClInclude Include="include\SoT_Repair_enums.hpp" />
     <ClInclude Include="include\SoT_Repair_structs.hpp" />
+    <ClInclude Include="include\SoT_ResourceContentionFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_ResourceContentionFramework_structs.hpp" />
     <ClInclude Include="include\SoT_Retraction_classes.hpp" />
     <ClInclude Include="include\SoT_Retraction_structs.hpp" />
+    <ClInclude Include="include\SoT_Reviving_classes.hpp" />
+    <ClInclude Include="include\SoT_Reviving_enums.hpp" />
+    <ClInclude Include="include\SoT_Reviving_structs.hpp" />
+    <ClInclude Include="include\SoT_SeasonProgressionFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_SeasonProgressionFramework_enums.hpp" />
+    <ClInclude Include="include\SoT_SeasonProgressionFramework_structs.hpp" />
     <ClInclude Include="include\SoT_Sessions_classes.hpp" />
     <ClInclude Include="include\SoT_Sessions_enums.hpp" />
     <ClInclude Include="include\SoT_Sessions_structs.hpp" />
@@ -146,11 +172,15 @@
     <ClInclude Include="include\SoT_Slate_classes.hpp" />
     <ClInclude Include="include\SoT_Slate_enums.hpp" />
     <ClInclude Include="include\SoT_Slate_structs.hpp" />
+    <ClInclude Include="include\SoT_SpireFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_SpireFramework_structs.hpp" />
     <ClInclude Include="include\SoT_StatusEffects_classes.hpp" />
     <ClInclude Include="include\SoT_StatusEffects_structs.hpp" />
     <ClInclude Include="include\SoT_StudiosAutomation_classes.hpp" />
     <ClInclude Include="include\SoT_StudiosAutomation_enums.hpp" />
     <ClInclude Include="include\SoT_StudiosAutomation_structs.hpp" />
+    <ClInclude Include="include\SoT_TaleMaps_classes.hpp" />
+    <ClInclude Include="include\SoT_TaleMaps_structs.hpp" />
     <ClInclude Include="include\SoT_Tales_classes.hpp" />
     <ClInclude Include="include\SoT_Tales_enums.hpp" />
     <ClInclude Include="include\SoT_Tales_structs.hpp" />
@@ -166,6 +196,8 @@
     <ClInclude Include="include\SoT_Watercrafts_classes.hpp" />
     <ClInclude Include="include\SoT_Watercrafts_enums.hpp" />
     <ClInclude Include="include\SoT_Watercrafts_structs.hpp" />
+    <ClInclude Include="include\SoT_WaterSlide_classes.hpp" />
+    <ClInclude Include="include\SoT_WaterSlide_structs.hpp" />
     <ClInclude Include="include\SoT_Water_classes.hpp" />
     <ClInclude Include="include\SoT_Water_enums.hpp" />
     <ClInclude Include="include\SoT_Water_structs.hpp" />
@@ -190,20 +222,20 @@
     <ProjectGuid>{AC5E8C18-D93C-4D65-983D-990947A089EF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SoTSDKminimalist</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <SpectreMitigation>false</SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <SpectreMitigation>false</SpectreMitigation>

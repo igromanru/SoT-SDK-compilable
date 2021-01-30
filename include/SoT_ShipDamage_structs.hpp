@@ -9,7 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_ShipDamage_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "SoT_Athena_structs.hpp"
+#include "AthenaCommons.hpp"
 
 namespace SDK
 {
@@ -81,10 +82,11 @@ struct FDamageZoneDamageLevelChanged
 };
 
 // ScriptStruct ShipDamage.AppliedDamageToShipEvent
-// 0x0008
+// 0x0010
 struct FAppliedDamageToShipEvent
 {
 	class UClass*                                      ShipType;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Ship;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -326,6 +326,27 @@ bool UActorComponent::IsActive()
 }
 
 
+// Function Engine.ActorComponent.GetTargetNetDormancy
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EComponentNetDormancy> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EComponentNetDormancy> UActorComponent::GetTargetNetDormancy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ActorComponent.GetTargetNetDormancy"));
+
+	struct
+	{
+		TEnumAsByte<EComponentNetDormancy> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.ActorComponent.GetOwner
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -338,6 +359,27 @@ class AActor* UActorComponent::GetOwner()
 	struct
 	{
 		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.FlushNetDormancy
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::FlushNetDormancy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ActorComponent.FlushNetDormancy"));
+
+	struct
+	{
+		bool                           ReturnValue;
 	} params;
 
 
@@ -2230,6 +2272,27 @@ bool AActor::GetTickableWhenPaused()
 }
 
 
+// Function Engine.Actor.GetPxActorCapacityForPhysXAggregate
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+unsigned char AActor::GetPxActorCapacityForPhysXAggregate()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Actor.GetPxActorCapacityForPhysXAggregate"));
+
+	struct
+	{
+		unsigned char                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.Actor.GetParentActor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2939,17 +3002,22 @@ void AActor::ForceNetUpdate()
 
 // Function Engine.Actor.FlushNetDormancy
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void AActor::FlushNetDormancy()
+bool AActor::FlushNetDormancy()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Actor.FlushNetDormancy"));
 
 	struct
 	{
+		bool                           ReturnValue;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -3162,6 +3230,1395 @@ bool AActor::ActorHasTag(const struct FName& Tag)
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.ToggleVisibility
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::ToggleVisibility(bool bPropagateToChildren)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.ToggleVisibility"));
+
+	struct
+	{
+		bool                           bPropagateToChildren;
+	} params;
+
+	params.bPropagateToChildren = bPropagateToChildren;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SnapTo
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent*         InParent                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SnapTo(class USceneComponent* InParent, const struct FName& InSocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SnapTo"));
+
+	struct
+	{
+		class USceneComponent*         InParent;
+		struct FName                   InSocketName;
+	} params;
+
+	params.InParent = InParent;
+	params.InSocketName = InSocketName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SharesBasis
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USceneComponent*         Other                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::SharesBasis(class USceneComponent* Other)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SharesBasis"));
+
+	struct
+	{
+		class USceneComponent*         Other;
+		bool                           ReturnValue;
+	} params;
+
+	params.Other = Other;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.SetWorldScale3D
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SetWorldScale3D(const struct FVector& NewScale)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetWorldScale3D"));
+
+	struct
+	{
+		struct FVector                 NewScale;
+	} params;
+
+	params.NewScale = NewScale;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SetVisibility
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewVisibility                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SetVisibility(bool bNewVisibility, bool bPropagateToChildren)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetVisibility"));
+
+	struct
+	{
+		bool                           bNewVisibility;
+		bool                           bPropagateToChildren;
+	} params;
+
+	params.bNewVisibility = bNewVisibility;
+	params.bPropagateToChildren = bPropagateToChildren;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SetRelativeScale3D
+// (Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewScale3D                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SetRelativeScale3D(const struct FVector& NewScale3D)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetRelativeScale3D"));
+
+	struct
+	{
+		struct FVector                 NewScale3D;
+	} params;
+
+	params.NewScale3D = NewScale3D;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SetHiddenInGame
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           NewHidden                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SetHiddenInGame(bool NewHidden, bool bPropagateToChildren)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetHiddenInGame"));
+
+	struct
+	{
+		bool                           NewHidden;
+		bool                           bPropagateToChildren;
+	} params;
+
+	params.NewHidden = NewHidden;
+	params.bPropagateToChildren = bPropagateToChildren;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.SetAbsolute
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewAbsoluteLocation           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bNewAbsoluteRotation           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bNewAbsoluteScale              (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::SetAbsolute(bool bNewAbsoluteLocation, bool bNewAbsoluteRotation, bool bNewAbsoluteScale)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetAbsolute"));
+
+	struct
+	{
+		bool                           bNewAbsoluteLocation;
+		bool                           bNewAbsoluteRotation;
+		bool                           bNewAbsoluteScale;
+	} params;
+
+	params.bNewAbsoluteLocation = bNewAbsoluteLocation;
+	params.bNewAbsoluteRotation = bNewAbsoluteRotation;
+	params.bNewAbsoluteScale = bNewAbsoluteScale;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.ResetRelativeTransform
+// (Final, Native, Public, BlueprintCallable)
+
+void USceneComponent::ResetRelativeTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.ResetRelativeTransform"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.OnRep_Visibility
+// (Final, Native, Private)
+// Parameters:
+// bool                           OldValue                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::OnRep_Visibility(bool OldValue)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.OnRep_Visibility"));
+
+	struct
+	{
+		bool                           OldValue;
+	} params;
+
+	params.OldValue = OldValue;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.OnRep_Transform
+// (Final, Native, Private)
+
+void USceneComponent::OnRep_Transform()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.OnRep_Transform"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.K2_TryGetCachedSocketVelocity
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   SocketName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OutVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::K2_TryGetCachedSocketVelocity(const struct FName& SocketName, struct FVector* OutVelocity)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_TryGetCachedSocketVelocity"));
+
+	struct
+	{
+		struct FName                   SocketName;
+		struct FVector                 OutVelocity;
+		bool                           ReturnValue;
+	} params;
+
+	params.SocketName = SocketName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (OutVelocity != nullptr)
+		*OutVelocity = params.OutVelocity;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.K2_SetWorldTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform              NewTransform                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetWorldTransform(const struct FTransform& NewTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldTransform"));
+
+	struct
+	{
+		struct FTransform              NewTransform;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewTransform = NewTransform;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetWorldRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetWorldRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldRotation"));
+
+	struct
+	{
+		struct FRotator                NewRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewRotation = NewRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetWorldLocationAndRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetWorldLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldLocationAndRotation"));
+
+	struct
+	{
+		struct FVector                 NewLocation;
+		struct FRotator                NewRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewLocation = NewLocation;
+	params.NewRotation = NewRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetWorldLocation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetWorldLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldLocation"));
+
+	struct
+	{
+		struct FVector                 NewLocation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewLocation = NewLocation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetRelativeTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform              NewTransform                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetRelativeTransform(const struct FTransform& NewTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeTransform"));
+
+	struct
+	{
+		struct FTransform              NewTransform;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewTransform = NewTransform;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetRelativeRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetRelativeRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeRotation"));
+
+	struct
+	{
+		struct FRotator                NewRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewRotation = NewRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetRelativeLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation"));
+
+	struct
+	{
+		struct FVector                 NewLocation;
+		struct FRotator                NewRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewLocation = NewLocation;
+	params.NewRotation = NewRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_SetRelativeLocation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_SetRelativeLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeLocation"));
+
+	struct
+	{
+		struct FVector                 NewLocation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.NewLocation = NewLocation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_GetComponentToWorld
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform USceneComponent::K2_GetComponentToWorld()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentToWorld"));
+
+	struct
+	{
+		struct FTransform              ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.K2_GetComponentScale
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::K2_GetComponentScale()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentScale"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.K2_GetComponentRotation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FRotator USceneComponent::K2_GetComponentRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentRotation"));
+
+	struct
+	{
+		struct FRotator                ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.K2_GetComponentLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::K2_GetComponentLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentLocation"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.K2_AttachTo
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent*         InParent                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EAttachLocation>   AttachType                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bWeldSimulatedBodies           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AttachTo(class USceneComponent* InParent, const struct FName& InSocketName, TEnumAsByte<EAttachLocation> AttachType, bool bWeldSimulatedBodies)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AttachTo"));
+
+	struct
+	{
+		class USceneComponent*         InParent;
+		struct FName                   InSocketName;
+		TEnumAsByte<EAttachLocation>   AttachType;
+		bool                           bWeldSimulatedBodies;
+	} params;
+
+	params.InParent = InParent;
+	params.InSocketName = InSocketName;
+	params.AttachType = AttachType;
+	params.bWeldSimulatedBodies = bWeldSimulatedBodies;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.SceneComponent.K2_AddWorldTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform              DeltaTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddWorldTransform(const struct FTransform& DeltaTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldTransform"));
+
+	struct
+	{
+		struct FTransform              DeltaTransform;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaTransform = DeltaTransform;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddWorldRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddWorldRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldRotation"));
+
+	struct
+	{
+		struct FRotator                DeltaRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaRotation = DeltaRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddWorldOffset
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddWorldOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldOffset"));
+
+	struct
+	{
+		struct FVector                 DeltaLocation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaLocation = DeltaLocation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddRelativeRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddRelativeRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddRelativeRotation"));
+
+	struct
+	{
+		struct FRotator                DeltaRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaRotation = DeltaRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddRelativeLocation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddRelativeLocation(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddRelativeLocation"));
+
+	struct
+	{
+		struct FVector                 DeltaLocation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaLocation = DeltaLocation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddLocalTransform
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform              DeltaTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddLocalTransform(const struct FTransform& DeltaTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalTransform"));
+
+	struct
+	{
+		struct FTransform              DeltaTransform;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaTransform = DeltaTransform;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddLocalRotation
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddLocalRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalRotation"));
+
+	struct
+	{
+		struct FRotator                DeltaRotation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaRotation = DeltaRotation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.K2_AddLocalOffset
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              SweepHitResult                 (Parm, OutParm)
+// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::K2_AddLocalOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalOffset"));
+
+	struct
+	{
+		struct FVector                 DeltaLocation;
+		bool                           bSweep;
+		struct FHitResult              SweepHitResult;
+		bool                           bTeleport;
+	} params;
+
+	params.DeltaLocation = DeltaLocation;
+	params.bSweep = bSweep;
+	params.bTeleport = bTeleport;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = params.SweepHitResult;
+}
+
+
+// Function Engine.SceneComponent.IsVisible
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::IsVisible()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsVisible"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.IsSimulatingPhysics
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   BoneName                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::IsSimulatingPhysics(const struct FName& BoneName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsSimulatingPhysics"));
+
+	struct
+	{
+		struct FName                   BoneName;
+		bool                           ReturnValue;
+	} params;
+
+	params.BoneName = BoneName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.IsAnySimulatingPhysics
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::IsAnySimulatingPhysics()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsAnySimulatingPhysics"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetUpVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::GetUpVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetUpVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetSocketTransform
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERelativeTransformSpace> TransformSpace                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform USceneComponent::GetSocketTransform(const struct FName& InSocketName, TEnumAsByte<ERelativeTransformSpace> TransformSpace)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketTransform"));
+
+	struct
+	{
+		struct FName                   InSocketName;
+		TEnumAsByte<ERelativeTransformSpace> TransformSpace;
+		struct FTransform              ReturnValue;
+	} params;
+
+	params.InSocketName = InSocketName;
+	params.TransformSpace = TransformSpace;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetSocketRotation
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FRotator USceneComponent::GetSocketRotation(const struct FName& InSocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketRotation"));
+
+	struct
+	{
+		struct FName                   InSocketName;
+		struct FRotator                ReturnValue;
+	} params;
+
+	params.InSocketName = InSocketName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetSocketQuaternion
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FQuat USceneComponent::GetSocketQuaternion(const struct FName& InSocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketQuaternion"));
+
+	struct
+	{
+		struct FName                   InSocketName;
+		struct FQuat                   ReturnValue;
+	} params;
+
+	params.InSocketName = InSocketName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetSocketLocation
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::GetSocketLocation(const struct FName& InSocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketLocation"));
+
+	struct
+	{
+		struct FName                   InSocketName;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.InSocketName = InSocketName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetRightVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::GetRightVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetRightVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetRelativeTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform USceneComponent::GetRelativeTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetRelativeTransform"));
+
+	struct
+	{
+		struct FTransform              ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetPhysicsVolume
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APhysicsVolume*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class APhysicsVolume* USceneComponent::GetPhysicsVolume()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetPhysicsVolume"));
+
+	struct
+	{
+		class APhysicsVolume*          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetParentComponents
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class USceneComponent*> Parents                        (Parm, OutParm, ZeroConstructor)
+
+void USceneComponent::GetParentComponents(TArray<class USceneComponent*>* Parents)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetParentComponents"));
+
+	struct
+	{
+		TArray<class USceneComponent*> Parents;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Parents != nullptr)
+		*Parents = params.Parents;
+}
+
+
+// Function Engine.SceneComponent.GetNumChildrenComponents
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int USceneComponent::GetNumChildrenComponents()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetNumChildrenComponents"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetForwardVector
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::GetForwardVector()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetForwardVector"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetComponentVelocity
+// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector USceneComponent::GetComponentVelocity()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetComponentVelocity"));
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetChildrenComponents
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           bIncludeAllDescendants         (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class USceneComponent*> Children                       (Parm, OutParm, ZeroConstructor)
+
+void USceneComponent::GetChildrenComponents(bool bIncludeAllDescendants, TArray<class USceneComponent*>* Children)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetChildrenComponents"));
+
+	struct
+	{
+		bool                           bIncludeAllDescendants;
+		TArray<class USceneComponent*> Children;
+	} params;
+
+	params.bIncludeAllDescendants = bIncludeAllDescendants;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Children != nullptr)
+		*Children = params.Children;
+}
+
+
+// Function Engine.SceneComponent.GetChildComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ChildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USceneComponent* USceneComponent::GetChildComponent(int ChildIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetChildComponent"));
+
+	struct
+	{
+		int                            ChildIndex;
+		class USceneComponent*         ReturnValue;
+	} params;
+
+	params.ChildIndex = ChildIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetAttachSocketName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName USceneComponent::GetAttachSocketName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAttachSocketName"));
+
+	struct
+	{
+		struct FName                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetAttachParent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USceneComponent* USceneComponent::GetAttachParent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAttachParent"));
+
+	struct
+	{
+		class USceneComponent*         ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetAttachedBasisTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform USceneComponent::GetAttachedBasisTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAttachedBasisTransform"));
+
+	struct
+	{
+		struct FTransform              ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.GetAllSocketNames
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> USceneComponent::GetAllSocketNames()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAllSocketNames"));
+
+	struct
+	{
+		TArray<struct FName>           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.DoesSocketExist
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USceneComponent::DoesSocketExist(const struct FName& InSocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.DoesSocketExist"));
+
+	struct
+	{
+		struct FName                   InSocketName;
+		bool                           ReturnValue;
+	} params;
+
+	params.InSocketName = InSocketName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SceneComponent.DetachFromParent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bMaintainWorldPosition         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bCallModify                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallModify)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.DetachFromParent"));
+
+	struct
+	{
+		bool                           bMaintainWorldPosition;
+		bool                           bCallModify;
+	} params;
+
+	params.bMaintainWorldPosition = bMaintainWorldPosition;
+	params.bCallModify = bCallModify;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -4526,6 +5983,26 @@ void UAnimInstance::Montage_SetNextSection(const struct FName& SectionNameToChan
 }
 
 
+// Function Engine.AnimInstance.Montage_Resume
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimMontage*            Montage                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAnimInstance::Montage_Resume(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AnimInstance.Montage_Resume"));
+
+	struct
+	{
+		class UAnimMontage*            Montage;
+	} params;
+
+	params.Montage = Montage;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.AnimInstance.Montage_Play
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -4715,9 +6192,9 @@ void UAnimInstance::LockAIResources(bool bLockMovement, bool LockAILogic)
 
 
 // Function Engine.AnimInstance.IsPlayingSlotAnimation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimSequenceBase*       Asset                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -4742,7 +6219,7 @@ bool UAnimInstance::IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const
 
 
 // Function Engine.AnimInstance.GetSyncGroupPosition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -5631,1374 +7108,6 @@ class FString UAnimNotify::GetNotifyName()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.ToggleVisibility
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::ToggleVisibility(bool bPropagateToChildren)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.ToggleVisibility"));
-
-	struct
-	{
-		bool                           bPropagateToChildren;
-	} params;
-
-	params.bPropagateToChildren = bPropagateToChildren;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SnapTo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USceneComponent*         InParent                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SnapTo(class USceneComponent* InParent, const struct FName& InSocketName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SnapTo"));
-
-	struct
-	{
-		class USceneComponent*         InParent;
-		struct FName                   InSocketName;
-	} params;
-
-	params.InParent = InParent;
-	params.InSocketName = InSocketName;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SharesBasis
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class USceneComponent*         Other                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::SharesBasis(class USceneComponent* Other)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SharesBasis"));
-
-	struct
-	{
-		class USceneComponent*         Other;
-		bool                           ReturnValue;
-	} params;
-
-	params.Other = Other;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.SetWorldScale3D
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SetWorldScale3D(const struct FVector& NewScale)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetWorldScale3D"));
-
-	struct
-	{
-		struct FVector                 NewScale;
-	} params;
-
-	params.NewScale = NewScale;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SetVisibility
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewVisibility                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SetVisibility(bool bNewVisibility, bool bPropagateToChildren)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetVisibility"));
-
-	struct
-	{
-		bool                           bNewVisibility;
-		bool                           bPropagateToChildren;
-	} params;
-
-	params.bNewVisibility = bNewVisibility;
-	params.bPropagateToChildren = bPropagateToChildren;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SetRelativeScale3D
-// (Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewScale3D                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SetRelativeScale3D(const struct FVector& NewScale3D)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetRelativeScale3D"));
-
-	struct
-	{
-		struct FVector                 NewScale3D;
-	} params;
-
-	params.NewScale3D = NewScale3D;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SetHiddenInGame
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           NewHidden                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SetHiddenInGame(bool NewHidden, bool bPropagateToChildren)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetHiddenInGame"));
-
-	struct
-	{
-		bool                           NewHidden;
-		bool                           bPropagateToChildren;
-	} params;
-
-	params.NewHidden = NewHidden;
-	params.bPropagateToChildren = bPropagateToChildren;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.SetAbsolute
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bNewAbsoluteLocation           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewAbsoluteRotation           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewAbsoluteScale              (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::SetAbsolute(bool bNewAbsoluteLocation, bool bNewAbsoluteRotation, bool bNewAbsoluteScale)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.SetAbsolute"));
-
-	struct
-	{
-		bool                           bNewAbsoluteLocation;
-		bool                           bNewAbsoluteRotation;
-		bool                           bNewAbsoluteScale;
-	} params;
-
-	params.bNewAbsoluteLocation = bNewAbsoluteLocation;
-	params.bNewAbsoluteRotation = bNewAbsoluteRotation;
-	params.bNewAbsoluteScale = bNewAbsoluteScale;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.ResetRelativeTransform
-// (Final, Native, Public, BlueprintCallable)
-
-void USceneComponent::ResetRelativeTransform()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.ResetRelativeTransform"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.OnRep_Visibility
-// (Final, Native, Private)
-// Parameters:
-// bool                           OldValue                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::OnRep_Visibility(bool OldValue)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.OnRep_Visibility"));
-
-	struct
-	{
-		bool                           OldValue;
-	} params;
-
-	params.OldValue = OldValue;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.OnRep_Transform
-// (Final, Native, Private)
-
-void USceneComponent::OnRep_Transform()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.OnRep_Transform"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.K2_TryGetCachedSocketVelocity
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   SocketName                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OutVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::K2_TryGetCachedSocketVelocity(const struct FName& SocketName, struct FVector* OutVelocity)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_TryGetCachedSocketVelocity"));
-
-	struct
-	{
-		struct FName                   SocketName;
-		struct FVector                 OutVelocity;
-		bool                           ReturnValue;
-	} params;
-
-	params.SocketName = SocketName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (OutVelocity != nullptr)
-		*OutVelocity = params.OutVelocity;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.K2_SetWorldTransform
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FTransform              NewTransform                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetWorldTransform(const struct FTransform& NewTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldTransform"));
-
-	struct
-	{
-		struct FTransform              NewTransform;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewTransform = NewTransform;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetWorldRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetWorldRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldRotation"));
-
-	struct
-	{
-		struct FRotator                NewRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewRotation = NewRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetWorldLocationAndRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetWorldLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldLocationAndRotation"));
-
-	struct
-	{
-		struct FVector                 NewLocation;
-		struct FRotator                NewRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewLocation = NewLocation;
-	params.NewRotation = NewRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetWorldLocation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetWorldLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetWorldLocation"));
-
-	struct
-	{
-		struct FVector                 NewLocation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewLocation = NewLocation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetRelativeTransform
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FTransform              NewTransform                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetRelativeTransform(const struct FTransform& NewTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeTransform"));
-
-	struct
-	{
-		struct FTransform              NewTransform;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewTransform = NewTransform;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetRelativeRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetRelativeRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeRotation"));
-
-	struct
-	{
-		struct FRotator                NewRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewRotation = NewRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetRelativeLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation"));
-
-	struct
-	{
-		struct FVector                 NewLocation;
-		struct FRotator                NewRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewLocation = NewLocation;
-	params.NewRotation = NewRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_SetRelativeLocation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 NewLocation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_SetRelativeLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_SetRelativeLocation"));
-
-	struct
-	{
-		struct FVector                 NewLocation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.NewLocation = NewLocation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_GetComponentToWorld
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FTransform USceneComponent::K2_GetComponentToWorld()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentToWorld"));
-
-	struct
-	{
-		struct FTransform              ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.K2_GetComponentScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::K2_GetComponentScale()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentScale"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.K2_GetComponentRotation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FRotator USceneComponent::K2_GetComponentRotation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentRotation"));
-
-	struct
-	{
-		struct FRotator                ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.K2_GetComponentLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::K2_GetComponentLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_GetComponentLocation"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.K2_AttachTo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USceneComponent*         InParent                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EAttachLocation>   AttachType                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWeldSimulatedBodies           (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AttachTo(class USceneComponent* InParent, const struct FName& InSocketName, TEnumAsByte<EAttachLocation> AttachType, bool bWeldSimulatedBodies)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AttachTo"));
-
-	struct
-	{
-		class USceneComponent*         InParent;
-		struct FName                   InSocketName;
-		TEnumAsByte<EAttachLocation>   AttachType;
-		bool                           bWeldSimulatedBodies;
-	} params;
-
-	params.InParent = InParent;
-	params.InSocketName = InSocketName;
-	params.AttachType = AttachType;
-	params.bWeldSimulatedBodies = bWeldSimulatedBodies;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.SceneComponent.K2_AddWorldTransform
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FTransform              DeltaTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddWorldTransform(const struct FTransform& DeltaTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldTransform"));
-
-	struct
-	{
-		struct FTransform              DeltaTransform;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaTransform = DeltaTransform;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddWorldRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddWorldRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldRotation"));
-
-	struct
-	{
-		struct FRotator                DeltaRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaRotation = DeltaRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddWorldOffset
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddWorldOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddWorldOffset"));
-
-	struct
-	{
-		struct FVector                 DeltaLocation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaLocation = DeltaLocation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddRelativeRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddRelativeRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddRelativeRotation"));
-
-	struct
-	{
-		struct FRotator                DeltaRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaRotation = DeltaRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddRelativeLocation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddRelativeLocation(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddRelativeLocation"));
-
-	struct
-	{
-		struct FVector                 DeltaLocation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaLocation = DeltaLocation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddLocalTransform
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FTransform              DeltaTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddLocalTransform(const struct FTransform& DeltaTransform, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalTransform"));
-
-	struct
-	{
-		struct FTransform              DeltaTransform;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaTransform = DeltaTransform;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddLocalRotation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FRotator                DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddLocalRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalRotation"));
-
-	struct
-	{
-		struct FRotator                DeltaRotation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaRotation = DeltaRotation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.K2_AddLocalOffset
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 DeltaLocation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSweep                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepHitResult                 (Parm, OutParm)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::K2_AddLocalOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.K2_AddLocalOffset"));
-
-	struct
-	{
-		struct FVector                 DeltaLocation;
-		bool                           bSweep;
-		struct FHitResult              SweepHitResult;
-		bool                           bTeleport;
-	} params;
-
-	params.DeltaLocation = DeltaLocation;
-	params.bSweep = bSweep;
-	params.bTeleport = bTeleport;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SweepHitResult != nullptr)
-		*SweepHitResult = params.SweepHitResult;
-}
-
-
-// Function Engine.SceneComponent.IsVisible
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::IsVisible()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsVisible"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.IsSimulatingPhysics
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   BoneName                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::IsSimulatingPhysics(const struct FName& BoneName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsSimulatingPhysics"));
-
-	struct
-	{
-		struct FName                   BoneName;
-		bool                           ReturnValue;
-	} params;
-
-	params.BoneName = BoneName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.IsAnySimulatingPhysics
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::IsAnySimulatingPhysics()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.IsAnySimulatingPhysics"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetUpVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::GetUpVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetUpVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetSocketTransform
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<ERelativeTransformSpace> TransformSpace                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FTransform USceneComponent::GetSocketTransform(const struct FName& InSocketName, TEnumAsByte<ERelativeTransformSpace> TransformSpace)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketTransform"));
-
-	struct
-	{
-		struct FName                   InSocketName;
-		TEnumAsByte<ERelativeTransformSpace> TransformSpace;
-		struct FTransform              ReturnValue;
-	} params;
-
-	params.InSocketName = InSocketName;
-	params.TransformSpace = TransformSpace;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetSocketRotation
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FRotator USceneComponent::GetSocketRotation(const struct FName& InSocketName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketRotation"));
-
-	struct
-	{
-		struct FName                   InSocketName;
-		struct FRotator                ReturnValue;
-	} params;
-
-	params.InSocketName = InSocketName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetSocketQuaternion
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FQuat USceneComponent::GetSocketQuaternion(const struct FName& InSocketName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketQuaternion"));
-
-	struct
-	{
-		struct FName                   InSocketName;
-		struct FQuat                   ReturnValue;
-	} params;
-
-	params.InSocketName = InSocketName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetSocketLocation
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::GetSocketLocation(const struct FName& InSocketName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetSocketLocation"));
-
-	struct
-	{
-		struct FName                   InSocketName;
-		struct FVector                 ReturnValue;
-	} params;
-
-	params.InSocketName = InSocketName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetRightVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::GetRightVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetRightVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetRelativeTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FTransform USceneComponent::GetRelativeTransform()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetRelativeTransform"));
-
-	struct
-	{
-		struct FTransform              ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetPhysicsVolume
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class APhysicsVolume*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class APhysicsVolume* USceneComponent::GetPhysicsVolume()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetPhysicsVolume"));
-
-	struct
-	{
-		class APhysicsVolume*          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetParentComponents
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class USceneComponent*> Parents                        (Parm, OutParm, ZeroConstructor)
-
-void USceneComponent::GetParentComponents(TArray<class USceneComponent*>* Parents)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetParentComponents"));
-
-	struct
-	{
-		TArray<class USceneComponent*> Parents;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Parents != nullptr)
-		*Parents = params.Parents;
-}
-
-
-// Function Engine.SceneComponent.GetNumChildrenComponents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int USceneComponent::GetNumChildrenComponents()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetNumChildrenComponents"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetForwardVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::GetForwardVector()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetForwardVector"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetComponentVelocity
-// (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector USceneComponent::GetComponentVelocity()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetComponentVelocity"));
-
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetChildrenComponents
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           bIncludeAllDescendants         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class USceneComponent*> Children                       (Parm, OutParm, ZeroConstructor)
-
-void USceneComponent::GetChildrenComponents(bool bIncludeAllDescendants, TArray<class USceneComponent*>* Children)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetChildrenComponents"));
-
-	struct
-	{
-		bool                           bIncludeAllDescendants;
-		TArray<class USceneComponent*> Children;
-	} params;
-
-	params.bIncludeAllDescendants = bIncludeAllDescendants;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Children != nullptr)
-		*Children = params.Children;
-}
-
-
-// Function Engine.SceneComponent.GetChildComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ChildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class USceneComponent* USceneComponent::GetChildComponent(int ChildIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetChildComponent"));
-
-	struct
-	{
-		int                            ChildIndex;
-		class USceneComponent*         ReturnValue;
-	} params;
-
-	params.ChildIndex = ChildIndex;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetAttachParent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class USceneComponent* USceneComponent::GetAttachParent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAttachParent"));
-
-	struct
-	{
-		class USceneComponent*         ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetAttachedBasisTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FTransform USceneComponent::GetAttachedBasisTransform()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAttachedBasisTransform"));
-
-	struct
-	{
-		struct FTransform              ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.GetAllSocketNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FName> USceneComponent::GetAllSocketNames()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.GetAllSocketNames"));
-
-	struct
-	{
-		TArray<struct FName>           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.DoesSocketExist
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   InSocketName                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USceneComponent::DoesSocketExist(const struct FName& InSocketName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.DoesSocketExist"));
-
-	struct
-	{
-		struct FName                   InSocketName;
-		bool                           ReturnValue;
-	} params;
-
-	params.InSocketName = InSocketName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.SceneComponent.DetachFromParent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           bMaintainWorldPosition         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCallModify                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void USceneComponent::DetachFromParent(bool bMaintainWorldPosition, bool bCallModify)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SceneComponent.DetachFromParent"));
-
-	struct
-	{
-		bool                           bMaintainWorldPosition;
-		bool                           bCallModify;
-	} params;
-
-	params.bMaintainWorldPosition = bMaintainWorldPosition;
-	params.bCallModify = bCallModify;
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -11821,9 +11930,10 @@ class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeCla
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                UserPlaySpaceRot               (Parm, ZeroConstructor, IsPlainOldData)
+// class UCurveFloat*             BlendInCurve                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UCameraAnimInst*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
+class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, class UCurveFloat* BlendInCurve)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerCameraManager.PlayCameraAnim"));
 
@@ -11839,6 +11949,7 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 		float                          Duration;
 		TEnumAsByte<ECameraAnimPlaySpace> PlaySpace;
 		struct FRotator                UserPlaySpaceRot;
+		class UCurveFloat*             BlendInCurve;
 		class UCameraAnimInst*         ReturnValue;
 	} params;
 
@@ -11852,6 +11963,7 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 	params.Duration = Duration;
 	params.PlaySpace = PlaySpace;
 	params.UserPlaySpaceRot = UserPlaySpaceRot;
+	params.BlendInCurve = BlendInCurve;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -14206,6 +14318,29 @@ void APlayerController::ClientVoiceHandshakeComplete()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerController.ClientUpdateLevelStreamingStatusBatched
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// class FString                  PackageBasePath                (Parm, ZeroConstructor)
+// TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void APlayerController::ClientUpdateLevelStreamingStatusBatched(const class FString& PackageBasePath, TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerController.ClientUpdateLevelStreamingStatusBatched"));
+
+	struct
+	{
+		class FString                  PackageBasePath;
+		TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo;
+	} params;
+
+	params.PackageBasePath = PackageBasePath;
+	params.LevelStreamingStatusUpdateInfo = LevelStreamingStatusUpdateInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -16591,22 +16726,6 @@ void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* M
 		*Min = params.Min;
 	if (Max != nullptr)
 		*Max = params.Max;
-}
-
-
-// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
-// (Final, Native, Public, BlueprintCallable)
-
-void UStaticMeshComponent::EnableAutomaticInstancing()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.EnableAutomaticInstancing"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -19646,27 +19765,6 @@ void AAmbientSound::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeL
 }
 
 
-// Function Engine.AutomaticInstancingActor.GetInstancedStaticMeshes
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<class UInstancedStaticMeshComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class UInstancedStaticMeshComponent*> AAutomaticInstancingActor::GetInstancedStaticMeshes()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AutomaticInstancingActor.GetInstancedStaticMeshes"));
-
-	struct
-	{
-		TArray<class UInstancedStaticMeshComponent*> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.FFTWater.ValidateVertexBuffer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -22333,6 +22431,26 @@ void USkinnedMeshComponent::SetMasterPoseComponent(class USkinnedMeshComponent* 
 }
 
 
+// Function Engine.SkinnedMeshComponent.SetCustomDepthMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void USkinnedMeshComponent::SetCustomDepthMaterial(class UMaterialInterface* Material)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SkinnedMeshComponent.SetCustomDepthMaterial"));
+
+	struct
+	{
+		class UMaterialInterface*      Material;
+	} params;
+
+	params.Material = Material;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.SkinnedMeshComponent.OnRep_SkeletalMesh
 // (Final, Native, Public)
 // Parameters:
@@ -22441,6 +22559,27 @@ struct FName USkinnedMeshComponent::GetParentBone(const struct FName& BoneName)
 	} params;
 
 	params.BoneName = BoneName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SkinnedMeshComponent.GetCustomDepthMaterial
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UMaterialInterface* USkinnedMeshComponent::GetCustomDepthMaterial()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.SkinnedMeshComponent.GetCustomDepthMaterial"));
+
+	struct
+	{
+		class UMaterialInterface*      ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33188,311 +33327,6 @@ class UGPUSortDestData* UGPUSortTestLibrary::TestGPUSortForSize(class UObject* W
 }
 
 
-// Function Engine.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* WorldContext, float NewScale)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale"));
-
-	struct
-	{
-		class UObject*                 WorldContext;
-		float                          NewScale;
-	} params;
-
-	params.WorldContext = WorldContext;
-	params.NewScale = NewScale;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.SetClippingPlanes
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          Near                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Far                            (Parm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.SetClippingPlanes"));
-
-	struct
-	{
-		float                          Near;
-		float                          Far;
-	} params;
-
-	params.Near = Near;
-	params.Far = Far;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EOrientPositionSelector> Options                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, TEnumAsByte<EOrientPositionSelector> Options)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition"));
-
-	struct
-	{
-		float                          Yaw;
-		TEnumAsByte<EOrientPositionSelector> Options;
-	} params;
-
-	params.Yaw = Yaw;
-	params.Options = Options;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UHeadMountedDisplayFunctionLibrary::IsInLowPersistenceMode()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UHeadMountedDisplayFunctionLibrary::HasValidTrackingPosition()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* WorldContext)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale"));
-
-	struct
-	{
-		class UObject*                 WorldContext;
-		float                          ReturnValue;
-	} params;
-
-	params.WorldContext = WorldContext;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.GetScreenPercentage
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.GetScreenPercentage"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FVector                 CameraOrigin                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                CameraRotation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          HFOV                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          VFOV                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CameraDistance                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          NearPlane                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          FarPlane                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters"));
-
-	struct
-	{
-		struct FVector                 CameraOrigin;
-		struct FRotator                CameraRotation;
-		float                          HFOV;
-		float                          VFOV;
-		float                          CameraDistance;
-		float                          NearPlane;
-		float                          FarPlane;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	if (CameraOrigin != nullptr)
-		*CameraOrigin = params.CameraOrigin;
-	if (CameraRotation != nullptr)
-		*CameraRotation = params.CameraRotation;
-	if (HFOV != nullptr)
-		*HFOV = params.HFOV;
-	if (VFOV != nullptr)
-		*VFOV = params.VFOV;
-	if (CameraDistance != nullptr)
-		*CameraDistance = params.CameraDistance;
-	if (NearPlane != nullptr)
-		*NearPlane = params.NearPlane;
-	if (FarPlane != nullptr)
-		*FarPlane = params.FarPlane;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FRotator                DeviceRotation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 DevicePosition                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition"));
-
-	struct
-	{
-		struct FRotator                DeviceRotation;
-		struct FVector                 DevicePosition;
-	} params;
-
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	if (DeviceRotation != nullptr)
-		*DeviceRotation = params.DeviceRotation;
-	if (DevicePosition != nullptr)
-		*DevicePosition = params.DevicePosition;
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode"));
-
-	struct
-	{
-		bool                           bEnable;
-	} params;
-
-	params.bEnable = bEnable;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.HeadMountedDisplayFunctionLibrary.EnableHMD
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.HeadMountedDisplayFunctionLibrary.EnableHMD"));
-
-	struct
-	{
-		bool                           bEnable;
-		bool                           ReturnValue;
-	} params;
-
-	params.bEnable = bEnable;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function Engine.KismetArrayLibrary.SetArrayPropertyByName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -40928,6 +40762,31 @@ void UKismetMathLibrary::GetYawPitchFromVector(const struct FVector& InVec, floa
 		*Yaw = params.Yaw;
 	if (Pitch != nullptr)
 		*Pitch = params.Pitch;
+}
+
+
+// Function Engine.KismetMathLibrary.GetYawFromVector
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                 InVec                          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKismetMathLibrary::GetYawFromVector(const struct FVector& InVec)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.KismetMathLibrary.GetYawFromVector"));
+
+	struct
+	{
+		struct FVector                 InVec;
+		float                          ReturnValue;
+	} params;
+
+	params.InVec = InVec;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -54550,6 +54409,26 @@ void UCanvas::K2_Deproject(const struct FVector2D& ScreenPosition, struct FVecto
 }
 
 
+// Function Engine.Canvas.DrawTextures
+// (Native, Public, HasOutParms)
+// Parameters:
+// TArray<struct FTextureRenderData> RenderDatas                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCanvas::DrawTextures(TArray<struct FTextureRenderData> RenderDatas)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Canvas.DrawTextures"));
+
+	struct
+	{
+		TArray<struct FTextureRenderData> RenderDatas;
+	} params;
+
+	params.RenderDatas = RenderDatas;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.CheatManager.WidgetReflector
 // (Exec, Native, Public)
 
@@ -55783,7 +55662,7 @@ bool ULevelStreaming::IsLevelVisible()
 
 
 // Function Engine.LevelStreaming.IsLevelLoaded
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55804,7 +55683,7 @@ bool ULevelStreaming::IsLevelLoaded()
 
 
 // Function Engine.LevelStreaming.GetLevelScriptActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ALevelScriptActor*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
