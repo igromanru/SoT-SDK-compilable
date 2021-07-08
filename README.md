@@ -1,1 +1,0 @@
-![https://ci.appveyor.com/api/projects/status/github/igromanru/SoT-SDK-compilable?branch=master&svg=true](https://ci.appveyor.com/api/projects/status/github/igromanru/SoT-SDK-compilable?branch=master&svg=true)
