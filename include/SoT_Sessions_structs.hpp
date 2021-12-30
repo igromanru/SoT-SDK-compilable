@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,7 +91,7 @@ struct FCrewSessionTelemetry
 	TArray<struct FCrewSessionMemberTelemetry>         SessionMembers;                                           // 0x0000(0x0010) (ZeroConstructor)
 	class FString                                      SessionTemplate;                                          // 0x0010(0x0010) (ZeroConstructor)
 	class FString                                      SessionVisibility;                                        // 0x0020(0x0010) (ZeroConstructor)
-	class FString                                      PlayMode;                                                 // 0x0030(0x0010) (ZeroConstructor)
+	class FString                                      Playmode;                                                 // 0x0030(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Sessions.CrewSessionBaseSessionTelemetryEvent
@@ -112,23 +112,34 @@ struct FCrewSessionMatchmakingFollowedTelemetryEvent : public FCrewSessionBaseSe
 };
 
 // ScriptStruct Sessions.CrewSessionMatchmakingEndedTelemetryEvent
-// 0x0028 (0x0078 - 0x0050)
-struct FCrewSessionMatchmakingEndedTelemetryEvent : public FCrewSessionBaseSessionTelemetryEvent
+// 0x0088 (0x0098 - 0x0010)
+struct FCrewSessionMatchmakingEndedTelemetryEvent : public FCrewSessionBaseTelemetryEvent
 {
-	struct FGuid                                       NewCrewId;                                                // 0x0050(0x0010) (ZeroConstructor, IsPlainOldData)
-	int                                                ResultCode;                                               // 0x0060(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	class FString                                      Message;                                                  // 0x0068(0x0010) (ZeroConstructor)
+	struct FGuid                                       NewCrewId;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       CrewMatchmakingAttemptId;                                 // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      SessionType;                                              // 0x0030(0x0010) (ZeroConstructor)
+	class FString                                      MatchmakingHopper;                                        // 0x0040(0x0010) (ZeroConstructor)
+	class FString                                      MatchmakingType;                                          // 0x0050(0x0010) (ZeroConstructor)
+	class FString                                      MatchmakingResult;                                        // 0x0060(0x0010) (ZeroConstructor)
+	class FString                                      ErrorMessage;                                             // 0x0070(0x0010) (ZeroConstructor)
+	TArray<int>                                        CrewSegmentValues;                                        // 0x0080(0x0010) (ZeroConstructor)
+	int                                                CurrentCrewCount;                                         // 0x0090(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                TotalWaitTime;                                            // 0x0094(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Sessions.CrewSessionMatchmakingStartedTelemetryEvent
-// 0x0008 (0x0018 - 0x0010)
+// 0x0060 (0x0070 - 0x0010)
 struct FCrewSessionMatchmakingStartedTelemetryEvent : public FCrewSessionBaseTelemetryEvent
 {
-	float                                              TimeoutSeconds;                                           // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               PreserveSession;                                          // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               ResubmitTicket;                                           // 0x0015(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0016(0x0002) MISSED OFFSET
+	struct FGuid                                       CrewMatchmakingAttemptId;                                 // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	class FString                                      SessionType;                                              // 0x0020(0x0010) (ZeroConstructor)
+	class FString                                      MatchmakingHopper;                                        // 0x0030(0x0010) (ZeroConstructor)
+	class FString                                      MatchmakingType;                                          // 0x0040(0x0010) (ZeroConstructor)
+	TArray<int>                                        CrewSegmentValues;                                        // 0x0050(0x0010) (ZeroConstructor)
+	int                                                CurrentCrewCount;                                         // 0x0060(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                EstimatedWaitTime;                                        // 0x0064(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxWaitTime;                                              // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Sessions.CrewSessionLeaveTelemetryEvent

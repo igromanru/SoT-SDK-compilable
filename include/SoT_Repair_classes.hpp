@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,6 +44,7 @@ public:
 
 
 	void HandleDestroy();
+	float GetUndoRepairTime(class AActor* Interactor);
 	class UClass* GetRepairType();
 	float GetRepairTime();
 	TEnumAsByte<ERepairableState> GetRepairableState();

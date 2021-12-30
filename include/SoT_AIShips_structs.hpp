@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,12 +8,12 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AIShips_enums.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Maths_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
-#include "SoT_Maths_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 
 namespace SDK
@@ -341,7 +341,7 @@ struct FCursedSailsBattleParams
 {
 	struct FText                                       Name;                                                     // 0x0000(0x0038) (Edit, DisableEditOnInstance)
 	struct FText                                       SkellyCrewName;                                           // 0x0038(0x0038) (Edit, DisableEditOnInstance)
-	TEnumAsByte<ECannonballIconType>                   CannonballType;                                           // 0x0070(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECannonballIconType>                   CannonBallType;                                           // 0x0070(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<ESkellyFormIconType>                   SkellyType;                                               // 0x0071(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0072(0x0006) MISSED OFFSET
 	class UAIShipEncounterDesc*                        EncounterDescription;                                     // 0x0078(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
@@ -410,7 +410,7 @@ struct FAIShipEncounterNotification
 	struct FText                                       BattleName;                                               // 0x0000(0x0038)
 	struct FName                                       SeaName;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FText                                       SkellyCrewName;                                           // 0x0040(0x0038)
-	TEnumAsByte<ECannonballIconType>                   CannonballType;                                           // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECannonballIconType>                   CannonBallType;                                           // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ESkellyFormIconType>                   SkellyType;                                               // 0x0079(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 };

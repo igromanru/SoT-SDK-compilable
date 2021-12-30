@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,6 +9,7 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Repair_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -33,6 +34,27 @@ struct FEventRepairableObjectRepairEndedEvent
 struct FEventRepairableObjectDestroyed
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Repair.EventPlayerUndoRepairEnd
+// 0x0008
+struct FEventPlayerUndoRepairEnd
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Repair.EventPlayerUndoRepairCompleted
+// 0x0008
+struct FEventPlayerUndoRepairCompleted
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Repair.EventPlayerUndoRepairStart
+// 0x0008
+struct FEventPlayerUndoRepairStart
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 }

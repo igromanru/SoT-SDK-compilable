@@ -26,16 +26,25 @@
     <ClInclude Include="include\SoT_Animation_enums.hpp" />
     <ClInclude Include="include\SoT_Animation_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaAIAbilities_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaAIAbilities_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaAIAbilities_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_classes.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaAI_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaDebug_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaDebug_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaEngine_classes.hpp" />
     <ClInclude Include="include\SoT_AthenaEngine_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaEngine_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaInputMkII_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaInputMkII_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaInputMkII_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaInput_classes.hpp" />
     <ClInclude Include="include\SoT_AthenaInput_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaInput_structs.hpp" />
+    <ClInclude Include="include\SoT_AthenaProjectiles_classes.hpp" />
+    <ClInclude Include="include\SoT_AthenaProjectiles_enums.hpp" />
+    <ClInclude Include="include\SoT_AthenaProjectiles_structs.hpp" />
     <ClInclude Include="include\SoT_AthenaRigging_classes.hpp" />
     <ClInclude Include="include\SoT_AthenaRigging_enums.hpp" />
     <ClInclude Include="include\SoT_AthenaRigging_structs.hpp" />
@@ -58,12 +67,19 @@
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_classes.hpp" />
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_enums.hpp" />
     <ClInclude Include="include\SoT_CoherentUIGTPlugin_structs.hpp" />
+    <ClInclude Include="include\SoT_CommodityDemandFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_CommodityDemandFramework_enums.hpp" />
+    <ClInclude Include="include\SoT_CommodityDemandFramework_structs.hpp" />
     <ClInclude Include="include\SoT_Cooking_classes.hpp" />
     <ClInclude Include="include\SoT_Cooking_enums.hpp" />
     <ClInclude Include="include\SoT_Cooking_structs.hpp" />
     <ClInclude Include="include\SoT_CoreUObject_classes.hpp" />
     <ClInclude Include="include\SoT_CoreUObject_enums.hpp" />
     <ClInclude Include="include\SoT_CoreUObject_structs.hpp" />
+    <ClInclude Include="include\SoT_CrewOwnershipTracking_classes.hpp" />
+    <ClInclude Include="include\SoT_CrewOwnershipTracking_structs.hpp" />
+    <ClInclude Include="include\SoT_CustomDeath_classes.hpp" />
+    <ClInclude Include="include\SoT_CustomDeath_structs.hpp" />
     <ClInclude Include="include\SoT_DebugMenu_classes.hpp" />
     <ClInclude Include="include\SoT_DebugMenu_structs.hpp" />
     <ClInclude Include="include\SoT_DeliverableFramework_classes.hpp" />
@@ -108,6 +124,9 @@
     <ClInclude Include="include\SoT_Kraken_structs.hpp" />
     <ClInclude Include="include\SoT_LevelSequence_classes.hpp" />
     <ClInclude Include="include\SoT_LevelSequence_structs.hpp" />
+    <ClInclude Include="include\SoT_LostShipmentsClueVariants_classes.hpp" />
+    <ClInclude Include="include\SoT_LostShipmentsClueVariants_enums.hpp" />
+    <ClInclude Include="include\SoT_LostShipmentsClueVariants_structs.hpp" />
     <ClInclude Include="include\SoT_Maths_classes.hpp" />
     <ClInclude Include="include\SoT_Maths_enums.hpp" />
     <ClInclude Include="include\SoT_Maths_structs.hpp" />
@@ -119,9 +138,14 @@
     <ClInclude Include="include\SoT_MovieScene_classes.hpp" />
     <ClInclude Include="include\SoT_MovieScene_enums.hpp" />
     <ClInclude Include="include\SoT_MovieScene_structs.hpp" />
+    <ClInclude Include="include\SoT_MysteriousNotes_classes.hpp" />
+    <ClInclude Include="include\SoT_MysteriousNotes_structs.hpp" />
     <ClInclude Include="include\SoT_NaturalDisasters_classes.hpp" />
     <ClInclude Include="include\SoT_NaturalDisasters_enums.hpp" />
     <ClInclude Include="include\SoT_NaturalDisasters_structs.hpp" />
+    <ClInclude Include="include\SoT_NetworkRegions_classes.hpp" />
+    <ClInclude Include="include\SoT_NetworkRegions_enums.hpp" />
+    <ClInclude Include="include\SoT_NetworkRegions_structs.hpp" />
     <ClInclude Include="include\SoT_ObjectLifetime_classes.hpp" />
     <ClInclude Include="include\SoT_ObjectLifetime_structs.hpp" />
     <ClInclude Include="include\SoT_ObjectMessaging_classes.hpp" />
@@ -147,6 +171,8 @@
     <ClInclude Include="include\SoT_RareEngine_classes.hpp" />
     <ClInclude Include="include\SoT_RareEngine_enums.hpp" />
     <ClInclude Include="include\SoT_RareEngine_structs.hpp" />
+    <ClInclude Include="include\SoT_RemoteActorDestruction_classes.hpp" />
+    <ClInclude Include="include\SoT_RemoteActorDestruction_structs.hpp" />
     <ClInclude Include="include\SoT_Repair_classes.hpp" />
     <ClInclude Include="include\SoT_Repair_enums.hpp" />
     <ClInclude Include="include\SoT_Repair_structs.hpp" />
@@ -166,6 +192,8 @@
     <ClInclude Include="include\SoT_ShipDamage_classes.hpp" />
     <ClInclude Include="include\SoT_ShipDamage_enums.hpp" />
     <ClInclude Include="include\SoT_ShipDamage_structs.hpp" />
+    <ClInclude Include="include\SoT_ShortRangeMarkerFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_ShortRangeMarkerFramework_structs.hpp" />
     <ClInclude Include="include\SoT_SlateCore_classes.hpp" />
     <ClInclude Include="include\SoT_SlateCore_enums.hpp" />
     <ClInclude Include="include\SoT_SlateCore_structs.hpp" />
@@ -173,8 +201,10 @@
     <ClInclude Include="include\SoT_Slate_enums.hpp" />
     <ClInclude Include="include\SoT_Slate_structs.hpp" />
     <ClInclude Include="include\SoT_SpireFramework_classes.hpp" />
+    <ClInclude Include="include\SoT_SpireFramework_enums.hpp" />
     <ClInclude Include="include\SoT_SpireFramework_structs.hpp" />
     <ClInclude Include="include\SoT_StatusEffects_classes.hpp" />
+    <ClInclude Include="include\SoT_StatusEffects_enums.hpp" />
     <ClInclude Include="include\SoT_StatusEffects_structs.hpp" />
     <ClInclude Include="include\SoT_StudiosAutomation_classes.hpp" />
     <ClInclude Include="include\SoT_StudiosAutomation_enums.hpp" />
@@ -272,6 +302,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -290,6 +321,7 @@
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

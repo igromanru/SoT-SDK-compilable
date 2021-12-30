@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,11 +11,11 @@
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
-#include "AthenaCommons.hpp"
 #include "SoT_Interaction_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
+#include "AthenaCommons.hpp"
 
 namespace SDK
 {

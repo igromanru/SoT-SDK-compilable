@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -229,7 +229,7 @@ public:
 
 
 // Class PirateGenerator.PirateGeneratorSettings
-// 0x00E0 (0x0108 - 0x0028)
+// 0x00E8 (0x0110 - 0x0028)
 class UPirateGeneratorSettings : public UObject
 {
 public:
@@ -247,6 +247,8 @@ public:
 	struct FStringAssetReference                       ThirdPersonAnimations;                                    // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<float>                                      LODScreenSizes;                                           // 0x00E8(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<float>                                      LODHysteresis;                                            // 0x00F8(0x0010) (Edit, ZeroConstructor, Config)
+	int                                                DefaultPirateGenerationSeed;                              // 0x0108(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

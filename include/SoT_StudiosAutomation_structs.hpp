@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,6 +30,26 @@ struct FTestLevelMetadataEntry
 struct FClientPawnDetails
 {
 	TArray<class APawn*>                               Pawns;                                                    // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct StudiosAutomation.TextureAuditorProperties
+// 0x0020
+struct FTextureAuditorProperties
+{
+	TEnumAsByte<ETextureAuditorMipSetting>             RequiredMipsSetting;                                      // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	TArray<TEnumAsByte<EPixelFormat>>                  AllowedTextureFormats;                                    // 0x0008(0x0010) (Edit, ZeroConstructor)
+	uint32_t                                           MinSizeToValidateFormatX;                                 // 0x0018(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	uint32_t                                           MinSizeToValidateFormatY;                                 // 0x001C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.TextureAuditorGroupProperties
+// 0x0028
+struct FTextureAuditorGroupProperties
+{
+	TEnumAsByte<ETextureGroup>                         TextureGroup;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	struct FTextureAuditorProperties                   Properties;                                               // 0x0008(0x0020) (Edit)
 };
 
 // ScriptStruct StudiosAutomation.SubstringAuditQueryData

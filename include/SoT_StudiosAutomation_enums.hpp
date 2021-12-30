@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,6 +70,16 @@ enum class ETestCategory : uint8_t
 	ETestCategory__Soak            = 4,
 	ETestCategory__Performance     = 5,
 	ETestCategory__ETestCategory_MAX = 6
+};
+
+
+// Enum StudiosAutomation.ETextureAuditorMipSetting
+enum class ETextureAuditorMipSetting : uint8_t
+{
+	ETextureAuditorMipSetting__MipGenRequired = 0,
+	ETextureAuditorMipSetting__NoMipGenRequired = 1,
+	ETextureAuditorMipSetting__MipGenOptional = 2,
+	ETextureAuditorMipSetting__ETextureAuditorMipSetting_MAX = 3
 };
 
 

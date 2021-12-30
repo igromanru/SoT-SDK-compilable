@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,6 +37,14 @@ struct FReplicatedAuthoritativeTime
 {
 	struct FReplicatedDateTime                         WorldTime;                                                // 0x0000(0x0008)
 	struct FReplicatedDateTime                         SyncTime;                                                 // 0x0008(0x0008)
+};
+
+// ScriptStruct Time.GameTimeRange
+// 0x0010
+struct FGameTimeRange
+{
+	struct FGameTime                                   Start;                                                    // 0x0000(0x0008) (Edit)
+	struct FGameTime                                   End;                                                      // 0x0008(0x0008) (Edit)
 };
 
 // ScriptStruct Time.EventSetDateTime

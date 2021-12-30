@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,6 +51,16 @@ enum class EAshenLordWorldEndCloudState : uint8_t
 };
 
 
+// Enum NaturalDisasters.EGeyserState
+enum class EGeyserState : uint8_t
+{
+	EGeyserState__Dormant          = 0,
+	EGeyserState__Active           = 1,
+	EGeyserState__Disabled         = 2,
+	EGeyserState__EGeyserState_MAX = 3
+};
+
+
 // Enum NaturalDisasters.EEarthquakeState
 enum class EEarthquakeState : uint8_t
 {
@@ -59,15 +69,6 @@ enum class EEarthquakeState : uint8_t
 	EEarthquakeState__Active       = 2,
 	EEarthquakeState__CoolingDown  = 3,
 	EEarthquakeState__EEarthquakeState_MAX = 4
-};
-
-
-// Enum NaturalDisasters.EGeyserState
-enum class EGeyserState : uint8_t
-{
-	EGeyserState__Dormant          = 0,
-	EGeyserState__Active           = 1,
-	EGeyserState__EGeyserState_MAX = 2
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,6 +29,18 @@ enum class ETaleQuestStepState : uint8_t
 	ETaleQuestStepState__PendingCompletion = 2,
 	ETaleQuestStepState__Completed = 3,
 	ETaleQuestStepState__ETaleQuestStepState_MAX = 4
+};
+
+
+// Enum Tales.ELostShipmentsIslandTypes
+enum class ELostShipmentsIslandTypes : uint8_t
+{
+	ELostShipmentsIslandTypes__Feature = 0,
+	ELostShipmentsIslandTypes__Resource = 1,
+	ELostShipmentsIslandTypes__Seapost = 2,
+	ELostShipmentsIslandTypes__Outpost = 3,
+	ELostShipmentsIslandTypes__Fort = 4,
+	ELostShipmentsIslandTypes__ELostShipmentsIslandTypes_MAX = 5
 };
 
 

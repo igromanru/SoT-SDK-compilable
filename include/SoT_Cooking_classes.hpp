@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -183,22 +183,22 @@ public:
 
 
 // Class Cooking.CookingPot
-// 0x01E0 (0x0678 - 0x0498)
+// 0x01E0 (0x05D8 - 0x03F8)
 class ACookingPot : public AInteractableBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
-	class UStaticMeshComponent*                        MeshComponent;                                            // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UCookerComponent*                            CookerComponent;                                          // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	float                                              HoldToInteractTime;                                       // 0x04B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
-	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x04C0(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       WieldingCookableItemTooltip;                              // 0x04F8(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       TakeItemTooltip;                                          // 0x0530(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       CannotTakeItemTooltip;                                    // 0x0568(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       MixInItemTooltip;                                         // 0x05A0(0x0038) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0xA0];                                      // 0x05D8(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03F8(0x0008) MISSED OFFSET
+	class UStaticMeshComponent*                        MeshComponent;                                            // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UCookerComponent*                            CookerComponent;                                          // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	float                                              HoldToInteractTime;                                       // 0x0418(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x041C(0x0004) MISSED OFFSET
+	struct FText                                       NotWieldingCookableItemTooltip;                           // 0x0420(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       WieldingCookableItemTooltip;                              // 0x0458(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       TakeItemTooltip;                                          // 0x0490(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       CannotTakeItemTooltip;                                    // 0x04C8(0x0038) (Edit, DisableEditOnInstance)
+	struct FText                                       MixInItemTooltip;                                         // 0x0500(0x0038) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0xA0];                                      // 0x0538(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

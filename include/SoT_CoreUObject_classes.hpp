@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,7 +221,7 @@ public:
 
 	inline UObject* CreateDefaultObject()
 	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 89)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 91)(this);
 	}
 
 };
@@ -262,6 +262,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.DelegateFunction"));
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.SparseDelegateFunction
+// 0x0010 (0x00C8 - 0x00B8)
+class USparseDelegateFunction : public UDelegateFunction
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00B8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.SparseDelegateFunction"));
 		return ptr;
 	}
 
@@ -700,6 +716,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.MulticastDelegateProperty"));
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.MulticastInlineDelegateProperty
+// 0x0000 (0x0078 - 0x0078)
+class UMulticastInlineDelegateProperty : public UMulticastDelegateProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.MulticastInlineDelegateProperty"));
 		return ptr;
 	}
 

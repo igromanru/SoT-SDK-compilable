@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,6 +23,16 @@ struct FOrientedPoint
 {
 	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Maths.RotationUpdateResult
+// 0x0018
+struct FRotationUpdateResult
+{
+	struct FRotator                                    UpdatedRotation;                                          // 0x0000(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SpinAngle;                                                // 0x000C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TiltAngle;                                                // 0x0010(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TiltDirection;                                            // 0x0014(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Maths.TimedBuffer
@@ -83,6 +93,15 @@ struct FInertialSmoothedFloat
 	float                                              MaxSpeed;                                                 // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CurrentVelocity;                                          // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CurrentValue;                                             // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Maths.SpatialOffset
+// 0x0008
+struct FSpatialOffset
+{
+	float                                              OffsetValue;                                              // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESpatialOffsetMethod>                  OffsetMethod;                                             // 0x0004(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 }

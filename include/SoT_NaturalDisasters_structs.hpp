@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_NaturalDisasters_enums.hpp"
-#include "SoT_ResourceContentionFramework_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "AthenaCommons.hpp"
+#include "SoT_ResourceContentionFramework_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
 
@@ -128,6 +128,15 @@ struct FVolcanoStateData
 	float                                              PercentageOfMaxTargetingRange;                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct NaturalDisasters.VolcanoProjectileData
+// 0x001C
+struct FVolcanoProjectileData
+{
+	int                                                WeightedVolcanoProjectileIndex;                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LaunchVelocity;                                           // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RotationRate;                                             // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct NaturalDisasters.VolcanoTarget
 // 0x0018
 struct FVolcanoTarget
@@ -146,6 +155,13 @@ struct FVolcanoTargetCoolDown
 {
 	class AActor*                                      Target;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct NaturalDisasters.EventVolcanoStateChanged
+// 0x0001
+struct FEventVolcanoStateChanged
+{
+	TEnumAsByte<EVolcanoState>                         State;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 }

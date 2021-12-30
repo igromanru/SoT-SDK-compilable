@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,6 +26,26 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Watercrafts.FakeShip
+// 0x0100 (0x04D0 - 0x03D0)
+class AFakeShip : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
+	TArray<class AItemProxy*>                          AttachedItems;                                            // 0x03D8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xE8];                                      // 0x03E8(0x00E8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.FakeShip"));
+		return ptr;
+	}
+
+
+	void OnAttachedItemEndPlay(class AActor* Actor);
 };
 
 
@@ -83,12 +103,13 @@ public:
 
 
 // Class Watercrafts.RowboatAudioComponent
-// 0x01A0 (0x0430 - 0x0290)
+// 0x01B0 (0x0460 - 0x02B0)
 class URowboatAudioComponent : public USceneComponent
 {
 public:
-	class ARowboat*                                    ParentRowboat;                                            // 0x0290(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x198];                                     // 0x0298(0x0198) MISSED OFFSET
+	class URowboatAudioComponentParams*                Params;                                                   // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class ARowboat*                                    ParentRowboat;                                            // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1A0];                                     // 0x02C0(0x01A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -316,35 +337,35 @@ public:
 
 
 // Class Watercrafts.Watercraft
-// 0x0378 (0x07E8 - 0x0470)
+// 0x0348 (0x0718 - 0x03D0)
 class AWatercraft : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0470(0x0028) MISSED OFFSET
-	class UBuoyancyComponent*                          BuoyancyComponent;                                        // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FWatercraftRolloverCorrector                RolloverCorrector;                                        // 0x04A0(0x000C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04AC(0x0004) MISSED OFFSET
-	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x04B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x04B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UStaticMeshComponent*                        CollisionMesh;                                            // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        CraftMesh;                                                // 0x04C8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               OverlapHits;                                              // 0x04D0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshComponent*                        WaterOcclusionVolume;                                     // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x04E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x04F0(0x0070) (Net)
-	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x0560(0x001C) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x34];                                      // 0x057C(0x0034) MISSED OFFSET
-	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x05B0(0x0068) (Edit, DisableEditOnInstance)
-	class UCurveFloat*                                 SpeedToChoppinessScalarCurve;                             // 0x0618(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DeepWaterSubmersionThreshold;                             // 0x0620(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BuoyancyChoppinessWhileSinking;                           // 0x0624(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               RigidBodyAwake;                                           // 0x0628(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               InContactWithLand;                                        // 0x0629(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               InDeepWater;                                              // 0x062A(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x5];                                       // 0x062B(0x0005) MISSED OFFSET
-	TScriptInterface<class UScrapeableInterface>       Scrapeable;                                               // 0x0630(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1A8];                                     // 0x0640(0x01A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x03D0(0x0028) MISSED OFFSET
+	class UBuoyancyComponent*                          BuoyancyComponent;                                        // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FWatercraftRolloverCorrector                RolloverCorrector;                                        // 0x0400(0x000C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x040C(0x0004) MISSED OFFSET
+	class UShipNosediveBrake*                          NosediveBrake;                                            // 0x0410(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBowSplashContainer*                         BowSplashContainer;                                       // 0x0418(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        CollisionMesh;                                            // 0x0420(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        CraftMesh;                                                // 0x0428(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               OverlapHits;                                              // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UStaticMeshComponent*                        WaterOcclusionVolume;                                     // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       ClientConvexHullCollisionProfile;                         // 0x0448(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FNetTimeStampCalculator                     MovementTimeStamp;                                        // 0x0450(0x0070) (Net)
+	struct FRigidBodyErrorCorrection                   PhysicsErrorCorrection;                                   // 0x04C0(0x001C) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x34];                                      // 0x04DC(0x0034) MISSED OFFSET
+	struct FBuoyancySampleMovement                     BuoyancySampleMovement;                                   // 0x0510(0x0068) (Edit, DisableEditOnInstance)
+	class UCurveFloat*                                 SpeedToChoppinessScalarCurve;                             // 0x0578(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeepWaterSubmersionThreshold;                             // 0x0580(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BuoyancyChoppinessWhileSinking;                           // 0x0584(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               RigidBodyAwake;                                           // 0x0588(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               InContactWithLand;                                        // 0x0589(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               InDeepWater;                                              // 0x058A(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x5];                                       // 0x058B(0x0005) MISSED OFFSET
+	TScriptInterface<class UScrapeableInterface>       Scrapeable;                                               // 0x0590(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x178];                                     // 0x05A0(0x0178) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -359,50 +380,50 @@ public:
 
 
 // Class Watercrafts.Rowboat
-// 0x0278 (0x0A60 - 0x07E8)
+// 0x02F0 (0x0A08 - 0x0718)
 class ARowboat : public AWatercraft
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x07E8(0x0030) MISSED OFFSET
-	class UChildActorComponent*                        LeftSideClamberSpot;                                      // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        RightSideClamberSpot;                                     // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        ForceSpot;                                                // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        Lantern;                                                  // 0x0830(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        RowingSeat;                                               // 0x0838(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0840(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UReplicatedShipPartCustomizationComponent*   CustomizationComponent;                                   // 0x0848(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FVector                                     WaterExclusionOffset;                                     // 0x0850(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x085C(0x0004) MISSED OFFSET
-	class UTetherCustomisationComponent*               TetherCustomisationComponent;                             // 0x0860(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UHealthComponent*                            HealthComponent;                                          // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UActorDamageableComponent*                   ActorDamageableComponent;                                 // 0x0870(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainerComponent;                                // 0x0878(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UInteractableStorageContainer*               InteractableStorageContainerComponent;                    // 0x0880(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class URammableComponent*                          RammableComponent;                                        // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UScrapeableComponent*                        ScrapeableComponent;                                      // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class URowboatAudioComponent*                      RowboatAudio;                                             // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBaseHullDragDynamicsDesc*                   HullDragDynamicsDesc;                                     // 0x08A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UBowSplashContainer*                         OarSplashContainer;                                       // 0x08A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UMountableComponent*                         MountableComponent;                                       // 0x08B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UCurveFloat*                                 LinearDampingOverTimeWhileBeachedScalarCurve;             // 0x08B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 AngularDampingOverTimeWhileBeachedScalarCurve;            // 0x08C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRowboatDamageEffectData                    DamageEffectData;                                         // 0x08C8(0x0018) (Edit, DisableEditOnInstance)
-	struct FRowboatStrainDamageData                    StrainDamageData;                                         // 0x08E0(0x0020) (Edit, DisableEditOnInstance)
-	TArray<class UChildActorComponent*>                AlwaysEnabledInteractables;                               // 0x0900(0x0010) (ExportObject, ZeroConstructor)
-	class UShroudBreakerTrackerComponent*              ShroudBreakerTrackerComponent;                            // 0x0910(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               IsBeingLaunched;                                          // 0x0918(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsSinking;                                                // 0x0919(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x091A(0x0002) MISSED OFFSET
-	float                                              MaxPushingAngle;                                          // 0x091C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CurrentStrainAmount;                                      // 0x0920(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsDocked;                                                 // 0x0924(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x0925(0x0001) MISSED OFFSET
-	TEnumAsByte<ECollisionChannel>                     CoverCollisionChannel;                                    // 0x0926(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1];                                       // 0x0927(0x0001) MISSED OFFSET
-	float                                              UnderCoverCheckInterval;                                  // 0x0928(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UnderCoverHeight;                                         // 0x092C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FVector>                             RelativeUnderCoverProbeRoots;                             // 0x0930(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData05[0x120];                                     // 0x0940(0x0120) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0718(0x0040) MISSED OFFSET
+	class UChildActorComponent*                        LeftSideClamberSpot;                                      // 0x0758(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        RightSideClamberSpot;                                     // 0x0760(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        ForceSpot;                                                // 0x0768(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        Lantern;                                                  // 0x0770(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        RowingSeat;                                               // 0x0778(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        StorageSeat;                                              // 0x0780(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UShipLiveryComponent*                        LiveryComponent;                                          // 0x0788(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UReplicatedShipPartCustomizationComponent*   CustomizationComponent;                                   // 0x0790(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FVector                                     WaterExclusionOffset;                                     // 0x0798(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x07A4(0x0004) MISSED OFFSET
+	class UTetherCustomisationComponent*               TetherCustomisationComponent;                             // 0x07A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UHealthComponent*                            HealthComponent;                                          // 0x07B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UActorDamageableComponent*                   ActorDamageableComponent;                                 // 0x07B8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class URammableComponent*                          RammableComponent;                                        // 0x07C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UScrapeableComponent*                        ScrapeableComponent;                                      // 0x07C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class URowboatAudioComponent*                      RowboatAudio;                                             // 0x07D0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBaseHullDragDynamicsDesc*                   HullDragDynamicsDesc;                                     // 0x07D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBowSplashContainer*                         OarSplashContainer;                                       // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UMountableComponent*                         MountableComponent;                                       // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UCurveFloat*                                 LinearDampingOverTimeWhileBeachedScalarCurve;             // 0x07F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 AngularDampingOverTimeWhileBeachedScalarCurve;            // 0x07F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRowboatDamageEffectData                    DamageEffectData;                                         // 0x0800(0x0018) (Edit, DisableEditOnInstance)
+	struct FRowboatStrainDamageData                    StrainDamageData;                                         // 0x0818(0x0020) (Edit, DisableEditOnInstance)
+	TArray<class UChildActorComponent*>                AlwaysEnabledInteractables;                               // 0x0838(0x0010) (ExportObject, ZeroConstructor)
+	class UShroudBreakerTrackerComponent*              ShroudBreakerTrackerComponent;                            // 0x0848(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               IsBeingLaunched;                                          // 0x0850(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSinking;                                                // 0x0851(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x0852(0x0002) MISSED OFFSET
+	float                                              MaxPushingAngle;                                          // 0x0854(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CurrentStrainAmount;                                      // 0x0858(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsDocked;                                                 // 0x085C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1];                                       // 0x085D(0x0001) MISSED OFFSET
+	TEnumAsByte<ECollisionChannel>                     CoverCollisionChannel;                                    // 0x085E(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x1];                                       // 0x085F(0x0001) MISSED OFFSET
+	float                                              UnderCoverCheckInterval;                                  // 0x0860(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UnderCoverHeight;                                         // 0x0864(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FVector>                             RelativeUnderCoverProbeRoots;                             // 0x0868(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TEnumAsByte<ETrackedActorType>                     TrackedActorType;                                         // 0x0878(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x18F];                                     // 0x0879(0x018F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -462,6 +483,22 @@ public:
 };
 
 
+// Class Watercrafts.RowingInputComponent
+// 0x0008 (0x0288 - 0x0280)
+class URowingInputComponent : public ULookAtOffsetInputComponent
+{
+public:
+	class ARowingSeat*                                 TargetOars;                                               // 0x0280(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowingInputComponent"));
+		return ptr;
+	}
+
+};
+
+
 
 // Class Watercrafts.WatercraftBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -496,11 +533,11 @@ public:
 
 
 // Class Watercrafts.WatercraftService
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x03D8 - 0x03D0)
 class AWatercraftService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
